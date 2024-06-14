@@ -1,0 +1,2 @@
+#!/bin/bash
+g++ -std=c++20 -DGLIBCXX_DEBUG -DGLIBCXX_DEBUG_PEDANTIC -fsanitize=undefined -fsanitize=address -fno-sanitize-recover -g -Wshadow -Wextra $1.cpp -o $1

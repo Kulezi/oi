@@ -1,0 +1,16 @@
+#!/bin/bash
+
+./c drob
+./c drog
+./c drob2
+
+for test in {1..1000000}; do
+    echo $test
+    ./drog > test.in
+    ./drob < test.in > brut.out
+    ./drob2 < test.in > wzo.out
+
+    diff brut.out wzo.out || break
+done
+
+echo "OJEJKU"

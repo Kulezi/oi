@@ -1,0 +1,1 @@
+g++ -O2 -std=c++17 arc.cpp arc.h -o arc

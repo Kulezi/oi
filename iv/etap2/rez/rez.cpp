@@ -1,3 +1,4 @@
+// Rozwiązanie do zadania 'Rezerwacje sal wykładowych' z II etapu IV OI.
 // Autor rozwiązania: Paweł Putra
 // Złożoność czasowa: O(max(k_i)).
 // Punkty: 100 (upsolve).

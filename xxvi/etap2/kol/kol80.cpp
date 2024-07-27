@@ -1,3 +1,4 @@
+// Rozwiązanie do zadania 'Kolacje' z II etapu XXVI OI.
 // Autor rozwiązania: Paweł Putra
 // Złożoność czasowa: O(n * sqrt(n) * log(n)).
 // Punkty: 80 (100 na szkopule)

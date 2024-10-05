@@ -1,0 +1,44 @@
+#!/bin/bash
+
+# Sprawdzamy czy poprawnie odpaliliśmy skrypt.
+if [[ $# -ne 3 ]]; then
+    echo "usage: ./stress <brute> <model> <gen>"
+    exit 1
+fi
+
+# Nazwy plików bruta, wzorcówki i generatorki bez rozszerzenia.
+brute=$1
+model=$2
+gen=$3
+
+# Time limit w sekundach.
+TL=25
+
+# Przed testowaniem kompilujemy.
+make $brute || exit 1
+make $model || exit 1
+make $gen || exit 1
+
+# 'run xyz' Odpala program o nazwie xyz z limitem czasu
+# - zapisuje zużycie czasu i pamięci w pliku xyz.time
+# - wyjście programu w pliku xyz.out
+run() {
+    timeout $TL /usr/bin/time -f "seconds=%e\nkbytes=%M" -o $1.time ./$1 < test.in > $1.out
+    # Jak program zakończył wykonanie z kodem 124 (SIGTERM) to znaczy, że komenda timeout go zabiła.
+    if [ $? -eq 124 ]; then
+        echo "$1 [TLE]"
+        exit 1
+    fi
+}
+
+for ((i=0; ; ++i)); do
+    echo -ne "$i "
+    ./$gen > test.in
+    run $brute
+    run $model
+    diff $brute.out $model.out || break
+    source $model.time
+    echo "[OK] ${seconds}s $(expr ${kbytes} / 1024)MB"
+done
+
+echo "[WA]"

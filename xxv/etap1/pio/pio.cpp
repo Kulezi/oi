@@ -49,7 +49,7 @@ main() {
     sort(t + 1, t + n + 1, comp);
     t2[1] = t[1];
     for (int i = 2; i <= n; i++) {
-        if (atan2(t2[N].f, t2[N].s) == atan2(t[i].f, t[i].s) && takisam(t[i], t2[N]))
+        if (atan2l(t2[N].f, t2[N].s) == atan2l(t[i].f, t[i].s) && takisam(t[i], t2[N]))
             t2[N].f += t[i].f, t2[N].s += t[i].s;
         else
             t2[++N] = t[i];
@@ -62,5 +62,5 @@ main() {
             p++, aktx += t2[p].f, akty += t2[p].s, res = max(res, aktx * aktx + akty * akty);
         }
     }
-    cout << res;
+    cout << res << "\n";
 }

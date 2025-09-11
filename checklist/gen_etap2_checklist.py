@@ -53,7 +53,7 @@ def ktory_dzien(numer):
 wszystkie_edycje = range(1, max(v["edycja"] for v in data.values()) + 1)
 
 # Przygotowujemy tabelę markdown
-header = ["edycja", "próbne", "Dzień 1 - zad. 1", "Dzień 1 - zad. 2", "Dzień 2 - zad. 1", "Dzień 2 - zad. 2"] 
+header = ["Edycja", "Próbne", "Dzień 1 - zad. 1", "Dzień 1 - zad. 2", "Dzień 2 - zad. 1", "Dzień 2 - zad. 2"] 
 # Pierwszy wiersz to nagłówek
 lines = [" | ".join(header)]
 # Drugi wiersz to wyrównanie: pierwszy do lewej, reszta do prawej

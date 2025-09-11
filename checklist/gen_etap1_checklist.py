@@ -46,7 +46,7 @@ def zadania_edycja(edycja):
 wszystkie_edycje = range(1, max(v["edycja"] for v in data.values()) + 1)
 
 # Przygotowujemy tabelę markdown
-header = ["edycja"] + [f"zadanie{i}" for i in range(1, 7)]
+header = ["Edycja"] + [f"Zad. {i}" for i in range(1, 7)]
 # Pierwszy wiersz to nagłówek
 lines = [" | ".join(header)]
 # Drugi wiersz to wyrównanie: pierwszy do lewej, reszta do prawej

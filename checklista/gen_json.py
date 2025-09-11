@@ -30,7 +30,7 @@ def extract_points(filename: str):
 
 tasks = {}
 
-for oi_dir, edycja in [("../" + edycja, i+1) for i, edycja in enumerate(oi)]:
+for oi_dir, edycja in [("../rozwiazania/" + edycja, i+1) for i, edycja in enumerate(oi)]:
     if not os.path.isdir(oi_dir):
         continue
 
@@ -60,7 +60,7 @@ for oi_dir, edycja in [("../" + edycja, i+1) for i, edycja in enumerate(oi)]:
                                 max_points = punkty
 
                     if max_points is not None:
-                        key = f"{oi_dir}_{etap}_{dzien}_{task_dir}"
+                        key = f"{oi[edycja-1]}_{etap}_{dzien}_{task_dir}"
                         tasks[key] = {
                             "edycja": edycja,
                             "etap": int(re.search(r"\d+", etap).group()),
@@ -86,7 +86,7 @@ for oi_dir, edycja in [("../" + edycja, i+1) for i, edycja in enumerate(oi)]:
                             max_points = punkty
 
                 if max_points is not None:
-                    key = f"{oi_dir}_{etap}_{task_dir}"
+                    key = f"{oi[edycja-1]}_{etap}_{task_dir}"
                     tasks[key] = {
                         "edycja": edycja,
                         "etap": int(re.search(r"\d+", etap).group()),

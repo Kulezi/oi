@@ -26,7 +26,7 @@ with open("tasks.json", "r", encoding="utf-8") as f:
     data = json.load(f)
 
 # Wybierz tylko etap 2 (możesz zmienić)
-wybrany_etap = 2
+wybrany_etap = 3
 zadania_etapu = [v for v in data.values() if v["etap"] == wybrany_etap]
 
 # Grupujemy po edycji
@@ -36,24 +36,47 @@ for zad in zadania_etapu:
 
 # Dla edycji zwraca trójkę (zadań próbnych, zadań dnia 1, zadań dnia 2)
 def zadania_edycja(edycja):
-    if edycja == 1:
-        return [1, 1, 1]
-    if edycja == 3:
-        return [1, 1, 2]
-    return [1, 2, 2]
+    wyjatki = {
+        1: [1, 2, 1],
+        2: [1, 2, 2],
+        3: [1, 2, 2],
+        4: [1, 3, 2],
+        6: [1, 2, 3],
+        7: [1, 2, 3],
+        8: [1, 2, 3],
+        9: [1, 2, 3],
+        10: [1, 2, 3],
+        11: [1, 3, 2],
+        13: [1, 2, 3],
+        14: [1, 2, 3],
+        15: [1, 3, 2],
+        16: [1, 3, 2],
+        24: [1, 3, 2],
+        25: [2, 3, 3],
+        27: [0, 0, 0],
+        29: [2, 3, 3],
+    }
+    
+    return wyjatki.get(edycja, [1, 3, 3])
+    
 
 # Dla numeru zadania zwraca parę (dzień, numer zadania w dniu)
-def ktory_dzien(numer):
-    # 0 -> 1, 1 -> 1, 2 -=> 2, 3 -> 1, 4 -> 2
-    if numer == 0:
-        return 0, 1
-    return (numer + 1) // 2, (numer - 1) % 2 + 1
+ktory_dzien = {
+    0: (0, 1),
+    1: (0, 2),
+    2: (1, 1),
+    3: (1, 2),
+    4: (1, 3),
+    5: (2, 1),
+    6: (2, 2),
+    7: (2, 3),
+}
 
 # Znajdź wszystkie edycje
 wszystkie_edycje = range(1, max(v["edycja"] for v in data.values()) + 1)
 
 # Przygotowujemy tabelę markdown
-header = ["edycja", "próbne", "Dzień 1 - zad. 1", "Dzień 1 - zad. 2", "Dzień 2 - zad. 1", "Dzień 2 - zad. 2"] 
+header = ["Edycja", "Dzień próbny, zad. 1", "Dzień próbny, zad. 2", "Dzień 1 - zad. 1", "Dzień 1 - zad. 2", "Dzień 1 - zad. 3", "Dzień 2 - zad. 1", "Dzień 2 - zad. 2", "Dzień 2 - zad. 3"] 
 # Pierwszy wiersz to nagłówek
 lines = [" | ".join(header)]
 # Drugi wiersz to wyrównanie: pierwszy do lewej, reszta do prawej
@@ -64,8 +87,8 @@ for edycja in wszystkie_edycje:
     zadania = sorted(grupy.get(edycja, []), key=lambda x: x["dzien"])
  
     i = 0
-    for col in range(5):
-        dzien, ktore = ktory_dzien(col)
+    for col in range(8):
+        dzien, ktore = ktory_dzien[col]
         if i < len(zadania):
             zad = zadania[i]
             if zad["dzien"] == dzien:
@@ -86,10 +109,6 @@ for edycja in wszystkie_edycje:
     lines.append(" | ".join(row))
 
 markdown = "\n".join(lines)
-
-# Zapis do pliku
-with open("tabela.md", "w", encoding="utf-8") as f:
-    f.write(markdown)
 
 print(markdown)
 

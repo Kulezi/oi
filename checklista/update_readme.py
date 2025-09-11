@@ -5,7 +5,7 @@ from pathlib import Path
 
 root = Path(__file__).resolve().parent.parent
 readme = root / "README.md"
-checklist_dir = root / "checklist"
+checklist_dir = root / "checklista"
 
 # wczytaj README.md
 content = readme.read_text(encoding="utf-8")
@@ -18,15 +18,26 @@ if marker not in content:
 # uruchomienie gen_json.py (w katalogu checklist)
 subprocess.run(["python3", "gen_json.py"], cwd=checklist_dir, check=True)
 
-# uruchomienie 3 generatorów (również w katalogu checklist)
 tables = []
+
+# uruchomienie gen_liczniki.py
+out = subprocess.check_output(
+    ["python3", "gen_liczniki.py"],
+    cwd=checklist_dir,
+    text=True
+)
+tables.append("\n\n" + out.strip() + "\n")
+
+roman = {1: "I", 2: "II", 3: "III"}
+
+# uruchomienie 3 generatorów (również w katalogu checklist)
 for etap in [1, 2, 3]:
     out = subprocess.check_output(
         ["python3", f"gen_etap{etap}_checklist.py"],
         cwd=checklist_dir,
         text=True
     )
-    tables.append(f"## Etap {etap}\n\n" + out.strip() + "\n")
+    tables.append(f"## Rozwiązane zadania z {roman[etap]} etapu\n\n" + out.strip() + "\n")
 
 # komunikat ostrzegawczy
 warning = (

@@ -1,0 +1,5532 @@
+<!-- dump strony https://oi.edu.pl/l/42/ z dnia 13.09.2025 -->
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+  <meta charset="utf-8" /> 
+  
+  <meta name="description" content="" /> 
+  <meta name="keywords" content="olimpiada informatyczna" /> 
+  <title>Olimpiada Informatyczna</title> 
+
+  
+
+  <link rel="stylesheet" href="/static/css/layout.min.css" /> 
+  <link rel="shortcut icon" href="/static/images/favicon.ico" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+
+  
+  </head>
+
+  <body>
+
+  
+                
+  <div id="large_container" role="presentation">
+  <div id="large_container2" role="presentation">
+  <div id="large_container3" role="presentation">
+
+    <div id="container" role="presentation">
+
+    
+    <div id="header" role="banner">
+      <!-- <a href="/"><img src="/static/images/logo_stare.o.jpg" alt="logo"></a> -->
+      <a href="/"><img src="/static/images/logo_oi.png" height="140" alt="Logo Olimpiady Informatycznej"></a>
+      <!--<a href="/"><img src="/static/images/logo_OI_30lat_72dpi.png" height="140" alt="Logo 30 lat Olimpiady Informatycznej"></a>-->
+      <div id="header_top_slider">
+        
+          <div id="header_top">
+  rok_szkolny(2024,2025);
+  <span>edycja_OI(32);</span>
+</div>
+
+<div id="header_slider">
+</div>
+
+<script>
+  
+  function centerInText(input_text, destination_length) {
+    
+    var return_value = input_text;
+    if (return_value.length % 2 > 0) {
+      return_value = return_value + ' ';
+    }
+    while (return_value.length < destination_length) {
+      return_value = ' ' + return_value + ' ';
+    }
+    return return_value
+  }
+
+  function generateSlider(slider_size, slider_progress, titles_array, dates_array) {
+    var element_size = 20;
+
+    var first_line = '<pre><span class=blue>' + centerInText(titles_array[0], element_size)+ '</span><span class=red>' + centerInText(titles_array[1], slider_size - 2 * element_size) + '</span><span class=green>'+ centerInText(titles_array[2], element_size) + '</span></pre>';
+    
+    var second_line = '[';
+    var i = 0;
+    for (i = 0; i < slider_progress; i = i + 1) {
+      var elem = '=';
+      if (i < element_size) {
+        elem = '<span class=blue>' + elem + '</span>';
+      }
+      if (titles_array[1] != "" && i > (slider_size - element_size)/2) {
+        elem = '<span class=red>' + elem + '</span>';
+      }
+      second_line += elem;
+    }
+    var finisher = '>';
+    if (titles_array[1] != "" && slider_size > (slider_size - element_size)/2) {
+      finisher = '<span class=red>' + finisher + '</span>';
+    }
+    second_line += finisher;
+    for (i = slider_progress + 1; i < slider_size; i = i + 1) {
+      var clr = 'black';
+      if (titles_array[1] != "" && i > (slider_size - element_size)/2 && i < (slider_size + element_size) / 2) {
+        clr = 'red';
+      }
+      if (i > slider_size - element_size) {
+        clr = 'green';
+      }
+      second_line += '<span class='+ clr +'>' + '.' + '</span>';
+    }
+    second_line += ']';
+
+    var third_line = '<pre><span class=blue>' + centerInText(dates_array[0], element_size) +
+    '</span><span class=red>' + centerInText(dates_array[1], slider_size - 2 * element_size) +
+    '</span><span class=green>' + centerInText(dates_array[2], element_size) + '</span></pre>';
+    return first_line + second_line + third_line
+  }
+  
+  document.getElementById('header_slider').innerHTML =
+      generateSlider(90, 49, new Array("IOI(2025);","","33_OI_etap_online(1);", ""), new Array("27.07 - 03.08","","13.10 - 17.11",""));
+
+</script>
+
+            
+      </div>
+    </div>
+
+    <div id="left_pane" role="presentation">
+      <div id="left_menu" role="navigation" aria-label="Menu boczne">
+        
+<ul>
+
+
+<li>
+
+<a href="/l/185/">XXXII OI</a>
+
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+
+<a href="/l/jak_zaczac/">JAK ZACZĄĆ?</a>
+
+</li>
+
+
+
+
+
+<li>
+
+<a href="/l/456/">O Olimpiadzie</a>
+
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+
+<a href="/l/76/">Międzynarodowe OI</a>
+
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="selected">
+
+<a href="/l/42/">Archiwum OI</a>
+
+<ul class="level2">
+  
+  <li class="level2_entry  selected 
+     " >
+    <a href="/l/oi_zadania/">Lista zadań</a>
+
+    
+    
+      
+
+
+    
+
+</li>
+  
+  <li class="level2_entry 
+     " >
+    <a href="/l/487/">XXXI OI(2023,2024)</a>
+
+    
+
+</li>
+  
+  <li class="level2_entry 
+     " >
+    <a href="/l/421/">XXX OI(2022,2023)</a>
+
+    
+
+</li>
+  
+  <li class="level2_entry 
+     " >
+    <a href="/l/398/">XXIX OI(2021,2022)</a>
+
+    
+
+</li>
+  
+  <li class="level2_entry 
+     " >
+    <a href="/l/375/">XXVIII OI(2020,2021)</a>
+
+    
+
+</li>
+  
+  <li class="level2_entry 
+     " >
+    <a href="/l/358/">XXVII OI(2019,2020)</a>
+
+    
+
+</li>
+  
+  <li class="level2_entry 
+     " >
+    <a href="/l/343/">XXVI OI(2018,2019)</a>
+
+    
+
+</li>
+  
+  <li class="level2_entry 
+     " >
+    <a href="/l/326/">XXV OI(2017,2018)</a>
+
+    
+
+</li>
+  
+  <li class="level2_entry 
+     " >
+    <a href="/l/301/">XXIV OI(2016,2017)</a>
+
+    
+
+</li>
+  
+  <li class="level2_entry 
+     " >
+    <a href="/l/288/">XXIII OI(2015,2016)</a>
+
+    
+
+</li>
+  
+  <li class="level2_entry 
+     " >
+    <a href="/l/274/">XXII OI(2014,2015)</a>
+
+    
+
+</li>
+  
+  <li class="level2_entry 
+     " >
+    <a href="/l/262/">XXI OI(2013,2014)</a>
+
+    
+
+</li>
+  
+  <li class="level2_entry 
+     " >
+    <a href="/l/245/">XX OI(2012,2013)</a>
+
+    
+
+</li>
+  
+  <li class="level2_entry 
+     " >
+    <a href="/l/209/">XIX OI(2011,2012)</a>
+
+    
+
+</li>
+  
+  <li class="level2_entry 
+     " >
+    <a href="/l/1/">XVIII OI(2010,2011)</a>
+
+    
+
+</li>
+  
+  <li class="level2_entry 
+     " >
+    <a href="/l/73/">XVII OI(2009,2010)</a>
+
+    
+
+</li>
+  
+  <li class="level2_entry 
+     " >
+    <a href="/l/109/">XVI OI(2008,2009)</a>
+
+    
+
+</li>
+  
+  <li class="level2_entry 
+     " >
+    <a href="/l/71/">XV OI(2007,2008)</a>
+
+    
+
+</li>
+  
+  <li class="level2_entry 
+     " >
+    <a href="/l/65/">XIV OI(2006,2007)</a>
+
+    
+
+</li>
+  
+  <li class="level2_entry 
+     " >
+    <a href="/l/93/">XIII OI(2005,2006)</a>
+
+    
+
+</li>
+  
+  <li class="level2_entry 
+     " >
+    <a href="/l/116/">XII OI(2004,2005)</a>
+
+    
+
+</li>
+  
+  <li class="level2_entry 
+     " >
+    <a href="/l/67/">XI OI(2003,2004)</a>
+
+    
+
+</li>
+  
+  <li class="level2_entry 
+     " >
+    <a href="/l/69/">X OI(2002,2003)</a>
+
+    
+
+</li>
+  
+  <li class="level2_entry 
+     " >
+    <a href="/l/104/">IX OI(2001,2002)</a>
+
+    
+
+</li>
+  
+  <li class="level2_entry 
+     " >
+    <a href="/l/129/">VIII OI(2000,2001)</a>
+
+    
+
+</li>
+  
+  <li class="level2_entry 
+     " >
+    <a href="/l/133/">VII OI(1999,2000)</a>
+
+    
+
+</li>
+  
+  <li class="level2_entry 
+     " >
+    <a href="/l/137/">VI OI(1998,1999)</a>
+
+    
+
+</li>
+  
+  <li class="level2_entry 
+     " >
+    <a href="/l/53/">V OI(1997,1998)</a>
+
+    
+
+</li>
+  
+  <li class="level2_entry 
+     " >
+    <a href="/l/51/">IV OI(1996,1997)</a>
+
+    
+
+</li>
+  
+  <li class="level2_entry 
+     " >
+    <a href="/l/60/">III OI(1995,1996)</a>
+
+    
+
+</li>
+  
+  <li class="level2_entry 
+     " >
+    <a href="/l/46/">II OI(1994,1995)</a>
+
+    
+
+</li>
+  
+  <li class="level2_entry 
+     " >
+    <a href="/l/43/">I OI(1993,1994)</a>
+
+    
+
+</li>
+  
+  <li class="level2_entry 
+     " >
+    <a href="/l/30lat/">30-lecie OI</a>
+
+    
+
+</li>
+  
+  <li class="level2_entry 
+     " >
+    <a href="/l/25lat/">25-lecie OI</a>
+
+    
+
+</li>
+  
+  <li class="level2_entry 
+      last-child " >
+    <a href="/l/oi15_folder/">15-lecie OI</a>
+
+    
+
+</li>
+  
+</ul>
+
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+
+<a href="/l/485/">Omówienia zadań</a>
+
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+
+<a href="/l/21/">Linki</a>
+
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+
+<a href="/l/352/">RODO i małoletni</a>
+
+</li>
+
+
+
+
+
+
+
+
+
+
+
+<li>
+
+<a href="/l/opp/">OPP</a>
+
+</li>
+
+
+
+
+</ul>
+
+    <!--
+       Font Awesome Free 5.3.1 by @fontawesome - https://fontawesome.com
+       License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+    -->
+    <ul>
+    <li><a href="https://oij.edu.pl">OI Juniorów</a></li>
+    <li><a href="https://facebook.com/OlimpiadaInformatyczna">
+      <img src="/static/images/fa-facebook-square.svg" style="max-width: 1em; max-height: 1em" alt="Facebook">
+    </a>
+    </li></ul>
+    </div>
+
+    
+
+      <div id="sponsor" role="complementary">
+	
+      <div>Firmy i instytucje wspierające</div>
+        <p><a href="https://consumer.huawei.com/pl/" target="_blank"><img src="/static/images/huawei.png" alt="logo Huawei" width="120"></a></p>
+        <p><a href="http://www.atinea.pl" target="_blank"><img width="120" src="/static/images/atinea.png" alt="logo Atinei"></a></p>
+        <p><a href="https://docplanner.tech/" target="_blank"><img src="/static/images/docplanner-tech.png" width="120" alt="logo Docplanner Tech"></a></p>
+        <p><a href="https://11labs-guides-dev.a17.dev" target="_blank"><img width="120" src="/static/images/elevenlabs-logo-black.png" alt="logo ElevenLabs"></a></p>
+        <p><a href="https://www.janestreet.com/" target="_blank"><img src="/static/images/jane_street1.png" width="120" alt="logo Jane Street"></a></p>
+        <!--<p><a href="https://lukasiewicz.gov.pl" target="_blank"><img src="/static/images/Lukasiewicz_Siec_uzupelniajacy_pozytyw.png" width="120" alt="logo Sieci Badawczej Łukasiewicz"></a></p>-->
+        <p><a href="https://map.org.pl" target="_blank"><img src="/static/images/MAP_RGB_Logo.png" width="120" alt="logo MAP"></a>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+        <p><a href="http://www.oeiizk.waw.pl" target="_blank"><img src="/static/images/logo_oeiizk.png" width="120" alt="logo OEIiZK"></a>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+        <p><a href="https://www.oracle.com/pl/" target="_blank"><img src="/static/images/oracle.png" width="130" alt="logo Oracle"></a>&nbsp;&nbsp;&nbsp;</p>
+        <p><a href="http://www.pti.org.pl/" target="_blank"><img src="/static/images/logo_PTI_RGB-01.png" width="120" alt="logo PTI"></a></p>
+        <p><a href="https://ksiegarnia.pwn.pl/it-pwn?utm_source=oi.edu.pl&utm_medium=logo&utm_campaign=IT_202112" target="_blank"><img src="/static/images/pwn-logo.gif" alt="logo PWN" width="120"></a></p>
+    
+      </div>
+
+
+    </div>
+    
+    <div id="center_pane" role="presentation">
+      <div id="content" role="main">
+        
+
+<div class="plain_page">
+
+<h1 class="content_title">Lista zadań</h1>
+<p>Poniżej znajduje się lista wszystkich zadań z dotychczasowych edycji Olimpiady Informatycznej, wraz z nazwiskami autor&oacute;w i odnośnikami do portalu <a href="https://szkopul.edu.pl" target="_blank">Szkopuł</a>, gdzie można wysyłać rozwiązania tych zadań. Przy większości zadań znajdują się też odnośniki do oficjalnych materiał&oacute;w (tzw. &bdquo;niebieskich książeczek&rdquo; Olimpiady), a czasem r&oacute;wnież artykuł&oacute;w i nagrań wideo. Przy zadaniach opisanych w książkach <em>W poszukiwaniu wyzwań</em> i <em>Przygody Bajtazara</em> znajduje się stosowna adnotacja.</p>
+<div class="contest contest-oi contest-oi-31">
+<h2>XXXII Olimpiada Informatyczna&nbsp;</h2>
+<table class="small" border="1">
+<thead> 
+<tr>
+<th class="th-name">Tytuł</th> <th class="th-stage">Etap</th> <th class="th-author">Autor</th> <th class="th-submit">Wyślij</th> <th class="th-solutions">Materiały</th>
+</tr>
+</thead> 
+<tbody>
+<tr>
+<td>Usuwanie</td>
+<td>Etap I</td>
+<td>Tomasz Nowak</td>
+<td><a href="../../../../pl/archive/oi/32/usu" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi32_1_usu/" target="_self">Om&oacute;wienie (Kamil Szymczak)</a>, <a href="https://www.youtube.com/watch?v=JxW6o3jH7DY" target="_blank">Webinarium (Kamil Szymczak)</a></td>
+</tr>
+<tr>
+<td>Walki</td>
+<td>Etap I</td>
+<td>Tomasz Nowak, Marcin Smulewicz</td>
+<td><a href="../../../../pl/archive/oi/32/wal" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi32_1_wal/" target="_self">Om&oacute;wienie</a>, <a href="https://www.youtube.com/watch?v=JxW6o3jH7DY" target="_blank">Webinarium</a> (Kamil Szymczak)</td>
+</tr>
+<tr>
+<td>Zamek cykliczny</td>
+<td>Etap I</td>
+<td>Bartłomiej Czarkowski</td>
+<td><a href="../../../../pl/archive/oi/32/zam" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi32_1_zam/" target="_self">Om&oacute;wienie (Jakub Radoszewski)</a>, <a href="https://www.youtube.com/watch?v=JxW6o3jH7DY" target="_blank">Webinarium (Kamil Szymczak)</a></td>
+</tr>
+<tr>
+<td>Bitada</td>
+<td>Etap I</td>
+<td>Bartosz Tarnawski</td>
+<td><a href="../../../../pl/archive/oi/32/bit" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi32_1_bit/" target="_self">Om&oacute;wienie (Kamil Szymczak)</a>, <a href="https://www.youtube.com/watch?v=JxW6o3jH7DY" target="_blank">Webinarium (Kamil Szymczak)</a></td>
+</tr>
+<tr>
+<td>Sprawiedliwy podział</td>
+<td>Etap I</td>
+<td>Franciszek Malinka</td>
+<td><a href="../../../../pl/archive/oi/32/spr" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi32_1_spr/" target="_self">Om&oacute;wienie (Dominik Klemba)</a>, <a href="https://www.youtube.com/watch?v=JxW6o3jH7DY" target="_blank">Webinarium (Kamil Szymczak)</a></td>
+</tr>
+<tr>
+<td>Kasyno</td>
+<td>Etap I</td>
+<td>Franciszek Witt</td>
+<td><a href="../../../../pl/archive/oi/32/kas" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi32_1_kas/" target="_self">Om&oacute;wienie (Bartłomiej Czarkowski)</a>, <a href="https://www.youtube.com/watch?v=JxW6o3jH7DY" target="_blank">Webinarium (Kamil Szymczak)</a></td>
+</tr>
+<tr>
+<td>Sekretna siatka szpiegowska</td>
+<td>Etap II, dzień pr&oacute;bny</td>
+<td>Adam Polak</td>
+<td><a href="../../../../pl/archive/oi/32/sss" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi32_2_sss/" target="_self">Om&oacute;wienie (Mateusz Kussowski)</a></td>
+</tr>
+<tr>
+<td>Podział na anagramy</td>
+<td>Etap II, dzień pierwszy</td>
+<td>Bartłomiej Czarkowski</td>
+<td><a href="../../../../pl/archive/oi/32/ana" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi32_2_ana/" target="_self">Om&oacute;wienie (Jakub Koliński)</a></td>
+</tr>
+<tr>
+<td>Drzewo genealogiczne</td>
+<td>Etap II, dzień pierwszy</td>
+<td>Bartłomiej Czarkowski</td>
+<td><a href="../../../../pl/archive/oi/32/drz" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi32_2_drz/" target="_self">Om&oacute;wienie (Kamil Szymczak)</a></td>
+</tr>
+<tr>
+<td>Porządki</td>
+<td>Etap II, dzień drugi</td>
+<td>Bartłomiej Czarkowski</td>
+<td><a href="../../../../pl/archive/oi/32/por" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi32_2_por/" target="_self">Om&oacute;wienie (Dominik Klemba)</a></td>
+</tr>
+<tr>
+<td>Schody</td>
+<td>Etap II, dzień drugi</td>
+<td>Tomasz Nowak</td>
+<td><a href="../../../../pl/archive/oi/32/sch" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi32_2_sch/" target="_self">Om&oacute;wienie (Mateusz Kussowski)</a></td>
+</tr>
+<tr>
+<td>Ogrodzenie</td>
+<td>Etap III, dzień pr&oacute;bny</td>
+<td>Jakub Radoszewski</td>
+<td><a href="../../../../pl/archive/oi/32/ogr" target="_blank">Szkopuł</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Impreza</td>
+<td>Etap III, dzień pierwszy</td>
+<td>Arkadiusz Czarkowski, Franciszek Witt</td>
+<td><a href="../../../../pl/archive/oi/32/imp" target="_blank">Szkopuł</a></td>
+<td><a href="https://www.youtube.com/watch?v=wMxSEXRqozo" target="_blank">Om&oacute;wienie wideo (Jakub Koliński)</a></td>
+</tr>
+<tr>
+<td>Szpiedzy</td>
+<td>Etap III, dzień pierwszy</td>
+<td>Arkadiusz Czarkowski, Bartłomiej Czarkowski</td>
+<td><a href="../../../../pl/archive/oi/32/ogr" target="_blank">Szkopuł</a></td>
+<td><a href="https://www.youtube.com/watch?v=Ep_RLpj78Hg" target="_blank">Om&oacute;wienie wideo (Jakub Koliński)</a></td>
+</tr>
+<tr>
+<td>Szum</td>
+<td>Etap III, dzień pierwszy</td>
+<td>Bartłomiej Czarkowski</td>
+<td><a href="../../../../pl/archive/oi/32/szu" target="_blank">Szkopuł</a></td>
+<td><a href="https://www.youtube.com/watch?v=5ZaGTo0VZP8" target="_blank">Om&oacute;wienie wideo (Jakub Koliński)</a></td>
+</tr>
+<tr>
+<td>Lokacja miasta</td>
+<td>Etap III, dzień drugi</td>
+<td>Bartosz Tarnawski</td>
+<td><a href="../../../../pl/archive/oi/32/lok" target="_blank">Szkopuł</a></td>
+<td><a href="https://www.youtube.com/watch?v=_HEqPBQ7CUM" target="_blank">Om&oacute;wienie wideo (Kamil Szymczak)</a></td>
+</tr>
+<tr>
+<td>Przyjaciele i wrogowie</td>
+<td>Etap III, dzień drugi</td>
+<td>Bartłomiej Czarkowski</td>
+<td><a href="../../../../pl/archive/oi/32/piw" target="_blank">Szkopuł</a></td>
+<td><a href="https://www.youtube.com/watch?v=CMrUJrUCT7w" target="_blank">Om&oacute;wienie wideo (Kamil Szymczak)</a></td>
+</tr>
+<tr>
+<td>Redukcja połączeń</td>
+<td>Etap III, dzień drugi</td>
+<td>Antoni Buraczewski</td>
+<td><a href="../../../../pl/archive/oi/32/red" target="_blank">Szkopuł</a></td>
+<td><a href="https://www.youtube.com/watch?v=x8p4yAW2208&amp;pp=0gcJCa0JAYcqIYzv" target="_blank">Om&oacute;wienie wideo (Kamil Szymczak)</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="contest contest-oi contest-oi-31">
+<h2>XXXI Olimpiada Informatyczna&nbsp;</h2>
+<table class="small" border="1">
+<thead> 
+<tr>
+<th class="th-name">Tytuł</th> <th class="th-stage">Etap</th> <th class="th-author">Autor</th> <th class="th-submit">Wyślij</th> <th class="th-solutions">Materiały</th>
+</tr>
+</thead> 
+<tbody>
+<tr>
+<td>Budowa lotniska</td>
+<td>Etap I</td>
+<td>Tomasz Idziaszek</td>
+<td><a href="../../../../pl/archive/oi/31/bud" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi31_1_bud/" target="_self">Om&oacute;wienie (Jakub Rożek)</a></td>
+</tr>
+<tr>
+<td>CzatBBB</td>
+<td>Etap I</td>
+<td>Tomasz Idziaszek</td>
+<td><a href="../../../../pl/archive/oi/31/cza" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi31_1_cza/" target="_self">Om&oacute;wienie (Franciszek Witt)</a></td>
+</tr>
+<tr>
+<td>Przyciski</td>
+<td>Etap I</td>
+<td>Bartosz Kostka</td>
+<td><a href="../../../../pl/archive/oi/31/prz" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi31_1_prz/" target="_self">Om&oacute;wienie (Paweł Parys)</a></td>
+</tr>
+<tr>
+<td>Satelity</td>
+<td>Etap I</td>
+<td>Bartosz Tarnawski</td>
+<td><a href="../../../../pl/archive/oi/31/sat" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi31_1_sat/" target="_self">Om&oacute;wienie (Tomasz Nowak)</a></td>
+</tr>
+<tr>
+<td>Zapobiegliwy student</td>
+<td>Etap I</td>
+<td>Jakub Radoszewski</td>
+<td><a href="../../../../pl/archive/oi/31/zap" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi31_1_zap/" target="_self">Om&oacute;wienie (Bartłomiej Czarkowski)</a></td>
+</tr>
+<tr>
+<td>Telefony</td>
+<td>Etap II, dzień pr&oacute;bny</td>
+<td>Jakub Radoszewski</td>
+<td><a href="../../../../pl/archive/oi/31/tel" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi31_2_tel/" target="_self">Om&oacute;wienie</a></td>
+</tr>
+<tr>
+<td>Liczniki</td>
+<td>Etap II, dzień pierwszy</td>
+<td>Bartłomiej Czarkowski</td>
+<td><a href="../../../../pl/archive/oi/31/lic" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi31_2_lic/" target="_self">Om&oacute;wienie</a></td>
+</tr>
+<tr>
+<td>Rycerz</td>
+<td>Etap II, dzień pierwszy</td>
+<td>Marek Sokołowski</td>
+<td><a href="../../../../pl/archive/oi/31/ryc" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi31_2_ryc/" target="_self">Om&oacute;wienie (Bartłomiej Czarkowski)</a></td>
+</tr>
+<tr>
+<td>Ciąg binarny</td>
+<td>Etap II, dzień drugi</td>
+<td>Anadi Agrawal</td>
+<td><a href="../../../../pl/archive/oi/31/cia" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi31_2_cia/" target="_self">Om&oacute;wienie (Arkadiusz Czarkowski)</a></td>
+</tr>
+<tr>
+<td>Pojemniki</td>
+<td>Etap II, dzień drugi</td>
+<td>Paweł Parys</td>
+<td><a href="../../../../pl/archive/oi/31/poj" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi31_2_poj/" target="_self">Om&oacute;wienie (Franciszek Witt)</a></td>
+</tr>
+<tr>
+<td>Stacje benzynowe</td>
+<td>Etap III, dzień pr&oacute;bny</td>
+<td>Jakub Radoszewski</td>
+<td><a href="../../../../pl/archive/oi/31/sta" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi31_3_sta/" target="_self">Om&oacute;wienie (Arkadiusz Czarkowski)</a></td>
+</tr>
+<tr>
+<td>Bukmacher</td>
+<td>Etap III, dzień pierwszy</td>
+<td>Bartłomiej Czarkowski, Franciszek Witt</td>
+<td><a href="../../../../pl/archive/oi/31/buk" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi31_3_buk/" target="_self">Om&oacute;wienie (Franciszek Witt)</a></td>
+</tr>
+<tr>
+<td>Skarb</td>
+<td>Etap III, dzień pierwszy</td>
+<td>Karol Pokorski</td>
+<td><a href="../../../../pl/archive/oi/31/ska" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi31_3_ska/" target="_self">Om&oacute;wienie (Grzegorz Kwacz)</a></td>
+</tr>
+<tr>
+<td>Wyścig kolarski</td>
+<td>Etap III, dzień pierwszy</td>
+<td>Adam Trzaskowski</td>
+<td><a href="../../../../pl/archive/oi/31/wys" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi31_3_wys/" target="_self">Om&oacute;wienie (Arkadiusz Czarkowski)</a></td>
+</tr>
+<tr>
+<td>Permutacje</td>
+<td>Etap III, dzień drugi</td>
+<td>Antoni Buraczewski</td>
+<td><a href="../../../../pl/archive/oi/31/per" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi31_3_per/" target="_self">Om&oacute;wienie (Bartłomiej Czarkowski)</a></td>
+</tr>
+<tr>
+<td>Wyjścia ewakuacyjne</td>
+<td>Etap III, dzień drugi</td>
+<td>Paweł Parys</td>
+<td><a href="../../../../pl/archive/oi/31/wyj" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi31_3_wyj/" target="_self">Om&oacute;wienie</a></td>
+</tr>
+<tr>
+<td>Żyrandol</td>
+<td>Etap III, dzień drugi</td>
+<td>Bartłomiej Czarkowski</td>
+<td><a href="../../../../pl/archive/oi/31/zyr" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi31_3_zyr/" target="_self">Om&oacute;wienie</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="contest contest-oi contest-oi-30">
+<h2>XXX Olimpiada Informatyczna&nbsp;</h2>
+<table class="small" border="1">
+<thead> 
+<tr>
+<th class="th-name">Tytuł</th> <th class="th-stage">Etap</th> <th class="th-author">Autor</th> <th class="th-submit">Wyślij</th> <th class="th-solutions">Materiały</th>
+</tr>
+</thead> 
+<tbody>
+<tr>
+<td>Kolorowy wąż&nbsp;</td>
+<td>Etap I</td>
+<td>Jakub Radoszewski</td>
+<td><a href="../../../../pl/archive/oi/30/kol" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi30_1_kol/" target="_self">Om&oacute;wienie</a>, <a href="https://youtu.be/uDaehoFiqzg" target="_blank">webinarium</a>, <a href="https://youtu.be/bKeCwbPjQfM" target="_blank">Wideo (Franciszek Witt)<br /></a></td>
+</tr>
+<tr>
+<td>Płytkie nawiasowania</td>
+<td>Etap I</td>
+<td>Tomasz Idziaszek</td>
+<td><a href="../../../../pl/archive/oi/30/ply" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi30_1_ply/" target="_self">Om&oacute;wienie (Wiktor Kotala)</a>, <a href="https://youtu.be/NFE5rzLOpNI" target="_blank">Wideo (Franciszek Witt)</a><br /></td>
+</tr>
+<tr>
+<td>Pociąg towarowy</td>
+<td>Etap I</td>
+<td>Jakub Radoszewski, Wojciech Rytter</td>
+<td><a href="../../../../pl/archive/oi/30/poc" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi30_1_poc/" target="_self">Om&oacute;wienie (Jakub Radoszewski)</a>, <a href="https://youtu.be/HuybjZoQEMs" target="_blank">Wideo (Franciszek Witt)</a><br /></td>
+</tr>
+<tr>
+<td>Wyprzedzanie</td>
+<td>Etap I</td>
+<td>Tomasz Idziaszek</td>
+<td><a href="../../../../pl/archive/oi/30/wyp" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi30_1_wyp/" target="_self">Om&oacute;wienie (Wiktor Kotala)</a>, <a href="https://youtu.be/s8OkCEMBP7o" target="_blank">Wideo (Franciszek Witt)</a></td>
+</tr>
+<tr>
+<td>Zboże</td>
+<td>Etap I</td>
+<td>Paweł Parys</td>
+<td><a href="../../../../pl/archive/oi/30/zbo" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi30_1_zbo/" target="_self">Om&oacute;wienie (Sylwia Sapkowska)</a>, <a href="https://youtu.be/9G3mWF6dHLA" target="_blank">Wideo (Franciszek Witt)</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Wirus</td>
+<td>Etap II - dzień pr&oacute;bny</td>
+<td>Wojciech Rytter</td>
+<td><a href="../../../../pl/archive/oi/30/wir" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi30_2_wir/" target="_self">Om&oacute;wienie (Maciej Malewicz)</a>, <a href="https://youtu.be/1YO_4u5hKso" target="_blank">Wideo (Franciszek Witt)</a></td>
+</tr>
+<tr>
+<td>Gra w kolorowanie</td>
+<td>Etap II - dzień pierwszy</td>
+<td>Franciszek Witt</td>
+<td><a href="../../../../pl/archive/oi/30/gra" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi30_2_gra/" target="_self">Om&oacute;wienie (Mateusz Kussowski)</a>, <a href="https://youtu.be/kB3P0xDAk3Q" target="_blank">Wideo (Franciszek Witt)</a></td>
+</tr>
+<tr>
+<td>Wagony</td>
+<td>Etap II - dzień pierwszy</td>
+<td>Wojciech Nadara</td>
+<td><a href="../../../../pl/archive/oi/30/wag" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi30_2_wag/" target="_self">Om&oacute;wienie (Maciej Malewicz)</a>, <a href="https://youtu.be/rWdxy1-mUGg" target="_blank">Wideo (Franciszek Witt)</a></td>
+</tr>
+<tr>
+<td>Drwale</td>
+<td>Etap II - dzień drugi</td>
+<td>Arkadiusz Czarkowski</td>
+<td><a href="../../../../pl/archive/oi/30/drw" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi30_2_drw/" target="_self">Om&oacute;wienie (Maciej Malewicz)</a>, <a href="https://youtu.be/qYDZDF0XpOc" target="_blank">Wideo (Jan Kanty Milczek)</a></td>
+</tr>
+<tr>
+<td>Wspinaczka</td>
+<td>Etap II - dzień drugi</td>
+<td>Marek Sokołowski</td>
+<td><a href="../../../../pl/archive/oi/30/wsp" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi30_2_wsp/" target="_self">Om&oacute;wienie (Mateusz Kussowski)</a>, <a href="https://youtu.be/Y3pi0E-0sT0" target="_blank">Wideo (Franciszek Witt)</a></td>
+</tr>
+<tr>
+<td>Nawigacja samochodowa&nbsp;</td>
+<td>Etap III - dzień pr&oacute;bny</td>
+<td>Bartłomiej Dudek</td>
+<td><a href="../../../../pl/archive/oi/30/lap" target="_blank"></a></td>
+<td><a href="../../../../l/oi30_3_naw/" target="_self">Om&oacute;wienie (Jakub Koliński)</a>, <a href="https://youtu.be/CTdOas6uo44" target="_blank">Wideo (Franciszek Witt)</a></td>
+</tr>
+<tr>
+<td>Laptopy</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Jakub Radoszewski&nbsp;</td>
+<td><a href="../../../../pl/archive/oi/30/lap" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi30_3_lap/" target="_self">Om&oacute;wienie (Sylwia Sapkowska)</a>, <a href="https://youtu.be/FLuPWMl-Nqc" target="_blank">Wideo (Franciszek Witt)</a></td>
+</tr>
+<tr>
+<td>NWW</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Marek Sokołowski&nbsp;</td>
+<td><a href="../../../../pl/archive/oi/30/nww" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi30_3_nww/" target="_self">Om&oacute;wienie (Jakub Koliński)</a>, <a href="https://youtu.be/QFkdf2HcgNI" target="_blank">Wideo (Franciszek Witt)</a></td>
+</tr>
+<tr>
+<td>Skoczek</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Mateusz Radecki&nbsp;</td>
+<td><a href="../../../../pl/archive/oi/30/sko" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi30_3_sko/" target="_self">Om&oacute;wienie (Grzegorz Krawczyk)</a>, <a href="https://youtu.be/Mf2R4DudjS0" target="_blank">Wideo (Franciszek Witt)</a></td>
+</tr>
+<tr>
+<td>Park linowy</td>
+<td>Etap III - dzień drugi</td>
+<td>Bartosz Tarnawski&nbsp;</td>
+<td><a href="../../../../pl/archive/oi/30/par" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi30_3_par/" target="_self">Om&oacute;wienie (Jakub Pniewski)</a>, <a href="https://youtu.be/bPgfZ9KhkAU" target="_blank">Wideo (Franciszek Witt)</a></td>
+</tr>
+<tr>
+<td>Sieć społecznościowa</td>
+<td>Etap III - dzień drugi</td>
+<td>Marek Sokołowski&nbsp;</td>
+<td><a href="../../../../pl/archive/oi/30/sie" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi30_3_sie/" target="_self">Om&oacute;wienie (Michał Szeliga)</a>, <a href="https://youtu.be/CHtefrWy7d0" target="_blank">Wideo (Franciszek Witt)</a></td>
+</tr>
+<tr>
+<td>Tort</td>
+<td>Etap III - dzień drugi</td>
+<td>Marek Sokołowski&nbsp;</td>
+<td><a href="../../../../pl/archive/oi/30/tor" target="_blank">Szkopuł</a></td>
+<td>
+<p><a href="../../../../l/oi30_3_tor/" target="_self">Om&oacute;wienie (Paweł Balawender)</a>, <a href="https://youtu.be/HoHCt5rK5W8" target="_blank">Wideo (Franciszek Witt)</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="contest contest-oi contest-oi-30">
+<h2>XXIX Olimpiada Informatyczna</h2>
+</div>
+<div class="contest contest-oi contest-oi-29">
+<table class="small" border="1">
+<thead> 
+<tr>
+<th class="th-name">Tytuł</th> <th class="th-stage">Etap</th> <th class="th-author">Autor</th> <th class="th-submit">Wyślij</th> <th class="th-solutions">Materiały</th>
+</tr>
+</thead> 
+<tbody>
+<tr>
+<td>Domino<span style="white-space: pre;"> </span></td>
+<td>Etap I</td>
+<td>Karol Pokorski&nbsp;</td>
+<td><a href="../../../../pl/archive/oi/29/dom" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi29_1_dom/" target="_self">Om&oacute;wienie (Tomasz Idziaszek)</a></td>
+</tr>
+<tr>
+<td>Druk</td>
+<td>Etap I</td>
+<td>Jakub Radoszewski, Wojciech Rytter</td>
+<td><a href="../../../../pl/archive/oi/29/dru" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi29_1_dru/" target="_self">Om&oacute;wienie (Tomasz Idziaszek)</a></td>
+</tr>
+<tr>
+<td>Impreza krasnali</td>
+<td>Etap I</td>
+<td>Tomasz Idziaszek</td>
+<td><a href="../../../../pl/archive/oi/29/imp" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi29_1_imp/" target="_self">Om&oacute;wienie (Tomasz Idziaszek)</a></td>
+</tr>
+<tr>
+<td>Montażysta</td>
+<td>Etap I</td>
+<td>Tomasz Idziaszek</td>
+<td><a href="../../../../pl/archive/oi/29/mon" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi29_1_mon/" target="_self">Om&oacute;wienie (Tomasz Idziaszek)</a></td>
+</tr>
+<tr>
+<td>Układanie kart</td>
+<td>Etap I</td>
+<td>Wojciech Rytter</td>
+<td><a href="../../../../pl/archive/oi/29/ukl" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi29_1_ukl/" target="_self">Om&oacute;wienie (Tomasz Idziaszek)</a></td>
+</tr>
+<tr>
+<td>Armia klon&oacute;w</td>
+<td>Etap II - dzień pr&oacute;bny</td>
+<td>Rafał Mińkowski, Bartosz Tarnawski&nbsp;</td>
+<td><a href="../../../../pl/archive/oi/29/arm" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi29_2_arm/" target="_self">Om&oacute;wienie</a>, <a href="https://youtu.be/t95flqKok4E" target="_blank">Wideo</a> (Tomasz Idziaszek)</td>
+</tr>
+<tr>
+<td>Agenci</td>
+<td>Etap II - dzień pierwszy</td>
+<td>Tomasz Nowak&nbsp;</td>
+<td><a href="../../../../pl/archive/oi/29/age" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi29_2_age/" target="_self">Om&oacute;wienie</a>, <a href="https://youtu.be/-CorxZMfhfU" target="_blank">Wideo</a> (Tomasz Idziaszek)</td>
+</tr>
+<tr>
+<td>Liczby względnie pierwsze</td>
+<td>Etap II - dzień pierwszy</td>
+<td>Karol Pokorski&nbsp;</td>
+<td><a href="../../../../pl/archive/oi/29/lic" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi29_2_lic/" target="_self">Om&oacute;wienie</a>, <a href="https://youtu.be/Ya8MnVLMR20" target="_blank">Wideo</a> (Tomasz Idziaszek)</td>
+</tr>
+<tr>
+<td>Bomberman</td>
+<td>Etap II - dzień drugi</td>
+<td>Tomasz Idziaszek</td>
+<td><a href="../../../../pl/archive/oi/29/bom" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi29_2_bom/" target="_self">Om&oacute;wienie</a>, <a href="https://youtu.be/LYvrP4hV-2Y" target="_blank">Wideo</a></td>
+</tr>
+<tr>
+<td>Konkurs tańca towarzyskiego&nbsp;</td>
+<td>Etap II - dzień drugi</td>
+<td>Konrad Majewski&nbsp;</td>
+<td><a href="../../../../pl/archive/oi/29/kon" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi29_2_kon/" target="_self">Om&oacute;wienie</a>, <a href="https://youtu.be/LMZL2GEEZEA" target="_blank">Wideo</a> (Tomasz Idziaszek)</td>
+</tr>
+<tr>
+<td>Impreza krasnali 2</td>
+<td>Etap III - dzień pr&oacute;bny</td>
+<td>Tomasz Idziaszek&nbsp;</td>
+<td><a href="../../../../pl/archive/oi/29/im2" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi29_3_im2/" target="_self">Om&oacute;wienie</a>, <a href="https://youtu.be/2zSDn2Td6I4" target="_blank">Wideo</a></td>
+</tr>
+<tr>
+<td>Zera i jedynki</td>
+<td>Etap III - dzień pr&oacute;bny&nbsp;</td>
+<td>Jakub Radoszewski&nbsp;&nbsp;</td>
+<td><a href="../../../../pl/archive/oi/29/zer" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi29_3_zer/" target="_self">Om&oacute;wienie</a>, <a href="https://youtu.be/2zSDn2Td6I4" target="_blank">Wideo</a> (Tomasz Idziaszek)</td>
+</tr>
+<tr>
+<td>Głosowanie&nbsp;</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Daniel Goc</td>
+<td><a href="../../../../pl/archive/oi/29/glo" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi29_3_glo/" target="_self">Om&oacute;wienie</a>, <a href="https://youtu.be/iJmRCSOBTOg" target="_blank">Wideo</a> (Tomasz Idziaszek)</td>
+</tr>
+<tr>
+<td>Rzeki</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Konrad Paluszek&nbsp;</td>
+<td><a href="../../../../pl/archive/oi/29/rze" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi29_3_rze/" target="_self">Om&oacute;wienie</a>, <a href="https://youtu.be/uonzUCqEuzk" target="_blank">Wideo</a> (Tomasz Idziaszek)</td>
+</tr>
+<tr>
+<td>Wybredny Bajtazar&nbsp;</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Tomasz Idziaszek, Jakub Radoszewski</td>
+<td><a href="../../../../pl/archive/oi/29/wyb" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi29_3_wyb/" target="_self">Om&oacute;wienie</a>, <a href="https://youtu.be/iJmRCSOBTOg" target="_blank">Wideo</a> (Tomasz Idziaszek)</td>
+</tr>
+<tr>
+<td>Meteory</td>
+<td>Etap III - dzień drugi</td>
+<td>Karol Pokorski</td>
+<td><a href="../../../../pl/archive/oi/29/met" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi29_3_met/" target="_self">Om&oacute;wienie</a>, <a href="https://youtu.be/ioylDO0SNUc" target="_blank">Wideo</a> (Tomasz Idziaszek)</td>
+</tr>
+<tr>
+<td>Szablon 2</td>
+<td>Etap III - dzień drugi</td>
+<td>Konrad Paluszek</td>
+<td><a href="../../../../pl/archive/oi/29/sza" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi29_3_sza/" target="_self">Om&oacute;wienie</a>, <a href="https://youtu.be/jU4tbMP2UlQ" target="_blank">Wideo</a> (Tomasz Idziaszek)</td>
+</tr>
+<tr>
+<td>Waga</td>
+<td>Etap III - dzień drugi</td>
+<td>Karol Pokorski</td>
+<td><a href="../../../../pl/archive/oi/29/wag" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi29_3_wag/" target="_self">Om&oacute;wienie</a>, <a href="https://youtu.be/jU4tbMP2UlQ" target="_blank">Wideo</a> (Tomasz Idziaszek)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="contest contest-oi contest-oi-28">
+<h2>XXVIII Olimpiada Informatyczna&nbsp;</h2>
+</div>
+<div class="contest contest-oi contest-oi-28">
+<table class="small" border="1">
+<thead> 
+<tr>
+<th class="th-name">Tytuł</th> <th class="th-stage">Etap</th> <th class="th-author">Autor</th> <th class="th-submit">Wyślij</th> <th class="th-solutions">Materiały</th>
+</tr>
+</thead> 
+<tbody>
+<tr>
+<td>Cukiernia</td>
+<td>Etap I</td>
+<td>Jakub Radoszewski</td>
+<td><a href="../../../../pl/archive/oi/28/cuk" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi28_1_cuk/" target="_self">Om&oacute;wienie</a>, <a href="https://youtu.be/3_4KSEXDo4o?t=30" target="_blank">Wideo</a> (Tomasz Idziaszek)</td>
+</tr>
+<tr>
+<td>Gang Biciak&oacute;w</td>
+<td>Etap I</td>
+<td>Tomasz Idziaszek</td>
+<td><a href="../../../../pl/archive/oi/28/gan" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi28_1_gan/" target="_self">Om&oacute;wienie</a>, <a href="https://youtu.be/HMmO6XWpE5I?t=22" target="_blank">Wideo</a></td>
+</tr>
+<tr>
+<td>Gra platformowa</td>
+<td>Etap I</td>
+<td>Daniel Goc</td>
+<td><a href="../../../../pl/archive/oi/28/gra" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi28_1_gra/" target="_self">Om&oacute;wienie</a>, <a href="https://youtu.be/3_4KSEXDo4o?t=3300" target="_blank">Wideo</a> (Tomasz Idziaszek)</td>
+</tr>
+<tr>
+<td>Licznik długu</td>
+<td>Etap I</td>
+<td>Tomasz Idziaszek</td>
+<td><a href="../../../../pl/archive/oi/28/lic" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi28_1_lic/" target="_self">Om&oacute;wienie</a>, <a href="https://youtu.be/3_4KSEXDo4o?t=2015" target="_blank">Wideo</a> (Tomasz Idziaszek)</td>
+</tr>
+<tr>
+<td>Tablica binarna</td>
+<td>Etap I</td>
+<td>Andrii Orap</td>
+<td><a href="../../../../pl/archive/oi/28/tab" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi28_1_tab/" target="_self">Om&oacute;wienie</a>, <a href="https://youtu.be/3_4KSEXDo4o?t=5143" target="_blank">Wideo</a> (Tomasz Idziaszek)</td>
+</tr>
+<tr>
+<td>Projekt planszy</td>
+<td>Etap II - dzień pr&oacute;bny</td>
+<td>Tomasz Idziaszek</td>
+<td><a href="../../../../pl/archive/oi/28/pro" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi28_2_pro/" target="_self">Om&oacute;wienie (Kamil Szymczak)</a>, <a href="https://youtu.be/l_-vtNoQFyE" target="_blank">Wideo (Tomasz Nowak)</a></td>
+</tr>
+<tr>
+<td>Pakowanie plecaka</td>
+<td>Etap II - dzień pierwszy</td>
+<td>Karol Pokorski</td>
+<td><a href="../../../../pl/archive/oi/28/ple" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi28_2_ple/" target="_self">Om&oacute;wienie</a>, <a href="https://youtu.be/Z2xfBeZqoDo" target="_blank">Wideo</a> (Tomasz Idziaszek)</td>
+</tr>
+<tr>
+<td>Zdjęcia krasnali</td>
+<td>Etap II - dzień pierwszy</td>
+<td>Daniel Goc</td>
+<td><a href="../../../../pl/archive/oi/28/zdj" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi28_2_zdj/" target="_self">Om&oacute;wienie</a>, <a href="https://youtu.be/efeYVv2bwSs" target="_blank">Wideo</a> (Tomasz Idziaszek)</td>
+</tr>
+<tr>
+<td>Plażowicze</td>
+<td>Etap II - dzień drugi</td>
+<td>Tomasz Idziaszek</td>
+<td><a href="../../../../pl/archive/oi/28/pla" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi28_2_pla/" target="_self">Om&oacute;wienie</a>, <a href="https://youtu.be/8neYo9iArGI" target="_blank">Wideo</a></td>
+</tr>
+<tr>
+<td>Szablon Bajtogrodu</td>
+<td>Etap II - dzień drugi</td>
+<td>Jakub Radoszewski</td>
+<td><a href="../../../../pl/archive/oi/28/sza" target="_blank">Szkopuł</a></td>
+<td><a href="https://youtu.be/dLvhk9Marp0" target="_blank">Wideo (Tomasz Idziaszek)</a><br /></td>
+</tr>
+<tr>
+<td>Kolekcjoner Bajtemon&oacute;w 2</td>
+<td>Etap III - dzień pr&oacute;bny</td>
+<td>Konrad Paluszek</td>
+<td><a href="../../../../pl/archive/oi/28/kol" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi28_3_kol/" target="_self">Om&oacute;wienie</a>, <a href="https://youtu.be/A0xGbjLJwPc" target="_blank">Wideo</a> (Tomasz Idziaszek)</td>
+</tr>
+<tr>
+<td>Droga do domu</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Jakub Radoszewski</td>
+<td><a href="../../../../pl/archive/oi/28/dro" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi28_3_dro/" target="_self">Om&oacute;wienie</a>, <a href="https://youtu.be/24PAGyrw2Do" target="_blank">Wideo</a> (Tomasz Idziaszek)</td>
+</tr>
+<tr>
+<td>Les Bit&eacute;rables</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Michał Woźny</td>
+<td><a href="../../../../pl/archive/oi/28/les" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi28_3_les/" target="_self">Om&oacute;wienie</a>, <a href="https://youtu.be/ZvqyvT6Hchw" target="_blank">Wideo</a> (Tomasz Idziaszek)</td>
+</tr>
+<tr>
+<td>Surowa zima</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Tomasz Idziaszek, Adrian Jask&oacute;łka</td>
+<td><a href="../../../../pl/archive/oi/28/sur" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi28_3_sur/" target="_self">Om&oacute;wienie (Adrian Jask&oacute;łka, Tomasz Nowak)</a></td>
+</tr>
+<tr>
+<td>Komunikacja międzyplanetarna</td>
+<td>Etap III - dzień drugi</td>
+<td>Wojciech Nadara</td>
+<td><a href="../../../../pl/archive/oi/28/kom" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi28_3_kom/" target="_self">Om&oacute;wienie</a>, <a href="https://youtu.be/vs4XtOB6OaY" target="_blank">Wideo</a> (Tomasz Idziaszek)</td>
+</tr>
+<tr>
+<td>Nawiasowania</td>
+<td>Etap III - dzień drugi</td>
+<td>Daniel Goc</td>
+<td><a href="../../../../pl/archive/oi/28/naw" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi28_3_naw/" target="_self">Om&oacute;wienie</a>, <a href="https://youtu.be/lT5O1JVZ7Do" target="_blank">Wideo</a> (Tomasz Idziaszek)</td>
+</tr>
+<tr>
+<td>Suma liczb pierwszych</td>
+<td>Etap III - dzień drugi</td>
+<td>Karol Pokorski</td>
+<td><a href="../../../../pl/archive/oi/28/sum" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi28_3_sum/" target="_self">Om&oacute;wienie</a>, <a href="https://youtu.be/5Ik6WCTl3Yc" target="_blank">Wideo</a> (Tomasz Idziaszek)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="contest contest-oi contest-oi-27">
+<h2>XXVII Olimpiada Informatyczna</h2>
+<table class="small" border="1">
+<thead> 
+<tr>
+<th class="th-name">Tytuł</th> <th class="th-stage">Etap</th> <th class="th-author">Autor</th> <th class="th-submit">Wyślij</th> <th class="th-solutions">Materiały</th>
+</tr>
+</thead> 
+<tbody>
+<tr>
+<td>Najmniejsza wsp&oacute;lna wielokrotność</td>
+<td>Etap I</td>
+<td>Karol Pokorski</td>
+<td><a href="../../../../pl/archive/oi/27/nww" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi27_1_nww/" target="_self">Om&oacute;wienie (Jakub Pniewski)</a>, <a href="https://youtu.be/_-rsxrcsNvw" target="_blank">Wideo</a><br /></td>
+</tr>
+<tr>
+<td>Pisarze</td>
+<td>Etap I</td>
+<td>Jan Kanty Milczek</td>
+<td><a href="../../../../pl/archive/oi/27/pis" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi27_1_pis/" target="_self">Om&oacute;wienie</a></td>
+</tr>
+<tr>
+<td>Pomniejszenie</td>
+<td>Etap I</td>
+<td>Jakub Radoszewski</td>
+<td><a href="../../../../pl/archive/oi/27/pom" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi27_1_pom/" target="_self">Om&oacute;wienie</a>, <a href="https://youtu.be/rYvihjkTU34?t=2501" target="_blank">Wideo</a> (Tomasz Idziaszek)<br /></td>
+</tr>
+<tr>
+<td>Przedszkole</td>
+<td>Etap I</td>
+<td>Karol Pokorski</td>
+<td><a href="../../../../pl/archive/oi/27/prz" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi27_1_prz/" target="_self">Om&oacute;wienie (Mateusz Kussowski)</a>, <a href="https://youtu.be/UiuEzw5SqeU" target="_blank">Wideo</a><br /></td>
+</tr>
+<tr>
+<td>Układ scalony</td>
+<td>Etap I</td>
+<td>Wojciech Nadara</td>
+<td><a href="../../../../pl/archive/oi/27/ukl" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi27_1_ukl/" target="_self">Om&oacute;wienie</a>, <a href="https://youtu.be/rYvihjkTU34?t=67" target="_blank">Wideo</a> (Tomasz Idziaszek)<br /></td>
+</tr>
+<tr>
+<td>Wakacje Bajtazara</td>
+<td>Etap II - dzień pr&oacute;bny</td>
+<td>Anadi Agrawal</td>
+<td><a href="../../../../pl/archive/oi/27/wak" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi27_2_wak/" target="_self">Om&oacute;wienie (Mateusz Kussowski)</a>, <a href="https://youtu.be/aOu4wuW3Dzc?t=117" target="_blank">Wideo (Jan Kanty Milczek)</a><br /></td>
+</tr>
+<tr>
+<td>Drzewo czw&oacute;rkowe</td>
+<td>Etap II - dzień pierwszy</td>
+<td>Tomasz Idziaszek</td>
+<td><a href="../../../../pl/archive/oi/27/czw" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi27_2_czw/" target="_self">Om&oacute;wienie (Jakub Koliński)</a>, <a href="https://youtu.be/aOu4wuW3Dzc?t=1602" target="_blank">Wideo (Jan Kanty Milczek)</a><br /></td>
+</tr>
+<tr>
+<td>Wielki Upadek</td>
+<td>Etap II - dzień pierwszy</td>
+<td>Michał Woźny</td>
+<td><a href="../../../../pl/archive/oi/27/wie" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi27_2_wie/" target="_self">Om&oacute;wienie (Jakub Pniewski)</a>, <a href="https://youtu.be/aOu4wuW3Dzc?t=3092" target="_blank">Wideo (Jan Kanty Milczek)</a><br /></td>
+</tr>
+<tr>
+<td>Marudny Bajtazar</td>
+<td>Etap II - dzień drugi</td>
+<td>Jakub Radoszewski</td>
+<td><a href="../../../../pl/archive/oi/27/mar" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi27_2_mar/" target="_self">Om&oacute;wienie (Jakub Pniewski)</a>, <a href="https://youtu.be/aOu4wuW3Dzc?t=3994" target="_blank">Wideo (Jan Kanty Milczek)</a><br /></td>
+</tr>
+<tr>
+<td>Trudny dylemat przedszkolanina</td>
+<td>Etap II - dzień drugi</td>
+<td>Karol Pokorski</td>
+<td><a href="../../../../pl/archive/oi/27/tru" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi27_2_tru/" target="_self">Om&oacute;wienie (Jakub Koliński)</a>, <a href="https://youtu.be/aOu4wuW3Dzc?t=4580" target="_blank">Wideo (Jan Kanty Milczek)</a><br /></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="contest contest-oi contest-oi-26">
+<h2>XXVI Olimpiada Informatyczna</h2>
+<table class="small" border="1">
+<thead> 
+<tr>
+<th class="th-name">Tytuł</th> <th class="th-stage">Etap</th> <th class="th-author">Autor</th> <th class="th-submit">Wyślij</th> <th class="th-solutions">Materiały</th>
+</tr>
+</thead> 
+<tbody>
+<tr>
+<td>Klubowicze 2</td>
+<td>Etap I</td>
+<td>Tomasz Idziaszek</td>
+<td><a href="../../../../pl/archive/oi/26/klu" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../static/attachment/20231220/klu.pdf" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Niedbałość</td>
+<td>Etap I</td>
+<td>Jan Kanty Milczek, Jakub Radoszewski</td>
+<td><a href="../../../../pl/archive/oi/26/nie" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../static/attachment/20231220/nie.pdf" target="_blank">Opracowanie (Jan Kanty Milczek)</a><br /></td>
+</tr>
+<tr>
+<td>Para naszyjnik&oacute;w</td>
+<td>Etap I</td>
+<td>Tomasz Waleń</td>
+<td><a href="../../../../pl/archive/oi/26/par" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../static/attachment/20231220/par.pdf" target="_blank">Opracowanie (Jakub Radoszewski</a><br /></td>
+</tr>
+<tr>
+<td>Podciągi</td>
+<td>Etap I</td>
+<td>Karol Pokorski</td>
+<td><a href="../../../../pl/archive/oi/26/pod" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../static/attachment/20231220/pod.pdf" target="_blank">Opracowanie</a></td>
+</tr>
+<tr>
+<td>Robocik</td>
+<td>Etap I</td>
+<td>Tomasz Idziaszek</td>
+<td><a href="../../../../pl/archive/oi/26/rob" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../static/attachment/20231220/rob.pdf" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Rozliczenia</td>
+<td>Etap II - dzień pr&oacute;bny</td>
+<td>Bartosz Kostka</td>
+<td><a href="../../../../pl/archive/oi/26/roz" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi26_2_roz/" target="_self">Om&oacute;wienie</a>, <a href="https://youtu.be/7EYXTdjC8O4" target="_blank">Wideo</a> (Tomasz Idziaszek)<br /></td>
+</tr>
+<tr>
+<td>Gwiazdy</td>
+<td>Etap II - dzień pierwszy</td>
+<td>Katarzyna Kowalska, Krzysztof Maziarz</td>
+<td><a href="../../../../pl/archive/oi/26/gwi" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi26_2_gwi/" target="_self">Om&oacute;wienie</a>, <a href="https://youtu.be/K7i8Ijb4r1Y" target="_blank">Wideo</a> (Tomasz Idziaszek)<br /></td>
+</tr>
+<tr>
+<td>Kolacje</td>
+<td>Etap II - dzień pierwszy</td>
+<td>Bartosz Kostka</td>
+<td><a href="../../../../pl/archive/oi/26/kol" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi26_2_kol/" target="_self">Om&oacute;wienie</a>, <a href="https://youtu.be/27DLZ3ZCixI" target="_blank">Wideo</a> (Tomasz Idziaszek)<br /></td>
+</tr>
+<tr>
+<td>Przesunięcie cykliczne</td>
+<td>Etap II - dzień drugi</td>
+<td>Marek Sommer</td>
+<td><a href="../../../../pl/archive/oi/26/cyk" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi26_2_cyk/" target="_self">Om&oacute;wienie</a>, <a href="https://youtu.be/wRZPJ3-Ny2U" target="_blank">Wideo</a> (Tomasz Idziaszek)<br /></td>
+</tr>
+<tr>
+<td>Osiedla</td>
+<td>Etap II - dzień drugi</td>
+<td>Bartosz Kostka</td>
+<td><a href="../../../../pl/archive/oi/26/osi" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi26_2_osi/" target="_self">Om&oacute;wienie</a>, <a href="https://youtu.be/FrbtFZpE1rA" target="_blank">Wideo</a> (Tomasz Idziaszek)<br /></td>
+</tr>
+<tr>
+<td>Metro</td>
+<td>Etap III - dzień pr&oacute;bny</td>
+<td>Wojciech Nadara</td>
+<td><a href="../../../../pl/archive/oi/26/met" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi26_3_met/" target="_self">Om&oacute;wienie</a>, <a href="https://youtu.be/5gQG1zB4XK0" target="_blank">Wideo</a> (Tomasz Idziaszek)<br /></td>
+</tr>
+<tr>
+<td>Remont</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Tomasz Kociumaka, Juliusz Straszyński</td>
+<td><a href="../../../../pl/archive/oi/26/rem" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi26_3_rem/" target="_self">Om&oacute;wienie (Jakub Radoszewski)</a>, <a href="https://youtu.be/MZLs1lpBc6o" target="_blank">Wideo (Tomasz Nowak)</a><br /></td>
+</tr>
+<tr>
+<td>Wyścigi</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Michał G&oacute;rniak</td>
+<td><a href="../../../../pl/archive/oi/26/wys" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi26_3_wys/" target="_self">Om&oacute;wienie</a>, <a href="https://youtu.be/_0GY8OwLrVk" target="_blank">Wideo</a> (Tomasz Idziaszek)<br /></td>
+</tr>
+<tr>
+<td>Zjazd obieżyświat&oacute;w</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Bartosz Kostka</td>
+<td><a href="../../../../pl/archive/oi/26/zja" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi26_3_zja/" target="_self">Om&oacute;wienie</a>, <a href="https://youtu.be/AbcXDFLehCs" target="_blank">Wideo</a> (Tomasz Idziaszek)<br /></td>
+</tr>
+<tr>
+<td>Długie podr&oacute;że</td>
+<td>Etap III - dzień drugi</td>
+<td>Kacper Walentynowicz</td>
+<td><a href="../../../../pl/archive/oi/26/dlu" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi26_3_dlu/" target="_self">Om&oacute;wienie (Wiktor Rutecki)</a>, <a href="https://youtu.be/m6NozzRk5Q4" target="_blank">Wideo (Tomasz Nowak)</a><br /></td>
+</tr>
+<tr>
+<td>Gra w dzielniki</td>
+<td>Etap III - dzień drugi</td>
+<td>Karol Pokorski</td>
+<td><a href="../../../../pl/archive/oi/26/gra" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi26_3_gra/" target="_self">Om&oacute;wienie</a>, <a href="https://youtu.be/tEQc1_UjRyE" target="_blank">Wideo</a> (Tomasz Idziaszek)<br /></td>
+</tr>
+<tr>
+<td>Ornitolog</td>
+<td>Etap III - dzień drugi</td>
+<td>Konrad Paluszek</td>
+<td><a href="../../../../pl/archive/oi/26/orn" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi26_3_orn/" target="_self">Om&oacute;wienie</a>, <a href="https://youtu.be/y9IcANLwdXk" target="_blank">Wideo</a> (Tomasz Idziaszek)<br /></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="contest contest-oi contest-oi-25">
+<h2>XXV Olimpiada Informatyczna</h2>
+<table class="small" border="1">
+<thead> 
+<tr>
+<th class="th-name">Tytuł</th> <th class="th-stage">Etap</th> <th class="th-author">Autor</th> <th class="th-submit">Wyślij</th> <th class="th-solutions">Materiały</th>
+</tr>
+</thead> 
+<tbody>
+<tr>
+<td>Pionek</td>
+<td>Etap I</td>
+<td>Jakub Radoszewski</td>
+<td><a href="../../../../pl/archive/oi/25/pio" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi25_1_pio/" target="_self">Om&oacute;wienie</a>, <a href="https://ksiegarnia.pwn.pl/,742983828,p.html" target="_blank">Przygody Bajtazara</a><br /></td>
+</tr>
+<tr>
+<td>Plan metra</td>
+<td>Etap I</td>
+<td>Tomasz Idziaszek</td>
+<td><a href="../../../../pl/archive/oi/25/pla" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi25_1_pla/" target="_self">Om&oacute;wienie (Jakub Pniewski)</a></td>
+</tr>
+<tr>
+<td>Pow&oacute;dź</td>
+<td>Etap I</td>
+<td>Konrad Paluszek</td>
+<td><a href="../../../../pl/archive/oi/25/pow" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi25_1_pow/" target="_self">Om&oacute;wienie (Jakub Koliński)</a></td>
+</tr>
+<tr>
+<td>Prawnicy</td>
+<td>Etap I</td>
+<td>Tomasz Idziaszek</td>
+<td><a href="../../../../pl/archive/oi/25/pra" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi25_1_pra/" target="_self">Om&oacute;wienie (Jakub Koliński)</a></td>
+</tr>
+<tr>
+<td>R&oacute;żnorodność</td>
+<td>Etap I</td>
+<td>Wojciech Rytter</td>
+<td><a href="../../../../pl/archive/oi/25/roz" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi25_1_roz/" target="_self">Om&oacute;wienie (Jakub Koliński)</a></td>
+</tr>
+<tr>
+<td>Przelewy</td>
+<td>Etap II - dzień pr&oacute;bny</td>
+<td>Wojciech Nadara</td>
+<td><a href="../../../../pl/archive/oi/25/prz" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi25_2_prz/" target="_self">Om&oacute;wienie</a>, <a href="https://youtu.be/kipf7jUYKhM" target="_blank">Wideo</a> (Tomasz Idziaszek)<br /></td>
+</tr>
+<tr>
+<td>Drogi rowerowe</td>
+<td>Etap II - dzień pierwszy</td>
+<td>Tomasz Idziaszek</td>
+<td><a href="../../../../pl/archive/oi/25/dro" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi25_2_dro/" target="_self">Om&oacute;wienie</a>, <a href="https://youtu.be/Oc1sTS_f5XA" target="_blank">Wideo</a><br /></td>
+</tr>
+<tr>
+<td>Konduktor</td>
+<td>Etap II - dzień pierwszy</td>
+<td>Tomasz Idziaszek</td>
+<td><a href="../../../../pl/archive/oi/25/kon" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi25_2_kon/" target="_self">Om&oacute;wienie</a>, <a href="https://youtu.be/O2DMfpmznSs" target="_blank">Wideo</a><br /></td>
+</tr>
+<tr>
+<td>Przekaźniki telekomunikacyjne</td>
+<td>Etap II - dzień drugi</td>
+<td>Tomasz Idziaszek</td>
+<td><a href="../../../../pl/archive/oi/25/tel" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi25_2_tel/" target="_self">Om&oacute;wienie (Wiktor Rutecki)</a>, <a href="https://youtu.be/v-ORFSWDM6M" target="_blank">Wideo (Tomasz Nowak)</a><br /></td>
+</tr>
+<tr>
+<td>Tomik poezji</td>
+<td>Etap II - dzień drugi</td>
+<td>Tomasz Idziaszek</td>
+<td><a href="../../../../pl/archive/oi/25/tom" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi25_2_tom/" target="_self">Om&oacute;wienie</a>, <a href="https://youtu.be/zcFA2dUUjFU" target="_blank">Wideo</a><br /></td>
+</tr>
+<tr>
+<td>Dwa pionki</td>
+<td>Etap III - dzień pr&oacute;bny</td>
+<td>Tomasz Idziaszek, Jakub Radoszewski</td>
+<td><a href="../../../../pl/archive/oi/25/dwa" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi25_3_dwa/" target="_self">Om&oacute;wienie</a>, <a href="https://youtu.be/o_HsFRxLWM8?t=21" target="_blank">Wideo</a> (Tomasz Idziaszek)<br /></td>
+</tr>
+<tr>
+<td>Trzy wieże 2</td>
+<td>Etap III - dzień pr&oacute;bny</td>
+<td>Jakub Radoszewski, Jacek Tomasiewicz</td>
+<td><a href="../../../../pl/archive/oi/25/trz" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi25_3_trz/" target="_self">Om&oacute;wienie</a>, <a href="https://youtu.be/o_HsFRxLWM8?t=261" target="_blank">Wideo</a> (Tomasz Idziaszek)<br /></td>
+</tr>
+<tr>
+<td>Liczby kompletne</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Bartosz Kostka</td>
+<td><a href="../../../../pl/archive/oi/25/kom" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi25_3_kom/" target="_self">Om&oacute;wienie</a>, <a href="https://youtu.be/jMqGoBsjTeA" target="_blank">Wideo</a> (Tomasz Idziaszek)<br /></td>
+</tr>
+<tr>
+<td>Ogrodzenie</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Karol Pokorski</td>
+<td><a href="../../../../pl/archive/oi/25/ogr" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi25_3_ogr/" target="_self">Om&oacute;wienie</a>, <a href="https://youtu.be/ysO_r27aNKk" target="_blank">Wideo</a> (Tomasz Idziaszek)<br /></td>
+</tr>
+<tr>
+<td>Turniej tr&oacute;jinformatyczny</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Mateusz Radecki</td>
+<td><a href="../../../../pl/archive/oi/25/tur" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi25_3_tur/" target="_self">Om&oacute;wienie</a>, <a href="https://youtu.be/vOTKf7JyYww" target="_blank">Wideo</a> (Tomasz Idziaszek)<br /></td>
+</tr>
+<tr>
+<td>Dwa długie lizaki</td>
+<td>Etap III - dzień drugi</td>
+<td>Jakub Radoszewski</td>
+<td><a href="../../../../pl/archive/oi/25/ddl" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi25_3_ddl/" target="_self">Om&oacute;wienie</a>, <a href="https://youtu.be/m8ikTXeoq9g" target="_blank">Wideo (Tomasz Nowak)</a><br /></td>
+</tr>
+<tr>
+<td>Taks&oacute;wki</td>
+<td>Etap III - dzień drugi</td>
+<td>Karol Pokorski</td>
+<td><a href="../../../../pl/archive/oi/25/tak" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi25_3_tak/" target="_self">Om&oacute;wienie (Jakub Pniewski)</a>, <a href="https://youtu.be/fYcgmEMFWBQ" target="_blank">Wideo (Tomasz Nowak)</a><br /></td>
+</tr>
+<tr>
+<td>Wielomian</td>
+<td>Etap III - dzień drugi</td>
+<td>Wojciech Rytter</td>
+<td><a href="../../../../pl/archive/oi/25/wie" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../l/oi25_3_wie/" target="_self">Om&oacute;wienie</a>, <a href="https://youtu.be/_T5hmVLqWPY" target="_blank">Wideo</a> (Tomasz Idziaszek)<br /></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="contest contest-oi contest-oi-24">
+<h2>XXIV Olimpiada Informatyczna</h2>
+<table class="small" border="1">
+<thead> 
+<tr>
+<th class="th-name">Tytuł</th> <th class="th-stage">Etap</th> <th class="th-author">Autor</th> <th class="th-submit">Wyślij</th> <th class="th-solutions">Materiały</th>
+</tr>
+</thead> 
+<tbody>
+<tr>
+<td>Flappy Bird</td>
+<td>Etap I</td>
+<td>Tomasz Idziaszek</td>
+<td><a href="../../../../pl/archive/oi/24/fla" target="_blank">Szkopuł</a></td>
+<td><a href="https://youtu.be/UuaCCOJZP8E" target="_blank">Wideo (Jakub Radoszewski)</a><br /></td>
+</tr>
+<tr>
+<td>Podzielność</td>
+<td>Etap I</td>
+<td>Bartosz Kostka</td>
+<td><a href="../../../../pl/archive/oi/24/pod" target="_blank">Szkopuł</a></td>
+<td><a href="https://youtu.be/irMNp0kfI_I" target="_blank">Wideo (Jakub Radoszewski)</a><br /></td>
+</tr>
+<tr>
+<td>Reprezentacje r&oacute;żnicowe</td>
+<td>Etap I</td>
+<td>Wojciech Rytter</td>
+<td><a href="../../../../pl/archive/oi/24/rep" target="_blank">Szkopuł</a></td>
+<td><a href="https://youtu.be/nbCsXKvinzU" target="_blank">Wideo (Jakub Radoszewski)</a><br /></td>
+</tr>
+<tr>
+<td>Sabotaż</td>
+<td>Etap I</td>
+<td>Adam Polak</td>
+<td><a href="../../../../pl/archive/oi/24/sab" target="_blank">Szkopuł</a></td>
+<td><a href="https://youtu.be/XRcuAbhSrck" target="_blank">Wideo (Jakub Radoszewski)</a><br /></td>
+</tr>
+<tr>
+<td>Turysta</td>
+<td>Etap I</td>
+<td>Wojciech Nadara</td>
+<td><a href="../../../../pl/archive/oi/24/tur" target="_blank">Szkopuł</a></td>
+<td><a href="https://youtu.be/w671qVdZ7Wc" target="_blank">Wideo (Jakub Radoszewski)</a><br /></td>
+</tr>
+<tr>
+<td>Zawody sportowe</td>
+<td>Etap II - dzień pr&oacute;bny</td>
+<td>Adam Polak</td>
+<td><a href="../../../../pl/archive/oi/24/zaw" target="_blank">Szkopuł</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Strajki</td>
+<td>Etap II - dzień pierwszy</td>
+<td>Jakub Radoszewski</td>
+<td><a href="../../../../pl/archive/oi/24/str" target="_blank">Szkopuł</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Suma cyfr</td>
+<td>Etap II - dzień pierwszy</td>
+<td>Karol Pokorski</td>
+<td><a href="../../../../pl/archive/oi/24/sum" target="_blank">Szkopuł</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Kontenery</td>
+<td>Etap II - dzień drugi</td>
+<td>Tomasz Idziaszek</td>
+<td><a href="../../../../pl/archive/oi/24/kon" target="_blank">Szkopuł</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Zamek</td>
+<td>Etap II - dzień drugi</td>
+<td>Tomasz Idziaszek</td>
+<td><a href="../../../../pl/archive/oi/24/zam" target="_blank">Szkopuł</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Dostawca pizzy</td>
+<td>Etap III - dzień pr&oacute;bny</td>
+<td>Krzysztof Diks, Wojciech Rytter</td>
+<td><a href="../../../../pl/archive/oi/24/piz" target="_blank">Szkopuł</a></td>
+<td><a href="https://ksiegarnia.pwn.pl/,742983828,p.html" target="_blank">Przygody Bajtazara<br />(Jakub Łącki)</a><br /></td>
+</tr>
+<tr>
+<td>Midas</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Piotr Chrząstowski</td>
+<td><a href="../../../../pl/archive/oi/24/mid" target="_blank">Szkopuł</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Oceny</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Mateusz Radecki</td>
+<td><a href="../../../../pl/archive/oi/24/oce" target="_blank">Szkopuł</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Zapiekanki</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Tomasz Idziaszek</td>
+<td><a href="../../../../pl/archive/oi/24/zap" target="_blank">Szkopuł</a></td>
+<td><a href="https://ksiegarnia.pwn.pl/,742983828,p.html" target="_blank">Przygody Bajtazara</a><br /></td>
+</tr>
+<tr>
+<td>Kucharz</td>
+<td>Etap III - dzień drugi</td>
+<td>Mateusz Radecki</td>
+<td><a href="../../../../pl/archive/oi/24/kuc" target="_blank">Szkopuł</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Rozdroża parzystości</td>
+<td>Etap III - dzień drugi</td>
+<td>Wojciech Nadara</td>
+<td><a href="../../../../pl/archive/oi/24/roz" target="_blank">Szkopuł</a></td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="contest contest-oi contest-oi-23">
+<h2>XXIII Olimpiada Informatyczna</h2>
+<table class="small" border="1">
+<thead> 
+<tr>
+<th class="th-name">Tytuł</th> <th class="th-stage">Etap</th> <th class="th-author">Autor</th> <th class="th-submit">Wyślij</th> <th class="th-solutions">Materiały</th>
+</tr>
+</thead> 
+<tbody>
+<tr>
+<td>Hydrorozgrywka</td>
+<td>Etap I</td>
+<td>Michał Włodarczyk</td>
+<td><a href="../../../../pl/archive/oi/23/hyd" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../static/attachment/20171006/oi23.pdf#page=63" target="_blank">Opracowanie</a><br /> <a href="https://youtu.be/WEcPz_5Vl1M" target="_blank">Wideo (Michał Włodarczyk)</a><br /></td>
+</tr>
+<tr>
+<td>Korale</td>
+<td>Etap I</td>
+<td>Karol Pokorski</td>
+<td><a href="../../../../pl/archive/oi/23/kor" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../static/attachment/20171006/oi23.pdf#page=75" target="_blank">Opracowanie</a><br /> <a href="https://youtu.be/OmvyBblVynE" target="_blank">Wideo (Karol Pokorski)</a><br /></td>
+</tr>
+<tr>
+<td>Nadajniki</td>
+<td>Etap I</td>
+<td>Jacek Tomasiewicz</td>
+<td><a href="../../../../pl/archive/oi/23/nad" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../static/attachment/20171006/oi23.pdf#page=83" target="_blank">Opracowanie (Krzysztof Kiljan)</a><br /> <a href="https://youtu.be/R1C0sSrOucM" target="_blank">Wideo (Kamil Dębowski)</a><br /></td>
+</tr>
+<tr>
+<td>Nim z utrudnieniem</td>
+<td>Etap I</td>
+<td>Marek Sokołowski</td>
+<td><a href="../../../../pl/archive/oi/23/nim" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../static/attachment/20171006/oi23.pdf#page=93" target="_blank">Opracowanie</a><br /> <a href="https://youtu.be/i6PrPpLbZiI" target="_blank">Wideo (Marek Sokołowski)</a><br /></td>
+</tr>
+<tr>
+<td>Park wodny</td>
+<td>Etap I</td>
+<td>Jacek Tomasiewicz</td>
+<td><a href="../../../../pl/archive/oi/23/par" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../static/attachment/20171006/oi23.pdf#page=101" target="_blank">Opracowanie</a><br /> <a href="https://youtu.be/MuiHdwQRemA" target="_blank">Wideo (Jacek Tomasiewicz)</a><br /></td>
+</tr>
+<tr>
+<td>Świąteczny łańcuch</td>
+<td>Etap II - dzień pr&oacute;bny</td>
+<td>Jakub Radoszewski</td>
+<td><a href="../../../../pl/archive/oi/23/swi" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../static/attachment/20171006/oi23.pdf#page=107" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Drogi zmiennokierunkowe</td>
+<td>Etap II - dzień pierwszy</td>
+<td>Marek Cygan</td>
+<td><a href="../../../../pl/archive/oi/23/dro" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../static/attachment/20171006/oi23.pdf#page=113" target="_blank">Opracowanie</a><br /> <a href="https://ksiegarnia.pwn.pl/,742983828,p.html" target="_blank">Przygody Bajtazara</a><br /></td>
+</tr>
+<tr>
+<td>Zająknięcia</td>
+<td>Etap II - dzień pierwszy</td>
+<td>Tomasz Syposz</td>
+<td><a href="../../../../pl/archive/oi/23/zaj" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../static/attachment/20171006/oi23.pdf#page=117" target="_blank">Opracowanie (Jakub Radoszewski)</a><br /> <a href="https://ksiegarnia.pwn.pl/,742983828,p.html" target="_blank">Przygody Bajtazara</a><br /></td>
+</tr>
+<tr>
+<td>Arkanoid</td>
+<td>Etap II - dzień drugi</td>
+<td>Tomasz Idziaszek</td>
+<td><a href="../../../../pl/archive/oi/23/ark" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../static/attachment/20171006/oi23.pdf#page=123" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Wcale nie Nim</td>
+<td>Etap II - dzień drugi</td>
+<td>Tomasz Idziaszek</td>
+<td><a href="../../../../pl/archive/oi/23/wca" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../static/attachment/20171006/oi23.pdf#page=141" target="_blank">Opracowanie<br />(Tomasz Idziaszek, Paweł Parys)</a><br /></td>
+</tr>
+<tr>
+<td>R&oacute;wnoważne programy</td>
+<td>Etap III - dzień pr&oacute;bny</td>
+<td>Michał Włodarczyk</td>
+<td><a href="../../../../pl/archive/oi/23/row" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../static/attachment/20171006/oi23.pdf#page=157" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Posłaniec</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Wojciech Nadara</td>
+<td><a href="../../../../pl/archive/oi/23/pos" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../static/attachment/20171006/oi23.pdf#page=163" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Pracowity Jaś</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Wojciech Nadara</td>
+<td><a href="../../../../pl/archive/oi/23/pra" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../static/attachment/20171006/oi23.pdf#page=169" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Żywopłot</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Tomasz Idziaszek</td>
+<td><a href="../../../../pl/archive/oi/23/zyw" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../static/attachment/20171006/oi23.pdf#page=175" target="_blank">Opracowanie (Juliusz Straszyński)</a><br /></td>
+</tr>
+<tr>
+<td>Klubowicze</td>
+<td>Etap III - dzień drugi</td>
+<td>Wojciech Rytter</td>
+<td><a href="../../../../pl/archive/oi/23/klu" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../static/attachment/20171006/oi23.pdf#page=181" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Niebanalne podr&oacute;że</td>
+<td>Etap III - dzień drugi</td>
+<td>Wojciech Nadara</td>
+<td><a href="../../../../pl/archive/oi/23/nie" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../static/attachment/20171006/oi23.pdf#page=187" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Parada</td>
+<td>Etap III - dzień drugi</td>
+<td>Jacek Tomasiewicz</td>
+<td><a href="../../../../pl/archive/oi/23/prd" target="_blank">Szkopuł</a></td>
+<td><a href="../../../../static/attachment/20171006/oi23.pdf#page=195" target="_blank">Opracowanie</a><br /></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="contest contest-oi contest-oi-22">
+<h2>XXII Olimpiada Informatyczna</h2>
+<table class="small" border="1">
+<thead> 
+<tr>
+<th class="th-name">Tytuł</th> <th class="th-stage">Etap</th> <th class="th-author">Autor</th> <th class="th-submit">Wyślij</th> <th class="th-solutions">Materiały</th>
+</tr>
+</thead> 
+<tbody>
+<tr>
+<td>Czarnoksiężnicy okrągłego stołu</td>
+<td>Etap I</td>
+<td>Wojciech Rytter</td>
+<td><a href="../../../../pl/archive/oi/22/cza" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20160825/oi22.pdf#page=63" target="_blank">Opracowanie</a><br /> <a href="https://youtu.be/NyPx51adAxE" target="_blank">Wideo (Jan Kanty Milczek)</a><br /></td>
+</tr>
+<tr>
+<td>Kinoman</td>
+<td>Etap I</td>
+<td>Tomasz Idziaszek</td>
+<td><a href="../../../../pl/archive/oi/22/kin" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20160825/oi22.pdf#page=67" target="_blank">Opracowanie</a><br /> <a href="https://youtu.be/dGBekiTMxq8" target="_blank">Wideo (Tomasz Idziaszek)</a><br /></td>
+</tr>
+<tr>
+<td>Kwadraty</td>
+<td>Etap I</td>
+<td>Wojciech Rytter</td>
+<td><a href="../../../../pl/archive/oi/22/kwa" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20160825/oi22.pdf#page=71" target="_blank">Opracowanie</a><br /> <a href="https://youtu.be/6-jNhePDmRU" target="_blank">Wideo (Jan Kanty Milczek)</a><br /></td>
+</tr>
+<tr>
+<td>Łasuchy</td>
+<td>Etap I</td>
+<td>Michał Włodarczyk</td>
+<td><a href="../../../../pl/archive/oi/22/las" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20160825/oi22.pdf#page=75" target="_blank">Opracowanie</a><br /> <a href="https://youtu.be/ggappyNuUKw" target="_blank">Wideo (Michał Włodarczyk)</a><br /></td>
+</tr>
+<tr>
+<td>Pieczęć</td>
+<td>Etap I</td>
+<td>Jakub Łącki</td>
+<td><a href="../../../../pl/archive/oi/22/pie" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20160825/oi22.pdf#page=83" target="_blank">Opracowanie</a><br /> <a href="https://youtu.be/0P6MA1RfukE" target="_blank">Wideo (Jakub Łącki)</a><br /></td>
+</tr>
+<tr>
+<td>Logistyka</td>
+<td>Etap II - dzień pr&oacute;bny</td>
+<td>Michał Włodarczyk</td>
+<td><a href="../../../../pl/archive/oi/22/log" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20160825/oi22.pdf#page=91" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Podział naszyjnika</td>
+<td>Etap II - dzień pierwszy</td>
+<td>Jacek Tomasiewicz</td>
+<td><a href="../../../../pl/archive/oi/22/pod" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20160825/oi22.pdf#page=97" target="_blank">Opracowanie (Jakub Radoszewski)</a><br /></td>
+</tr>
+<tr>
+<td>Pustynia</td>
+<td>Etap II - dzień pierwszy</td>
+<td>Adam Karczmarz</td>
+<td><a href="../../../../pl/archive/oi/22/pus" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20160825/oi22.pdf#page=103" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Kurs szybkiego czytania</td>
+<td>Etap II - dzień drugi</td>
+<td>Wojciech Rytter</td>
+<td><a href="../../../../pl/archive/oi/22/kur" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20160825/oi22.pdf#page=111" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Trzy wieże</td>
+<td>Etap II - dzień drugi</td>
+<td>Jacek Tomasiewicz</td>
+<td><a href="../../../../pl/archive/oi/22/trz" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20160825/oi22.pdf#page=117" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Odwiedziny</td>
+<td>Etap III - dzień pr&oacute;bny</td>
+<td>Wojciech Nadara</td>
+<td><a href="../../../../pl/archive/oi/22/odw" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20160825/oi22.pdf#page=125" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Myjnie</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Michał Włodarczyk</td>
+<td><a href="../../../../pl/archive/oi/22/myj" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20160825/oi22.pdf#page=133" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Tablice kierunkowe</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Wojciech Nadara</td>
+<td><a href="../../../../pl/archive/oi/22/tab" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20160825/oi22.pdf#page=139" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Wilcze doły</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Jacek Tomasiewicz</td>
+<td><a href="../../../../pl/archive/oi/22/wil" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20160825/oi22.pdf#page=145" target="_blank">Opracowanie</a><br /> <a href="https://ksiegarnia.pwn.pl/,742983828,p.html" target="_blank">Przygody Bajtazara</a><br /></td>
+</tr>
+<tr>
+<td>Kolekcjoner Bajtemon&oacute;w</td>
+<td>Etap III - dzień drugi</td>
+<td>Marek Sokołowski</td>
+<td><a href="../../../../pl/archive/oi/22/kol" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20160825/oi22.pdf#page=151" target="_blank">Opracowanie</a><br /> <a href="https://ksiegarnia.pwn.pl/,742983828,p.html" target="_blank">Przygody Bajtazara</a><br /></td>
+</tr>
+<tr>
+<td>Modernizacja autostrady</td>
+<td>Etap III - dzień drugi</td>
+<td>Tomasz Idziaszek</td>
+<td><a href="../../../../pl/archive/oi/22/mod" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20160825/oi22.pdf#page=157" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Wycieczki</td>
+<td>Etap III - dzień drugi</td>
+<td>Karol Pokorski</td>
+<td><a href="../../../../pl/archive/oi/22/wyc" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20160825/oi22.pdf#page=163" target="_blank">Opracowanie</a><br /></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="contest contest-oi contest-oi-21">
+<h2>XXI Olimpiada Informatyczna</h2>
+<table class="small" border="1">
+<thead> 
+<tr>
+<th class="th-name">Tytuł</th> <th class="th-stage">Etap</th> <th class="th-author">Autor</th> <th class="th-submit">Wyślij</th> <th class="th-solutions">Materiały</th>
+</tr>
+</thead> 
+<tbody>
+<tr>
+<td>Bar sałatkowy</td>
+<td>Etap I</td>
+<td>Jacek Tomasiewicz</td>
+<td><a href="../../../../pl/archive/oi/21/bar" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20151031/oi21.pdf#page=67" target="_blank">Opracowanie (Bartosz Tarnawski)</a><br /> <a href="https://youtu.be/iOjJq_M47rU" target="_blank">Wideo (Bartosz Tarnawski)</a><br /></td>
+</tr>
+<tr>
+<td>Hotele</td>
+<td>Etap I</td>
+<td>Jacek Tomasiewicz</td>
+<td><a href="../../../../pl/archive/oi/21/hot" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20151031/oi21.pdf#page=75" target="_blank">Opracowanie (Bartosz Tarnawski)</a><br /> <a href="https://youtu.be/guUPR-RUUYg" target="_blank">Wideo (Bartosz Tarnawski)</a><br /></td>
+</tr>
+<tr>
+<td>Klocki</td>
+<td>Etap I</td>
+<td>Wojciech Rytter, Bartosz Szreder</td>
+<td><a href="../../../../pl/archive/oi/21/klo" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20151031/oi21.pdf#page=83" target="_blank">Opracowanie</a><br /> <a href="https://youtu.be/0ceSpggW7tg" target="_blank">Wideo (Bartosz Szreder)</a><br /></td>
+</tr>
+<tr>
+<td>Kurierzy</td>
+<td>Etap I</td>
+<td>Jacek Tomasiewicz</td>
+<td><a href="../../../../pl/archive/oi/21/kur" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20151031/oi21.pdf#page=87" target="_blank">Opracowanie</a><br /> <a href="https://ksiegarnia.pwn.pl/,742983828,p.html" target="_blank">Przygody Bajtazara<br />(Jacek Tomasiewicz, Tomasz Idziaszek)</a><br /> <a href="https://youtu.be/OoRh1R7_lWo" target="_blank">Wideo (Jacek Tomasiewicz)</a><br /></td>
+</tr>
+<tr>
+<td>Wąż</td>
+<td>Etap I</td>
+<td>Jakub Radoszewski</td>
+<td><a href="../../../../pl/archive/oi/21/waz" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20151031/oi21.pdf#page=93" target="_blank">Opracowanie</a><br /> <a href="https://youtu.be/gckZWpzLOgo" target="_blank">Wideo (Jakub Radoszewski)</a><br /></td>
+</tr>
+<tr>
+<td>Karty</td>
+<td>Etap II - dzień pr&oacute;bny</td>
+<td>Adam Polak</td>
+<td><a href="../../../../pl/archive/oi/21/kar" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20151031/oi21.pdf#page=105" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Przestępcy</td>
+<td>Etap II - dzień pierwszy</td>
+<td>Paweł Parys</td>
+<td><a href="../../../../pl/archive/oi/21/prz" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20151031/oi21.pdf#page=111" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Superkomputer</td>
+<td>Etap II - dzień pierwszy</td>
+<td>Michał Włodarczyk</td>
+<td><a href="../../../../pl/archive/oi/21/sup" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20151031/oi21.pdf#page=117" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Ptaszek</td>
+<td>Etap II - dzień drugi</td>
+<td>Jacek Tomasiewicz</td>
+<td><a href="../../../../pl/archive/oi/21/pta" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20151031/oi21.pdf#page=127" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Rajd</td>
+<td>Etap II - dzień drugi</td>
+<td>Bartosz Tarnawski</td>
+<td><a href="../../../../pl/archive/oi/21/raj" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20151031/oi21.pdf#page=131" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>FarmerCraft</td>
+<td>Etap III - dzień pr&oacute;bny</td>
+<td>Jacek Tomasiewicz</td>
+<td><a href="../../../../pl/archive/oi/21/far" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20151031/oi21.pdf#page=141" target="_blank">Opracowanie (Marek Sommer)</a><br /></td>
+</tr>
+<tr>
+<td>Dookoła świata</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Jan Kanty Milczek, Jakub Pachocki</td>
+<td><a href="../../../../pl/archive/oi/21/doo" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20151031/oi21.pdf#page=147" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Mrowisko</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Jacek Tomasiewicz</td>
+<td><a href="../../../../pl/archive/oi/21/mro" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20151031/oi21.pdf#page=151" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Turystyka</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Marcin Pilipczuk</td>
+<td><a href="../../../../pl/archive/oi/21/tur" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20151031/oi21.pdf#page=157" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Lampy słoneczne</td>
+<td>Etap III - dzień drugi</td>
+<td>Wojciech Nadara</td>
+<td><a href="../../../../pl/archive/oi/21/lam" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20151031/oi21.pdf#page=167" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Panele słoneczne</td>
+<td>Etap III - dzień drugi</td>
+<td>Bartosz Tarnawski</td>
+<td><a href="../../../../pl/archive/oi/21/pan" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20151031/oi21.pdf#page=175" target="_blank">Opracowanie</a><br /> <a href="https://ksiegarnia.pwn.pl/,742983828,p.html" target="_blank">Przygody Bajtazara</a><br /></td>
+</tr>
+<tr>
+<td>Załadunek</td>
+<td>Etap III - dzień drugi</td>
+<td>Michał Włodarczyk</td>
+<td><a href="../../../../pl/archive/oi/21/zal" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20151031/oi21.pdf#page=179" target="_blank">Opracowanie</a><br /></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="contest contest-oi contest-oi-20">
+<h2>XX Olimpiada Informatyczna</h2>
+<table class="small" border="1">
+<thead> 
+<tr>
+<th class="th-name">Tytuł</th> <th class="th-stage">Etap</th> <th class="th-author">Autor</th> <th class="th-submit">Wyślij</th> <th class="th-solutions">Materiały</th>
+</tr>
+</thead> 
+<tbody>
+<tr>
+<td>Cennik</td>
+<td>Etap I</td>
+<td>Jakub Radoszewski</td>
+<td><a href="../../../../pl/archive/oi/20/cen" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20140306/oi20.pdf#page=57" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Gobeliny</td>
+<td>Etap I</td>
+<td>Jakub Wojtaszczyk</td>
+<td><a href="../../../../pl/archive/oi/20/gob" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20140306/oi20.pdf#page=63" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Multidrink</td>
+<td>Etap I</td>
+<td>Jakub Radoszewski, Wojciech Rytter</td>
+<td><a href="../../../../pl/archive/oi/20/mul" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20140306/oi20.pdf#page=71" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Taks&oacute;wki</td>
+<td>Etap I</td>
+<td>Krzysztof Diks, Wojciech Rytter</td>
+<td><a href="../../../../pl/archive/oi/20/tak" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20140306/oi20.pdf#page=79" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Usuwanka</td>
+<td>Etap I</td>
+<td>Jakub Pachocki, Wojciech Rytter</td>
+<td><a href="../../../../pl/archive/oi/20/usu" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20140306/oi20.pdf#page=83" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Spacer</td>
+<td>Etap II - dzień pr&oacute;bny</td>
+<td>Wojciech Rytter</td>
+<td><a href="../../../../pl/archive/oi/20/spa" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20140306/oi20.pdf#page=89" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Inspektor</td>
+<td>Etap II - dzień pierwszy</td>
+<td>Jakub Wojtaszczyk</td>
+<td><a href="../../../../pl/archive/oi/20/ins" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20140306/oi20.pdf#page=93" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Łuk triumfalny</td>
+<td>Etap II - dzień pierwszy</td>
+<td>Jacek Tomasiewicz</td>
+<td><a href="../../../../pl/archive/oi/20/luk" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20140306/oi20.pdf#page=101" target="_blank">Opracowanie</a><br /> <a href="https://ksiegarnia.pwn.pl/,742983828,p.html" target="_blank">Przygody Bajtazara</a><br /></td>
+</tr>
+<tr>
+<td>Konewka</td>
+<td>Etap II - dzień drugi</td>
+<td>Bartłomiej Dudek</td>
+<td><a href="../../../../pl/archive/oi/20/kon" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20140306/oi20.pdf#page=107" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Morskie opowieści</td>
+<td>Etap II - dzień drugi</td>
+<td>Wiktor Kuropatwa</td>
+<td><a href="../../../../pl/archive/oi/20/mor" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20140306/oi20.pdf#page=115" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Gra Tower Defense</td>
+<td>Etap III - dzień pr&oacute;bny</td>
+<td>Marcin Pilipczuk</td>
+<td><a href="../../../../pl/archive/oi/20/gra" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20140306/oi20.pdf#page=123" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Bajtokomputer</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Jacek Tomasiewicz</td>
+<td><a href="../../../../pl/archive/oi/20/baj" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20140306/oi20.pdf#page=131" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Labirynt</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Tomasz Idziaszek</td>
+<td><a href="../../../../pl/archive/oi/20/lab" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20140306/oi20.pdf#page=137" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Łańcuch kolorowy</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Tomasz Waleń</td>
+<td><a href="../../../../pl/archive/oi/20/lan" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20140306/oi20.pdf#page=143" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Gdzie jest jedynka?</td>
+<td>Etap III - dzień drugi</td>
+<td>Jakub Pachocki</td>
+<td><a href="../../../../pl/archive/oi/20/gdz" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20140306/oi20.pdf#page=147" target="_blank">Opracowanie<br />(Adam Polak, Jakub Radoszewski)</a><br /> <a href="https://ksiegarnia.pwn.pl/,742983828,p.html" target="_blank">Przygody Bajtazara</a><br /></td>
+</tr>
+<tr>
+<td>Laser</td>
+<td>Etap III - dzień drugi</td>
+<td>Karol Pokorski</td>
+<td><a href="../../../../pl/archive/oi/20/las" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20140306/oi20.pdf#page=153" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Polaryzacja</td>
+<td>Etap III - dzień drugi</td>
+<td>Jan Kanty Milczek</td>
+<td><a href="../../../../pl/archive/oi/20/pol" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20140306/oi20.pdf#page=159" target="_blank">Opracowanie<br />(Jan Kanty Milczek, Bartosz Tarnawski)</a><br /></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="contest contest-oi contest-oi-19">
+<h2>XIX Olimpiada Informatyczna</h2>
+<table class="small" border="1">
+<thead> 
+<tr>
+<th class="th-name">Tytuł</th> <th class="th-stage">Etap</th> <th class="th-author">Autor</th> <th class="th-submit">Wyślij</th> <th class="th-solutions">Materiały</th>
+</tr>
+</thead> 
+<tbody>
+<tr>
+<td>Festyn</td>
+<td>Etap I</td>
+<td>Marian M. Kędzierski</td>
+<td><a href="../../../../pl/archive/oi/19/fes" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20121205/oi19.pdf#page=57" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Litery</td>
+<td>Etap I</td>
+<td>Marian M. Kędzierski</td>
+<td><a href="../../../../pl/archive/oi/19/lit" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20121205/oi19.pdf#page=65" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Odległość</td>
+<td>Etap I</td>
+<td>Wojciech Śmietanka</td>
+<td><a href="../../../../pl/archive/oi/19/odl" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20121205/oi19.pdf#page=73" target="_blank">Opracowanie<br />(Tomasz Idziaszek, Wojciech Śmietanka)</a><br /> <a href="https://ksiegarnia.pwn.pl/,742983828,p.html" target="_blank">Przygody Bajtazara</a><br /></td>
+</tr>
+<tr>
+<td>Randka</td>
+<td>Etap I</td>
+<td>Alan Kutniewski</td>
+<td><a href="../../../../pl/archive/oi/19/ran" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20121205/oi19.pdf#page=79" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Studnia</td>
+<td>Etap I</td>
+<td>Michał Włodarczyk</td>
+<td><a href="../../../../pl/archive/oi/19/stu" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20121205/oi19.pdf#page=85" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Tour de Bajtocja</td>
+<td>Etap II - dzień pr&oacute;bny</td>
+<td>Marek Cygan</td>
+<td><a href="../../../../pl/archive/oi/19/tou" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20121205/oi19.pdf#page=95" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Bony</td>
+<td>Etap II - dzień pierwszy</td>
+<td>Jakub Pachocki</td>
+<td><a href="../../../../pl/archive/oi/19/bon" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20121205/oi19.pdf#page=101" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Szatnia</td>
+<td>Etap II - dzień pierwszy</td>
+<td>Jan Kanty Milczek</td>
+<td><a href="../../../../pl/archive/oi/19/sza" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20121205/oi19.pdf#page=105" target="_blank">Opracowanie</a><br /> <a href="https://ksiegarnia.pwn.pl/,742983828,p.html" target="_blank">Przygody Bajtazara</a><br /></td>
+</tr>
+<tr>
+<td>Okropny wiersz</td>
+<td>Etap II - dzień drugi</td>
+<td>Igor Adamski</td>
+<td><a href="../../../../pl/archive/oi/19/okr" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20121205/oi19.pdf#page=111" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Rozkład Fibonacciego</td>
+<td>Etap II - dzień drugi</td>
+<td>Karol Pokorski</td>
+<td><a href="../../../../pl/archive/oi/19/roz" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20121205/oi19.pdf#page=117" target="_blank">Opracowanie</a><br /> <a href="https://ksiegarnia.pwn.pl/,742983828,p.html" target="_blank">Przygody Bajtazara</a><br /></td>
+</tr>
+<tr>
+<td>Squarki</td>
+<td>Etap III - dzień pr&oacute;bny</td>
+<td>Jakub Wojtaszczyk</td>
+<td><a href="../../../../pl/archive/oi/19/squ" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20121205/oi19.pdf#page=127" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Licytacja</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Karol Pokorski</td>
+<td><a href="../../../../pl/archive/oi/19/lic" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20121205/oi19.pdf#page=133" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Pensje</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Adam Karczmarz</td>
+<td><a href="../../../../pl/archive/oi/19/pen" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20121205/oi19.pdf#page=141" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Wyr&oacute;wnywanie terenu</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Jakub Pachocki</td>
+<td><a href="../../../../pl/archive/oi/19/wyr" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20121205/oi19.pdf#page=147" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Bezpieczeństwo minimalistyczne</td>
+<td>Etap III - dzień drugi</td>
+<td>Marek Cygan, Wojciech Rytter</td>
+<td><a href="../../../../pl/archive/oi/19/bez" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20121205/oi19.pdf#page=151" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Hurtownia</td>
+<td>Etap III - dzień drugi</td>
+<td>Tomasz Idziaszek</td>
+<td><a href="../../../../pl/archive/oi/19/hur" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20121205/oi19.pdf#page=157" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Prefiksufiks</td>
+<td>Etap III - dzień drugi</td>
+<td>Jacek Tomasiewicz</td>
+<td><a href="../../../../pl/archive/oi/19/pre" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20121205/oi19.pdf#page=165" target="_blank">Opracowanie (Jakub Radoszewski)</a><br /></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="contest contest-oi contest-oi-18">
+<h2>XVIII Olimpiada Informatyczna</h2>
+<table class="small" border="1">
+<thead> 
+<tr>
+<th class="th-name">Tytuł</th> <th class="th-stage">Etap</th> <th class="th-author">Autor</th> <th class="th-submit">Wyślij</th> <th class="th-solutions">Materiały</th>
+</tr>
+</thead> 
+<tbody>
+<tr>
+<td>Konspiracja</td>
+<td>Etap I</td>
+<td>Jakub Wojtaszczyk</td>
+<td><a href="../../../../pl/archive/oi/18/kon" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20120215/oi18.pdf#page=53" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Lizak</td>
+<td>Etap I</td>
+<td>Jakub Pachocki</td>
+<td><a href="../../../../pl/archive/oi/18/liz" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20120215/oi18.pdf#page=67" target="_blank">Opracowanie</a><br /> <a href="https://ksiegarnia.pwn.pl/,742983828,p.html" target="_blank">Przygody Bajtazara</a><br /></td>
+</tr>
+<tr>
+<td>Piorunochron</td>
+<td>Etap I</td>
+<td>Piotr Niedźwiedź</td>
+<td><a href="../../../../pl/archive/oi/18/pio" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20120215/oi18.pdf#page=73" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Przekładanka</td>
+<td>Etap I</td>
+<td>Krzysztof Diks, Wojciech Rytter</td>
+<td><a href="../../../../pl/archive/oi/18/prz" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20120215/oi18.pdf#page=81" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Wykres</td>
+<td>Etap I</td>
+<td>Jakub Pawlewicz</td>
+<td><a href="../../../../pl/archive/oi/18/wyk" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20120215/oi18.pdf#page=85" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Sejf</td>
+<td>Etap II - dzień pr&oacute;bny</td>
+<td>Marian M. Kędzierski</td>
+<td><a href="../../../../pl/archive/oi/18/sej" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20120215/oi18.pdf#page=97" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>R&oacute;żnica</td>
+<td>Etap II - dzień pierwszy</td>
+<td>Jacek Tomasiewicz</td>
+<td><a href="../../../../pl/archive/oi/18/roz" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20120215/oi18.pdf#page=109" target="_blank">Opracowanie</a><br /> <a href="https://ksiegarnia.pwn.pl/,742983828,p.html" target="_blank">Przygody Bajtazara</a><br /></td>
+</tr>
+<tr>
+<td>Śmieci</td>
+<td>Etap II - dzień pierwszy</td>
+<td>Michał Pilipczuk</td>
+<td><a href="../../../../pl/archive/oi/18/smi" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20120215/oi18.pdf#page=115" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Rotacje na drzewie</td>
+<td>Etap II - dzień drugi</td>
+<td>Tomasz Waleń</td>
+<td><a href="../../../../pl/archive/oi/18/rot" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20120215/oi18.pdf#page=123" target="_blank">Opracowanie</a><br /> <a href="../../../../pl/archive/oi/18/rod" target="_blank">Trudniejsza wersja (Szkopuł)</a><br /></td>
+</tr>
+<tr>
+<td>Temperatura</td>
+<td>Etap II - dzień drugi</td>
+<td>Jacek Tomasiewicz</td>
+<td><a href="../../../../pl/archive/oi/18/tem" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20120215/oi18.pdf#page=135" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Dynamit</td>
+<td>Etap III - dzień pr&oacute;bny</td>
+<td>Jacek Tomasiewicz</td>
+<td><a href="../../../../pl/archive/oi/18/dyn" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20120215/oi18.pdf#page=147" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Impreza</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Jakub Wojtaszczyk</td>
+<td><a href="../../../../pl/archive/oi/18/imp" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20120215/oi18.pdf#page=155" target="_blank">Opracowanie</a><br /> <a href="https://ksiegarnia.pwn.pl/,748491780,p.html" target="_blank">W poszukiwaniu wyzwań<br />(Jakub Wojtaszczyk)</a><br /></td>
+</tr>
+<tr>
+<td>Inspekcja</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Wojciech Rytter, Bartosz Szreder</td>
+<td><a href="../../../../pl/archive/oi/18/ins" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20120215/oi18.pdf#page=159" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Okresowość</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Wojciech Rytter</td>
+<td><a href="../../../../pl/archive/oi/18/okr" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20120215/oi18.pdf#page=167" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Meteory</td>
+<td>Etap III - dzień drugi</td>
+<td>Paweł Mechliński, Jakub Pachocki</td>
+<td><a href="../../../../pl/archive/oi/18/met" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20120215/oi18.pdf#page=183" target="_blank">Opracowanie</a><br /> <a href="https://ksiegarnia.pwn.pl/,742983828,p.html" target="_blank">Przygody Bajtazara</a><br /></td>
+</tr>
+<tr>
+<td>Patyczki</td>
+<td>Etap III - dzień drugi</td>
+<td>Michał Pilipczuk</td>
+<td><a href="../../../../pl/archive/oi/18/pat" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20120215/oi18.pdf#page=187" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Konkurs programistyczny</td>
+<td>Etap III - dzień drugi</td>
+<td>Tomasz Idziaszek</td>
+<td><a href="../../../../pl/archive/oi/18/pro" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20120215/oi18.pdf#page=173" target="_blank">Opracowanie</a><br /></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="contest contest-oi contest-oi-17">
+<h2>XVII Olimpiada Informatyczna</h2>
+<table class="small" border="1">
+<thead> 
+<tr>
+<th class="th-name">Tytuł</th> <th class="th-stage">Etap</th> <th class="th-author">Autor</th> <th class="th-submit">Wyślij</th> <th class="th-solutions">Materiały</th>
+</tr>
+</thead> 
+<tbody>
+<tr>
+<td>Gildie</td>
+<td>Etap I</td>
+<td>Marcin Pilipczuk</td>
+<td><a href="../../../../pl/archive/oi/17/gil" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110704/oi17.pdf#page=53" target="_blank">Opracowanie</a><br /> <a href="https://ksiegarnia.pwn.pl/,748491780,p.html" target="_blank">W poszukiwaniu wyzwań<br />(Marcin Pilipczuk)</a><br /></td>
+</tr>
+<tr>
+<td>Kolej</td>
+<td>Etap I</td>
+<td>Bartosz Walczak</td>
+<td><a href="../../../../pl/archive/oi/17/kol" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110704/oi17.pdf#page=61" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Korale</td>
+<td>Etap I</td>
+<td>Tomasz Waleń</td>
+<td><a href="../../../../pl/archive/oi/17/kor" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110704/oi17.pdf#page=75" target="_blank">Opracowanie</a><br /> <a href="https://ksiegarnia.pwn.pl/,742983828,p.html" target="_blank">Przygody Bajtazara</a><br /></td>
+</tr>
+<tr>
+<td>Najdzielniejszy dzielnik</td>
+<td>Etap I</td>
+<td>Jakub Radoszewski</td>
+<td><a href="../../../../pl/archive/oi/17/naj" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110704/oi17.pdf#page=81" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Test na inteligencję</td>
+<td>Etap I</td>
+<td>Jakub Radoszewski</td>
+<td><a href="../../../../pl/archive/oi/17/tes" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110704/oi17.pdf#page=91" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Antysymetria</td>
+<td>Etap II - dzień pr&oacute;bny</td>
+<td>Jakub Radoszewski, Wojciech Rytter</td>
+<td><a href="../../../../pl/archive/oi/17/ant" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110704/oi17.pdf#page=101" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Chomiki</td>
+<td>Etap II - dzień pierwszy</td>
+<td>Jakub Radoszewski, Wojciech Rytter</td>
+<td><a href="../../../../pl/archive/oi/17/cho" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110704/oi17.pdf#page=111" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Klocki</td>
+<td>Etap II - dzień pierwszy</td>
+<td>Jacek Tomasiewicz</td>
+<td><a href="../../../../pl/archive/oi/17/klo" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110704/oi17.pdf#page=119" target="_blank">Opracowanie<br />(Michał Pilipczuk, Jacek Tomasiewicz)</a><br /></td>
+</tr>
+<tr>
+<td>Owce</td>
+<td>Etap II - dzień drugi</td>
+<td>Michał Włodarczyk</td>
+<td><a href="../../../../pl/archive/oi/17/owc" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110704/oi17.pdf#page=129" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Teleporty</td>
+<td>Etap II - dzień drugi</td>
+<td>Jakub Wojtaszczyk</td>
+<td><a href="../../../../pl/archive/oi/17/tel" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110704/oi17.pdf#page=137" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Monotoniczność</td>
+<td>Etap III - dzień pr&oacute;bny</td>
+<td>Marian M. Kędzierski</td>
+<td><a href="../../../../pl/archive/oi/17/mon" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110704/oi17.pdf#page=149" target="_blank">Opracowanie<br />(Marian M. Kędzierski, Piotr Niedźwiedź)</a><br /> <a href="../../../../pl/archive/oi/17/mot" target="_blank">Trudniejsza wersja (Szkopuł)</a><br /></td>
+</tr>
+<tr>
+<td>Gra w minima</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Jakub Wojtaszczyk</td>
+<td><a href="../../../../pl/archive/oi/17/gra" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110704/oi17.pdf#page=157" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Latarnia</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Jakub Wojtaszczyk</td>
+<td><a href="../../../../pl/archive/oi/17/lat" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110704/oi17.pdf#page=163" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Żabka</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Jakub Radoszewski</td>
+<td><a href="../../../../pl/archive/oi/17/zab" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110704/oi17.pdf#page=175" target="_blank">Opracowanie</a><br /> <a href="https://ksiegarnia.pwn.pl/,742983828,p.html" target="_blank">Przygody Bajtazara</a><br /></td>
+</tr>
+<tr>
+<td>Jedynki</td>
+<td>Etap III - dzień drugi</td>
+<td>Wojciech Rytter</td>
+<td><a href="../../../../pl/archive/oi/17/jed" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110704/oi17.pdf#page=189" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Mosty</td>
+<td>Etap III - dzień drugi</td>
+<td>Szymon Acedański, Jakub Radoszewski</td>
+<td><a href="../../../../pl/archive/oi/17/mos" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110704/oi17.pdf#page=195" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Piloci</td>
+<td>Etap III - dzień drugi</td>
+<td>Piotr Chrząstowski</td>
+<td><a href="../../../../pl/archive/oi/17/pil" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110704/oi17.pdf#page=207" target="_blank">Opracowanie</a><br /> <a href="https://ksiegarnia.pwn.pl/,748491780,p.html" target="_blank">W poszukiwaniu wyzwań<br />(Piotr Chrząstowski)</a><br /></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="contest contest-oi contest-oi-16">
+<h2>XVI Olimpiada Informatyczna</h2>
+<table class="small" border="1">
+<thead> 
+<tr>
+<th class="th-name">Tytuł</th> <th class="th-stage">Etap</th> <th class="th-author">Autor</th> <th class="th-submit">Wyślij</th> <th class="th-solutions">Materiały</th>
+</tr>
+</thead> 
+<tbody>
+<tr>
+<td>Gaśnice</td>
+<td>Etap I</td>
+<td>Paweł Parys</td>
+<td><a href="../../../../pl/archive/oi/16/gas" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110704/oi16.pdf#page=51" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Kamyki</td>
+<td>Etap I</td>
+<td>Paweł Parys</td>
+<td><a href="../../../../pl/archive/oi/16/kam" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110704/oi16.pdf#page=59" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Przyspieszenie algorytmu</td>
+<td>Etap I</td>
+<td>Jakub Radoszewski, Wojciech Rytter</td>
+<td><a href="../../../../pl/archive/oi/16/prz" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110704/oi16.pdf#page=65" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Słonie</td>
+<td>Etap I</td>
+<td>Jakub Radoszewski, Wojciech Rytter</td>
+<td><a href="../../../../pl/archive/oi/16/slo" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110704/oi16.pdf#page=73" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Straż pożarna</td>
+<td>Etap I</td>
+<td>Marian M. Kędzierski, Jakub Radoszewski</td>
+<td><a href="../../../../pl/archive/oi/16/str" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110704/oi16.pdf#page=83" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Wyspy na tr&oacute;jkątnej sieci</td>
+<td>Etap II - dzień pr&oacute;bny</td>
+<td>Andrzej Walat</td>
+<td>?</td>
+<td><a href="http://oi.edu.pl/static/attachment/20110704/oi16.pdf#page=93" target="_blank">Opracowanie (redakcja)</a><br /></td>
+</tr>
+<tr>
+<td>Konduktor</td>
+<td>Etap II - dzień pierwszy</td>
+<td>Marcin Kubica</td>
+<td><a href="../../../../pl/archive/oi/16/kon" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110704/oi16.pdf#page=97" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Przechadzka Bajtusia</td>
+<td>Etap II - dzień pierwszy</td>
+<td>Mirosław Michalski</td>
+<td><a href="../../../../pl/archive/oi/16/prb" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110704/oi16.pdf#page=103" target="_blank">Opracowanie<br />(Mirosław Michalski, Jakub Łącki)</a><br /></td>
+</tr>
+<tr>
+<td>Architekci</td>
+<td>Etap II - dzień drugi</td>
+<td>Jakub Wojtaszczyk</td>
+<td><a href="../../../../pl/archive/oi/16/arc" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110704/oi16.pdf#page=109" target="_blank">Opracowanie</a><br /> <a href="https://ksiegarnia.pwn.pl/,742983828,p.html" target="_blank">Przygody Bajtazara</a><br /></td>
+</tr>
+<tr>
+<td>Łyżwy</td>
+<td>Etap II - dzień drugi</td>
+<td>Jakub Radoszewski</td>
+<td><a href="../../../../pl/archive/oi/16/lyz" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110704/oi16.pdf#page=121" target="_blank">Opracowanie</a><br /> <a href="https://ksiegarnia.pwn.pl/,748491780,p.html" target="_blank">W poszukiwaniu wyzwań<br />(Jakub Pachocki)</a><br /></td>
+</tr>
+<tr>
+<td>Wiedźmak</td>
+<td>Etap III - dzień pr&oacute;bny</td>
+<td>Michał Włodarczyk</td>
+<td><a href="../../../../pl/archive/oi/16/wie" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110704/oi16.pdf#page=135" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Słowa</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Wojciech Rytter, Bartosz Walczak</td>
+<td><a href="../../../../pl/archive/oi/16/slw" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110704/oi16.pdf#page=149" target="_blank">Opracowanie</a><br /> <a href="../../../../pl/archive/oi/16/fib" target="_blank">Trudniejsza wersja (Szkopuł)</a><br /></td>
+</tr>
+<tr>
+<td>Tablice</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Marian M. Kędzierski</td>
+<td><a href="../../../../pl/archive/oi/16/tab" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110704/oi16.pdf#page=143" target="_blank">Opracowanie<br />(Marian M. Kędzierski, Błażej Osiński)</a><br /></td>
+</tr>
+<tr>
+<td>Wyspa</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Jakub Wojtaszczyk</td>
+<td><a href="../../../../pl/archive/oi/16/wsp" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110704/oi16.pdf#page=157" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Kod</td>
+<td>Etap III - dzień drugi</td>
+<td>Marek Biskup</td>
+<td><a href="../../../../pl/archive/oi/16/kod" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110704/oi16.pdf#page=165" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Poszukiwania</td>
+<td>Etap III - dzień drugi</td>
+<td>Tomasz Kulczyński</td>
+<td><a href="../../../../pl/archive/oi/16/pos" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110704/oi16.pdf#page=183" target="_blank">Opracowanie<br />(Tomasz Kulczyński, Juliusz Sompolski)</a><br /> <a href="https://ksiegarnia.pwn.pl/,748491780,p.html" target="_blank">W poszukiwaniu wyzwań<br />(Tomasz Kulczyński)</a><br /></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="contest contest-oi contest-oi-15">
+<h2>XV Olimpiada Informatyczna</h2>
+<table class="small" border="1">
+<thead> 
+<tr>
+<th class="th-name">Tytuł</th> <th class="th-stage">Etap</th> <th class="th-author">Autor</th> <th class="th-submit">Wyślij</th> <th class="th-solutions">Materiały</th>
+</tr>
+</thead> 
+<tbody>
+<tr>
+<td>Cło</td>
+<td>Etap I</td>
+<td>Michał Pilipczuk</td>
+<td><a href="../../../../pl/archive/oi/15/clo" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110704/oi15-b5.pdf#page=47" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Klocki</td>
+<td>Etap I</td>
+<td>Tomasz Waleń</td>
+<td><a href="../../../../pl/archive/oi/15/klo" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110704/oi15-b5.pdf#page=57" target="_blank">Opracowanie</a><br /> <a href="https://ksiegarnia.pwn.pl/,748491780,p.html" target="_blank">W poszukiwaniu wyzwań<br />(Tomasz Waleń)</a><br /></td>
+</tr>
+<tr>
+<td>Plakatowanie</td>
+<td>Etap I</td>
+<td>Jakub Radoszewski</td>
+<td><a href="../../../../pl/archive/oi/15/pla" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110704/oi15-b5.pdf#page=65" target="_blank">Opracowanie<br />(Michał Pilipczuk, Jakub Radoszewski)</a><br /> <a href="https://ksiegarnia.pwn.pl/,742983828,p.html" target="_blank">Przygody Bajtazara</a><br /></td>
+</tr>
+<tr>
+<td>Robinson</td>
+<td>Etap I</td>
+<td>Karol Cwalina</td>
+<td><a href="../../../../pl/archive/oi/15/rob" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110704/oi15-b5.pdf#page=75" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Szklana pułapka</td>
+<td>Etap I</td>
+<td>Marian M. Kędzierski</td>
+<td><a href="../../../../pl/archive/oi/15/szk" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110704/oi15-b5.pdf#page=87" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Blokada</td>
+<td>Etap II - dzień pr&oacute;bny</td>
+<td>Piotr Zieliński</td>
+<td><a href="../../../../pl/archive/oi/15/blo" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110704/oi15-b5.pdf#page=103" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>BBB</td>
+<td>Etap II - dzień pierwszy</td>
+<td>Jakub Radoszewski, Wojciech Rytter</td>
+<td><a href="../../../../pl/archive/oi/15/bbb" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110704/oi15-b5.pdf#page=109" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Pociągi</td>
+<td>Etap II - dzień pierwszy</td>
+<td>Piotr Stańczyk</td>
+<td><a href="../../../../pl/archive/oi/15/poc" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110704/oi15-b5.pdf#page=119" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Mafia</td>
+<td>Etap II - dzień drugi</td>
+<td>Wojciech Rytter</td>
+<td><a href="../../../../pl/archive/oi/15/maf" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110704/oi15-b5.pdf#page=129" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Ucieczka</td>
+<td>Etap II - dzień drugi</td>
+<td>Marian M. Kędzierski</td>
+<td><a href="../../../../pl/archive/oi/15/uci" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110704/oi15-b5.pdf#page=139" target="_blank">Opracowanie<br />(Marian M. Kędzierski, Filip Wolski)</a><br /></td>
+</tr>
+<tr>
+<td>Lampki</td>
+<td>Etap III - dzień pr&oacute;bny</td>
+<td>Michał Pilipczuk</td>
+<td><a href="../../../../pl/archive/oi/15/lam" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110704/oi15-b5.pdf#page=149" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Kupno gruntu</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Marcin Kubica</td>
+<td><a href="../../../../pl/archive/oi/15/kup" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110704/oi15-b5.pdf#page=179" target="_blank">Opracowanie</a><br /> <a href="https://ksiegarnia.pwn.pl/,742983828,p.html" target="_blank">Przygody Bajtazara</a><br /></td>
+</tr>
+<tr>
+<td>Podział kr&oacute;lestwa</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Zbigniew Czech</td>
+<td><a href="../../../../pl/archive/oi/15/pod" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110704/oi15-b5.pdf#page=157" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Tr&oacute;jkąty</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Jakub Radoszewski</td>
+<td><a href="../../../../pl/archive/oi/15/tro" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110704/oi15-b5.pdf#page=165" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Permutacja</td>
+<td>Etap III - dzień drugi</td>
+<td>Jakub Radoszewski</td>
+<td><a href="../../../../pl/archive/oi/15/per" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110704/oi15-b5.pdf#page=195" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Stacja</td>
+<td>Etap III - dzień drugi</td>
+<td>Marcin Kubica</td>
+<td><a href="../../../../pl/archive/oi/15/sta" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110704/oi15-b5.pdf#page=189" target="_blank">Opracowanie</a><br /></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="contest contest-oi contest-oi-14">
+<h2>XIV Olimpiada Informatyczna</h2>
+<table class="small" border="1">
+<thead> 
+<tr>
+<th class="th-name">Tytuł</th> <th class="th-stage">Etap</th> <th class="th-author">Autor</th> <th class="th-submit">Wyślij</th> <th class="th-solutions">Materiały</th>
+</tr>
+</thead> 
+<tbody>
+<tr>
+<td>Atrakcje turystyczne</td>
+<td>Etap I</td>
+<td>Zbigniew Czech</td>
+<td><a href="../../../../pl/archive/oi/14/atr" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi14-b5.pdf#page=45" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Biura</td>
+<td>Etap I</td>
+<td>Marek Cygan, Jakub Radoszewski</td>
+<td><a href="../../../../pl/archive/oi/14/biu" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi14-b5.pdf#page=53" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Drzewa</td>
+<td>Etap I</td>
+<td>Jakub Radoszewski</td>
+<td><a href="../../../../pl/archive/oi/14/drz" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi14-b5.pdf#page=61" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Osie symetrii</td>
+<td>Etap I</td>
+<td>Piotr Stańczyk</td>
+<td><a href="../../../../pl/archive/oi/14/osi" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi14-b5.pdf#page=75" target="_blank">Opracowanie</a><br /> <a href="https://ksiegarnia.pwn.pl/,748491780,p.html" target="_blank">W poszukiwaniu wyzwań<br />(Tomasz Kociumaka)</a><br /></td>
+</tr>
+<tr>
+<td>Zapytania</td>
+<td>Etap I</td>
+<td>Jakub Radoszewski</td>
+<td><a href="../../../../pl/archive/oi/14/zap" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi14-b5.pdf#page=81" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Grzbiety i doliny</td>
+<td>Etap II - dzień pr&oacute;bny</td>
+<td>Zbigniew Czech</td>
+<td><a href="../../../../pl/archive/oi/14/grz" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi14-b5.pdf#page=97" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Pow&oacute;dź</td>
+<td>Etap II - dzień pierwszy</td>
+<td>Marcin Kubica</td>
+<td><a href="../../../../pl/archive/oi/14/pow" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi14-b5.pdf#page=101" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Skalniak</td>
+<td>Etap II - dzień pierwszy</td>
+<td>Marek Cygan, Jakub Radoszewski</td>
+<td><a href="../../../../pl/archive/oi/14/ska" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi14-b5.pdf#page=109" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Megalopolis</td>
+<td>Etap II - dzień drugi</td>
+<td>Szymon Acedański</td>
+<td><a href="../../../../pl/archive/oi/14/meg" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi14-b5.pdf#page=119" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Tetris Attack</td>
+<td>Etap II - dzień drugi</td>
+<td>Tomasz Waleń</td>
+<td><a href="../../../../pl/archive/oi/14/tet" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi14-b5.pdf#page=127" target="_blank">Opracowanie</a><br /> <a href="https://ksiegarnia.pwn.pl/,742983828,p.html" target="_blank">Przygody Bajtazara</a><br /></td>
+</tr>
+<tr>
+<td>Koleje</td>
+<td>Etap III - dzień pr&oacute;bny</td>
+<td>Marcin Kubica</td>
+<td><a href="../../../../pl/archive/oi/14/kol" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi14-b5.pdf#page=135" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Gazociągi</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Jakub Radoszewski</td>
+<td><a href="../../../../pl/archive/oi/14/gaz" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi14-b5.pdf#page=145" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Odważniki</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Jakub Radoszewski</td>
+<td><a href="../../../../pl/archive/oi/14/odw" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi14-b5.pdf#page=153" target="_blank">Opracowanie<br />(Marcin Pilipczuk, Jakub Radoszewski)</a><br /></td>
+</tr>
+<tr>
+<td>Egzamin na prawo jazdy</td>
+<td>Etap III - dzień drugi</td>
+<td>Jakub Radoszewski</td>
+<td><a href="../../../../pl/archive/oi/14/egz" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi14-b5.pdf#page=167" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Klocki</td>
+<td>Etap III - dzień drugi</td>
+<td>Jakub Radoszewski</td>
+<td><a href="../../../../pl/archive/oi/14/klo" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi14-b5.pdf#page=179" target="_blank">Opracowanie</a><br /> <a href="https://ksiegarnia.pwn.pl/,742983828,p.html" target="_blank">Przygody Bajtazara</a><br /></td>
+</tr>
+<tr>
+<td>Waga czw&oacute;rkowa</td>
+<td>Etap III - dzień drugi</td>
+<td>Wojciech Rytter, Andrzej Walat</td>
+<td><a href="../../../../pl/archive/oi/14/wag" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi14-b5.pdf#page=191" target="_blank">Opracowanie</a><br /></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="contest contest-oi contest-oi-13">
+<h2>XIII Olimpiada Informatyczna</h2>
+<table class="small" border="1">
+<thead> 
+<tr>
+<th class="th-name">Tytuł</th> <th class="th-stage">Etap</th> <th class="th-author">Autor</th> <th class="th-submit">Wyślij</th> <th class="th-solutions">Materiały</th>
+</tr>
+</thead> 
+<tbody>
+<tr>
+<td>Krążki</td>
+<td>Etap I</td>
+<td>Jakub Radoszewski</td>
+<td><a href="../../../../pl/archive/oi/13/kra" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi13-b5.pdf#page=49" target="_blank">Opracowanie</a><br /> <a href="https://ksiegarnia.pwn.pl/,742983828,p.html" target="_blank">Przygody Bajtazara</a><br /></td>
+</tr>
+<tr>
+<td>Okresy sł&oacute;w</td>
+<td>Etap I</td>
+<td>Szymon Acedański</td>
+<td><a href="../../../../pl/archive/oi/13/okr" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi13-b5.pdf#page=55" target="_blank">Opracowanie</a><br /> <a href="https://ksiegarnia.pwn.pl/,742983828,p.html" target="_blank">Przygody Bajtazara</a><br /></td>
+</tr>
+<tr>
+<td>Profesor Szu</td>
+<td>Etap I</td>
+<td>Jakub Radoszewski</td>
+<td><a href="../../../../pl/archive/oi/13/pro" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi13-b5.pdf#page=59" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Tetris 3D</td>
+<td>Etap I</td>
+<td>Jakub Radoszewski</td>
+<td><a href="../../../../pl/archive/oi/13/tet" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi13-b5.pdf#page=71" target="_blank">Opracowanie<br />(Jakub Radoszewski, Marcin Pilipczuk)</a><br /></td>
+</tr>
+<tr>
+<td>Żaby</td>
+<td>Etap I</td>
+<td>Piotr Stańczyk</td>
+<td><a href="../../../../pl/archive/oi/13/zab" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi13-b5.pdf#page=85" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Magazyn</td>
+<td>Etap II - dzień pr&oacute;bny</td>
+<td>Zbigniew Czech</td>
+<td><a href="../../../../pl/archive/oi/13/mag" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi13-b5.pdf#page=105" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Szkoły</td>
+<td>Etap II - dzień pr&oacute;bny</td>
+<td>Jakub Radoszewski</td>
+<td><a href="../../../../pl/archive/oi/13/szk" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi13-b5.pdf#page=97" target="_blank">Opracowanie<br />(Marek Cygan, Łukasz Kowalik)</a><br /></td>
+</tr>
+<tr>
+<td>Metro</td>
+<td>Etap II - dzień pierwszy</td>
+<td>Karol Cwalina</td>
+<td><a href="../../../../pl/archive/oi/13/met" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi13-b5.pdf#page=113" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Najazd</td>
+<td>Etap II - dzień pierwszy</td>
+<td>Jakub Radoszewski</td>
+<td><a href="../../../../pl/archive/oi/13/naj" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi13-b5.pdf#page=121" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Listonosz</td>
+<td>Etap II - dzień drugi</td>
+<td>Tomasz Waleń</td>
+<td><a href="../../../../pl/archive/oi/13/lis" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi13-b5.pdf#page=131" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Orka</td>
+<td>Etap II - dzień drugi</td>
+<td>Marcin Kubica</td>
+<td><a href="../../../../pl/archive/oi/13/ork" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi13-b5.pdf#page=137" target="_blank">Opracowanie</a><br /> <a href="https://ksiegarnia.pwn.pl/,748491780,p.html" target="_blank">W poszukiwaniu wyzwań<br />(Jakub Radoszewski)</a><br /></td>
+</tr>
+<tr>
+<td>Tańce w k&oacute;łkach</td>
+<td>Etap III - dzień pr&oacute;bny</td>
+<td>Krzysztof Sikora</td>
+<td><a href="../../../../pl/archive/oi/13/tan" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi13-b5.pdf#page=147" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Estetyczny tekst</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Bartosz Walczak</td>
+<td><a href="../../../../pl/archive/oi/13/est" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi13-b5.pdf#page=155" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Kryształy</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Jakub Pawlewicz</td>
+<td><a href="../../../../pl/archive/oi/13/kry" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi13-b5.pdf#page=161" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Misie</td>
+<td>Etap III - dzień drugi</td>
+<td>Maciej Jaśkowski</td>
+<td><a href="../../../../pl/archive/oi/13/mis" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi13-b5.pdf#page=193" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Palindromy</td>
+<td>Etap III - dzień drugi</td>
+<td>Jakub Radoszewski</td>
+<td><a href="../../../../pl/archive/oi/13/pal" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi13-b5.pdf#page=173" target="_blank">Opracowanie<br />(Jakub Radoszewski, Adam Iwanicki)</a><br /></td>
+</tr>
+<tr>
+<td>Zosia</td>
+<td>Etap III - dzień drugi</td>
+<td>Łukasz Kowalik</td>
+<td><a href="../../../../pl/archive/oi/13/zos" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi13-b5.pdf#page=185" target="_blank">Opracowanie</a><br /></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="contest contest-oi contest-oi-12">
+<h2>XII Olimpiada Informatyczna</h2>
+<table class="small" border="1">
+<thead> 
+<tr>
+<th class="th-name">Tytuł</th> <th class="th-stage">Etap</th> <th class="th-author">Autor</th> <th class="th-submit">Wyślij</th> <th class="th-solutions">Materiały</th>
+</tr>
+</thead> 
+<tbody>
+<tr>
+<td>Bankomat</td>
+<td>Etap I</td>
+<td>Piotr Stańczyk</td>
+<td><a href="../../../../pl/archive/oi/12/bnk" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi12.pdf#page=47" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Punkty</td>
+<td>Etap I</td>
+<td>Piotr Stańczyk</td>
+<td><a href="../../../../pl/archive/oi/12/pun" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi12.pdf#page=51" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Samochodziki</td>
+<td>Etap I</td>
+<td>Krzysztof Sikora</td>
+<td><a href="../../../../pl/archive/oi/12/sam" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi12.pdf#page=57" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Skarbonki</td>
+<td>Etap I</td>
+<td>Wojciech Guzicki</td>
+<td><a href="../../../../pl/archive/oi/12/ska" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi12.pdf#page=63" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Skoczki</td>
+<td>Etap I</td>
+<td>Wojciech Guzicki</td>
+<td><a href="../../../../pl/archive/oi/12/sko" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi12.pdf#page=71" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Lot na Marsa</td>
+<td>Etap II - dzień pr&oacute;bny</td>
+<td>Paweł Parys</td>
+<td><a href="../../../../pl/archive/oi/12/lot" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi12.pdf#page=83" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Banknoty</td>
+<td>Etap II - dzień pierwszy</td>
+<td>Bartosz Walczak</td>
+<td><a href="../../../../pl/archive/oi/12/ban" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi12.pdf#page=91" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Sumy Fibonacciego</td>
+<td>Etap II - dzień pierwszy</td>
+<td>Marcin Kubica</td>
+<td><a href="../../../../pl/archive/oi/12/sum" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi12.pdf#page=97" target="_blank">Opracowanie</a><br /> <a href="https://ksiegarnia.pwn.pl/,748491780,p.html" target="_blank">W poszukiwaniu wyzwań<br />(Marcin Kubica)</a><br /></td>
+</tr>
+<tr>
+<td>Kości</td>
+<td>Etap II - dzień drugi</td>
+<td>Łukasz Kowalik</td>
+<td><a href="../../../../pl/archive/oi/12/kos" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi12.pdf#page=113" target="_blank">Opracowanie</a><br /> <a href="https://ksiegarnia.pwn.pl/,742983828,p.html" target="_blank">Przygody Bajtazara</a><br /></td>
+</tr>
+<tr>
+<td>Szablon</td>
+<td>Etap II - dzień drugi</td>
+<td>Wojciech Rytter</td>
+<td><a href="../../../../pl/archive/oi/12/sza" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi12.pdf#page=105" target="_blank">Opracowanie<br />(Jakub Radoszewski, Wojciech Rytter)</a><br /></td>
+</tr>
+<tr>
+<td>Dziuple</td>
+<td>Etap III - dzień pr&oacute;bny</td>
+<td>Jakub Radoszewski</td>
+<td><a href="../../../../pl/archive/oi/12/dzi" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi12.pdf#page=125" target="_blank">Opracowanie</a><br /> <a href="https://ksiegarnia.pwn.pl/,742983828,p.html" target="_blank">Przygody Bajtazara</a><br /></td>
+</tr>
+<tr>
+<td>Akcja komandos&oacute;w</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Szymon Acedański</td>
+<td><a href="../../../../pl/archive/oi/12/akc" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi12.pdf#page=149" target="_blank">Opracowanie<br />(Szymon Acedański, Marek Cygan)</a><br /></td>
+</tr>
+<tr>
+<td>Dwa przyjęcia</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Wojciech Guzicki</td>
+<td><a href="../../../../pl/archive/oi/12/dwa" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi12.pdf#page=141" target="_blank">Opracowanie</a><br /> <a href="https://ksiegarnia.pwn.pl/,748491780,p.html" target="_blank">W poszukiwaniu wyzwań<br />(Filip Wolski)</a><br /></td>
+</tr>
+<tr>
+<td>Dwuszereg</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Wojciech Rytter</td>
+<td><a href="../../../../pl/archive/oi/12/dwu" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi12.pdf#page=135" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Autobus</td>
+<td>Etap III - dzień drugi</td>
+<td>Wojciech Rytter</td>
+<td><a href="../../../../pl/archive/oi/12/aut" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi12.pdf#page=161" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Lustrzana pułapka</td>
+<td>Etap III - dzień drugi</td>
+<td>Zbigniew Czech</td>
+<td><a href="../../../../pl/archive/oi/12/lus" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi12.pdf#page=167" target="_blank">Opracowanie (Marcin Pilipczuk)</a><br /></td>
+</tr>
+<tr>
+<td>Prawoskrętny wielbłąd</td>
+<td>Etap III - dzień drugi</td>
+<td>Paweł Parys</td>
+<td><a href="../../../../pl/archive/oi/12/pra" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi12.pdf#page=155" target="_blank">Opracowanie</a><br /></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="contest contest-oi contest-oi-11">
+<h2>XI Olimpiada Informatyczna</h2>
+<table class="small" border="1">
+<thead> 
+<tr>
+<th class="th-name">Tytuł</th> <th class="th-stage">Etap</th> <th class="th-author">Autor</th> <th class="th-submit">Wyślij</th> <th class="th-solutions">Materiały</th>
+</tr>
+</thead> 
+<tbody>
+<tr>
+<td>Gra</td>
+<td>Etap I</td>
+<td>Bartosz Walczak</td>
+<td><a href="../../../../pl/archive/oi/11/gra" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi11.pdf#page=43" target="_blank">Opracowanie</a><br /> <a href="https://ksiegarnia.pwn.pl/,742983828,p.html" target="_blank">Przygody Bajtazara</a><br /></td>
+</tr>
+<tr>
+<td>PIN-kod</td>
+<td>Etap I</td>
+<td>Marcin Stefaniak</td>
+<td><a href="../../../../pl/archive/oi/11/pin" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi11.pdf#page=49" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Sznurki</td>
+<td>Etap I</td>
+<td>Marcin Kubica</td>
+<td><a href="../../../../pl/archive/oi/11/szn" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi11.pdf#page=53" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Szpiedzy</td>
+<td>Etap I</td>
+<td>Paweł Parys</td>
+<td><a href="../../../../pl/archive/oi/11/szp" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi11.pdf#page=65" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Zawody</td>
+<td>Etap I</td>
+<td>Łukasz Kowalik</td>
+<td><a href="../../../../pl/archive/oi/11/zaw" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi11.pdf#page=69" target="_blank">Opracowanie</a><br /> <a href="https://ksiegarnia.pwn.pl/,742983828,p.html" target="_blank">Przygody Bajtazara</a><br /></td>
+</tr>
+<tr>
+<td>Most</td>
+<td>Etap II - dzień pr&oacute;bny</td>
+<td>Jakub Pawlewicz</td>
+<td><a href="../../../../pl/archive/oi/11/mos" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi11.pdf#page=77" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Bramki</td>
+<td>Etap II - dzień pierwszy</td>
+<td>Bartosz Walczak</td>
+<td><a href="../../../../pl/archive/oi/11/bra" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi11.pdf#page=85" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Jaskinia</td>
+<td>Etap II - dzień pierwszy</td>
+<td>Paweł Parys</td>
+<td><a href="../../../../pl/archive/oi/11/jas" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi11.pdf#page=91" target="_blank">Opracowanie</a><br /> <a href="https://ksiegarnia.pwn.pl/,748491780,p.html" target="_blank">W poszukiwaniu wyzwań<br />(Paweł Parys)</a><br /></td>
+</tr>
+<tr>
+<td>Przeprawa</td>
+<td>Etap II - dzień drugi</td>
+<td>Piotr Stańczyk</td>
+<td><a href="../../../../pl/archive/oi/11/prz" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi11.pdf#page=97" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Turniej</td>
+<td>Etap II - dzień drugi</td>
+<td>Bartosz Walczak</td>
+<td><a href="../../../../pl/archive/oi/11/tur" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi11.pdf#page=103" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Zgadywanka</td>
+<td>Etap III - dzień pr&oacute;bny</td>
+<td>Wojciech Guzicki</td>
+<td><a href="../../../../pl/archive/oi/11/zga" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi11.pdf#page=111" target="_blank">Opracowanie</a><br /> <a href="https://ksiegarnia.pwn.pl/,748491780,p.html" target="_blank">W poszukiwaniu wyzwań<br />(Filip Wolski)</a><br /></td>
+</tr>
+<tr>
+<td>Misie-Patysie</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Karol Cwalina</td>
+<td><a href="../../../../pl/archive/oi/11/mis" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi11.pdf#page=133" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Wsch&oacute;d-Zach&oacute;d</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Karol Cwalina</td>
+<td><a href="../../../../pl/archive/oi/11/wsc" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi11.pdf#page=143" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Wyspy</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Piotr Chrząstowski</td>
+<td><a href="../../../../pl/archive/oi/11/wys" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi11.pdf#page=151" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Kaglony</td>
+<td>Etap III - dzień drugi</td>
+<td>Tomasz Waleń</td>
+<td><a href="../../../../pl/archive/oi/11/kag" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi11.pdf#page=157" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Maksymalne rzędy permutacji</td>
+<td>Etap III - dzień drugi</td>
+<td>Jakub Pawlewicz</td>
+<td><a href="../../../../pl/archive/oi/11/mak" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi11.pdf#page=165" target="_blank">Opracowanie</a><br /></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="contest contest-oi contest-oi-10">
+<h2>X Olimpiada Informatyczna</h2>
+<table class="small" border="1">
+<thead> 
+<tr>
+<th class="th-name">Tytuł</th> <th class="th-stage">Etap</th> <th class="th-author">Autor</th> <th class="th-submit">Wyślij</th> <th class="th-solutions">Materiały</th>
+</tr>
+</thead> 
+<tbody>
+<tr>
+<td>Ciągi bez zająknięć</td>
+<td>Etap I</td>
+<td>Krzysztof Sikora</td>
+<td><a href="../../../../pl/archive/oi/10/cia" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi10.pdf#page=45" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Czekolada</td>
+<td>Etap I</td>
+<td>Marcin Kubica</td>
+<td><a href="../../../../pl/archive/oi/10/cze" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi10.pdf#page=51" target="_blank">Opracowanie</a><br /> <a href="https://ksiegarnia.pwn.pl/,748491780,p.html" target="_blank">W poszukiwaniu wyzwań<br />(Marcin Kubica)</a><br /></td>
+</tr>
+<tr>
+<td>Liczby Przesmyk&oacute;w</td>
+<td>Etap I</td>
+<td>Łukasz Kaiser</td>
+<td><a href="../../../../pl/archive/oi/10/lic" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi10.pdf#page=59" target="_blank">Opracowanie<br />(Łukasz Kaiser, Krzysztof Onak)</a><br /></td>
+</tr>
+<tr>
+<td>Płytki drukowane</td>
+<td>Etap I</td>
+<td>Marcin Kubica</td>
+<td><a href="../../../../pl/archive/oi/10/ply" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi10.pdf#page=63" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Przemytnicy</td>
+<td>Etap I</td>
+<td>Łukasz Kowalik</td>
+<td><a href="../../../../pl/archive/oi/10/prz" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi10.pdf#page=71" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Mastermind II</td>
+<td>Etap II - dzień pr&oacute;bny</td>
+<td>Zbigniew Czech</td>
+<td><a href="../../../../pl/archive/oi/10/mas" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi10.pdf#page=79" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Autostrady</td>
+<td>Etap II - dzień pierwszy</td>
+<td>Tomasz Waleń</td>
+<td><a href="../../../../pl/archive/oi/10/aut" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi10.pdf#page=81" target="_blank">Opracowanie</a><br /> <a href="https://ksiegarnia.pwn.pl/,742983828,p.html" target="_blank">Przygody Bajtazara</a><br /></td>
+</tr>
+<tr>
+<td>Tr&oacute;jmian</td>
+<td>Etap II - dzień pierwszy</td>
+<td>Krzysztof Sikora</td>
+<td><a href="../../../../pl/archive/oi/10/tro" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi10.pdf#page=87" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Kafelki</td>
+<td>Etap II - dzień drugi</td>
+<td>Rafał Rusin</td>
+<td><a href="../../../../pl/archive/oi/10/kaf" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi10.pdf#page=91" target="_blank">Opracowanie<br />(Rafał Rusin, Paweł Wolff)</a><br /></td>
+</tr>
+<tr>
+<td>Połączenia</td>
+<td>Etap II - dzień drugi</td>
+<td>Krzysztof Sikora</td>
+<td><a href="../../../../pl/archive/oi/10/pol" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi10.pdf#page=97" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Gra w dzielniki</td>
+<td>Etap III - dzień pr&oacute;bny</td>
+<td>Krzysztof Onak</td>
+<td><a href="../../../../pl/archive/oi/10/gra" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi10.pdf#page=105" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Skarb</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Adam Borowski</td>
+<td><a href="../../../../pl/archive/oi/10/ska" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi10.pdf#page=109" target="_blank">Opracowanie (Marcin Stefaniak)</a><br /></td>
+</tr>
+<tr>
+<td>Sumy</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Krzysztof Onak</td>
+<td><a href="../../../../pl/archive/oi/10/sum" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi10.pdf#page=115" target="_blank">Opracowanie</a><br /> <a href="https://ksiegarnia.pwn.pl/,748491780,p.html" target="_blank">W poszukiwaniu wyzwań<br />(Krzysztof Onak)</a><br /></td>
+</tr>
+<tr>
+<td>Kryształ</td>
+<td>Etap III - dzień drugi</td>
+<td>Marcin Stefaniak</td>
+<td><a href="../../../../pl/archive/oi/10/kry" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi10.pdf#page=119" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Małpki</td>
+<td>Etap III - dzień drugi</td>
+<td>Andrzej Gąsienica-Samek</td>
+<td><a href="../../../../pl/archive/oi/10/mal" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi10.pdf#page=131" target="_blank">Opracowanie (Marcin Stefaniak)</a><br /> <a href="https://ksiegarnia.pwn.pl/,748491780,p.html" target="_blank">W poszukiwaniu wyzwań<br />(Andrzej Gąsienica-Samek)</a><br /></td>
+</tr>
+<tr>
+<td>Tasowanie</td>
+<td>Etap III - dzień drugi</td>
+<td>Paweł Parys</td>
+<td><a href="../../../../pl/archive/oi/10/tas" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi10.pdf#page=139" target="_blank">Opracowanie</a><br /> <a href="https://ksiegarnia.pwn.pl/,748491780,p.html" target="_blank">W poszukiwaniu wyzwań<br />(Paweł Parys)</a><br /></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="contest contest-oi contest-oi-9">
+<h2>IX Olimpiada Informatyczna</h2>
+<table class="small" border="1">
+<thead> 
+<tr>
+<th class="th-name">Tytuł</th> <th class="th-stage">Etap</th> <th class="th-author">Autor</th> <th class="th-submit">Wyślij</th> <th class="th-solutions">Materiały</th>
+</tr>
+</thead> 
+<tbody>
+<tr>
+<td>Koleje</td>
+<td>Etap I</td>
+<td>Tomasz Waleń</td>
+<td><a href="../../../../pl/archive/oi/9/kol" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi9.pdf#page=45" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Komiwojażer Bajtazar</td>
+<td>Etap I</td>
+<td>Tomasz Waleń</td>
+<td><a href="../../../../pl/archive/oi/9/kom" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi9.pdf#page=55" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Superskoczek</td>
+<td>Etap I</td>
+<td>Krzysztof Onak</td>
+<td><a href="../../../../pl/archive/oi/9/sup" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi9.pdf#page=61" target="_blank">Opracowanie</a><br /> <a href="https://ksiegarnia.pwn.pl/,748491780,p.html" target="_blank">W poszukiwaniu wyzwań<br />(Krzysztof Onak)</a><br /></td>
+</tr>
+<tr>
+<td>Wyspa</td>
+<td>Etap I</td>
+<td>Piotr Chrząstowski</td>
+<td><a href="../../../../pl/archive/oi/9/wys" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi9.pdf#page=69" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Zamek</td>
+<td>Etap I</td>
+<td>Zbigniew Czech</td>
+<td><a href="../../../../pl/archive/oi/9/zam" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi9.pdf#page=75" target="_blank">Opracowanie<br />(Zbigniew Czech, Paweł Wolff)</a><br /></td>
+</tr>
+<tr>
+<td>Izolator</td>
+<td>Etap II - dzień pr&oacute;bny</td>
+<td>Zbigniew Czech</td>
+<td><a href="../../../../pl/archive/oi/9/izo" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi9.pdf#page=83" target="_blank">Opracowanie<br />(Zbigniew Czech, Marcin Mucha)</a><br /></td>
+</tr>
+<tr>
+<td>Działka</td>
+<td>Etap II - dzień pierwszy</td>
+<td>Jakub Pawlewicz</td>
+<td><a href="../../../../pl/archive/oi/9/dzi" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi9.pdf#page=87" target="_blank">Opracowanie<br />(Krzysztof Onak, Jakub Pawlewicz)</a><br /></td>
+</tr>
+<tr>
+<td>Wyliczanka</td>
+<td>Etap II - dzień pierwszy</td>
+<td>Jakub Pawlewicz</td>
+<td><a href="../../../../pl/archive/oi/9/wyl" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi9.pdf#page=91" target="_blank">Opracowanie<br />(Krzysztof Onak, Jakub Pawlewicz)</a><br /></td>
+</tr>
+<tr>
+<td>Kurort narciarski</td>
+<td>Etap II - dzień drugi</td>
+<td>Marcin Sawicki</td>
+<td><a href="../../../../pl/archive/oi/9/kur" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi9.pdf#page=99" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Protokoły</td>
+<td>Etap II - dzień drugi</td>
+<td>Marcin Stefaniak</td>
+<td><a href="../../../../pl/archive/oi/9/pro" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi9.pdf#page=105" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Minusy</td>
+<td>Etap III - dzień pr&oacute;bny</td>
+<td>Piotr Chrząstowski, Wojciech Guzicki</td>
+<td><a href="../../../../pl/archive/oi/9/min" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi9.pdf#page=113" target="_blank">Opracowanie (Wojciech Guzicki)</a><br /> <a href="https://ksiegarnia.pwn.pl/,742983828,p.html" target="_blank">Przygody Bajtazara</a><br /></td>
+</tr>
+<tr>
+<td>Narciarze</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Piotr Chrząstowski</td>
+<td><a href="../../../../pl/archive/oi/9/nar" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi9.pdf#page=119" target="_blank">Opracowanie</a><br /> <a href="https://ksiegarnia.pwn.pl/,748491780,p.html" target="_blank">W poszukiwaniu wyzwań<br />(Piotr Chrząstowski)</a><br /></td>
+</tr>
+<tr>
+<td>Waga</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Krzysztof Onak</td>
+<td><a href="../../../../pl/archive/oi/9/wag" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi9.pdf#page=127" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Liczby B-gładkie</td>
+<td>Etap III - dzień drugi</td>
+<td>Wojciech Guzicki</td>
+<td><a href="../../../../pl/archive/oi/9/lic" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi9.pdf#page=133" target="_blank">Opracowanie<br />(Wojciech Guzicki, Przemysława Kanarek)</a><br /></td>
+</tr>
+<tr>
+<td>Nawiasy</td>
+<td>Etap III - dzień drugi</td>
+<td>Piotr Chrząstowski, Wojciech Guzicki</td>
+<td><a href="../../../../pl/archive/oi/9/naw" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi9.pdf#page=141" target="_blank">Opracowanie (Piotr Chrząstowski)</a><br /></td>
+</tr>
+<tr>
+<td>Szyfr</td>
+<td>Etap III - dzień drugi</td>
+<td>Wojciech Guzicki</td>
+<td><a href="../../../../pl/archive/oi/9/szy" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110811/oi9.pdf#page=149" target="_blank">Opracowanie</a><br /> <a href="https://ksiegarnia.pwn.pl/,742983828,p.html" target="_blank">Przygody Bajtazara</a><br /></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="contest contest-oi contest-oi-8">
+<h2>VIII Olimpiada Informatyczna</h2>
+<table class="small" border="1">
+<thead> 
+<tr>
+<th class="th-name">Tytuł</th> <th class="th-stage">Etap</th> <th class="th-author">Autor</th> <th class="th-submit">Wyślij</th> <th class="th-solutions">Materiały</th>
+</tr>
+</thead> 
+<tbody>
+<tr>
+<td>Gra w zielone</td>
+<td>Etap I</td>
+<td>Marcin Jurdziński</td>
+<td><a href="../../../../pl/archive/oi/8/gra" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20180207/oi8-b5.pdf#page=57" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Liczby antypierwsze</td>
+<td>Etap I</td>
+<td>Wojciech Rytter</td>
+<td><a href="../../../../pl/archive/oi/8/ant" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20180207/oi8-b5.pdf#page=51" target="_blank">Opracowanie</a><br /> <a href="https://ksiegarnia.pwn.pl/,742983828,p.html" target="_blank">Przygody Bajtazara<br />(Wojciech Rytter, Jakub Radoszewski)</a><br /></td>
+</tr>
+<tr>
+<td>Mapa gęstości</td>
+<td>Etap I</td>
+<td>Tomasz Śmigielski</td>
+<td><a href="../../../../pl/archive/oi/8/map" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20180207/oi8-b5.pdf#page=43" target="_blank">Opracowanie (Marcin Mucha)</a><br /></td>
+</tr>
+<tr>
+<td>Przedziały</td>
+<td>Etap I</td>
+<td>Wojciech Guzicki</td>
+<td><a href="../../../../pl/archive/oi/8/prz" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20180207/oi8-b5.pdf#page=47" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Gorszy Goldbach</td>
+<td>Etap II - dzień pr&oacute;bny</td>
+<td>Wojciech Guzicki, Jarosław Wr&oacute;blewski</td>
+<td><a href="../../../../pl/archive/oi/8/gol" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20180207/oi8-b5.pdf#page=71" target="_blank">Opracowanie (Wojciech Guzicki)</a><br /></td>
+</tr>
+<tr>
+<td>Spokojna komisja</td>
+<td>Etap II - dzień pierwszy</td>
+<td>Wojciech Rytter</td>
+<td><a href="../../../../pl/archive/oi/8/spo" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20180207/oi8-b5.pdf#page=79" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Wyspa</td>
+<td>Etap II - dzień pierwszy</td>
+<td>Wojciech Guzicki</td>
+<td><a href="../../../../pl/archive/oi/8/wys" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20180207/oi8-b5.pdf#page=85" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Mr&oacute;wki i biedronka</td>
+<td>Etap II - dzień drugi</td>
+<td>Krzysztof Loryś</td>
+<td><a href="../../../../pl/archive/oi/8/mro" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20180207/oi8-b5.pdf#page=103" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Podr&oacute;ż</td>
+<td>Etap II - dzień drugi</td>
+<td>Zbigniew Czech</td>
+<td><a href="../../../../pl/archive/oi/8/pod" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20180207/oi8-b5.pdf#page=107" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Wędrowni treserzy pcheł</td>
+<td>Etap III - dzień pr&oacute;bny</td>
+<td>Marcin Sawicki</td>
+<td><a href="../../../../pl/archive/oi/8/pch" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20180207/oi8-b5.pdf#page=115" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Por&oacute;wnywanie naszyjnik&oacute;w</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Adam Malinowski, Wojciech Rytter</td>
+<td><a href="../../../../pl/archive/oi/8/por" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20180207/oi8-b5.pdf#page=123" target="_blank">Opracowanie (Adam Malinowski)</a><br /></td>
+</tr>
+<tr>
+<td>Zwiedzanie miasta</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Krzysztof Onak</td>
+<td><a href="../../../../pl/archive/oi/8/zwi" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20180207/oi8-b5.pdf#page=127" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Bank</td>
+<td>Etap III - dzień drugi</td>
+<td>Marcin Kubica</td>
+<td><a href="../../../../pl/archive/oi/8/ban" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20180207/oi8-b5.pdf#page=131" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Kopalnia złota</td>
+<td>Etap III - dzień drugi</td>
+<td>Tomasz Waleń</td>
+<td><a href="../../../../pl/archive/oi/8/kop" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20180207/oi8-b5.pdf#page=139" target="_blank">Opracowanie</a><br /> <a href="https://ksiegarnia.pwn.pl/,742983828,p.html" target="_blank">Przygody Bajtazara</a><br /></td>
+</tr>
+<tr>
+<td>Łańcuch</td>
+<td>Etap III - dzień drugi</td>
+<td>Marcin Kubica</td>
+<td><a href="../../../../pl/archive/oi/8/lan" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20180207/oi8-b5.pdf#page=147" target="_blank">Opracowanie</a><br /></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="contest contest-oi contest-oi-7">
+<h2>VII Olimpiada Informatyczna</h2>
+<table class="small" border="1">
+<thead> 
+<tr>
+<th class="th-name">Tytuł</th> <th class="th-stage">Etap</th> <th class="th-author">Autor</th> <th class="th-submit">Wyślij</th> <th class="th-solutions">Materiały</th>
+</tr>
+</thead> 
+<tbody>
+<tr>
+<td>Gdzie zbudować browar?</td>
+<td>Etap I</td>
+<td>Wojciech Guzicki</td>
+<td><a href="../../../../pl/archive/oi/7/bro" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110731/oi7.pdf#page=37" target="_blank">Opracowanie</a><br /> <a href="https://ksiegarnia.pwn.pl/,742983828,p.html" target="_blank">Przygody Bajtazara</a><br /></td>
+</tr>
+<tr>
+<td>Narciarze</td>
+<td>Etap I</td>
+<td>Marcin Kubica</td>
+<td><a href="../../../../pl/archive/oi/7/nar" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110731/oi7.pdf#page=47" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Paski</td>
+<td>Etap I</td>
+<td>Adam Borowski</td>
+<td><a href="../../../../pl/archive/oi/7/pas" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110731/oi7.pdf#page=52" target="_blank">Opracowanie (Marcin Sawicki)</a><br /></td>
+</tr>
+<tr>
+<td>Wirusy</td>
+<td>Etap I</td>
+<td>Wojciech Rytter</td>
+<td><a href="../../../../pl/archive/oi/7/wir" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110731/oi7.pdf#page=41" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Podpisy</td>
+<td>Etap II - dzień pr&oacute;bny</td>
+<td>Marcin Kubica</td>
+<td><a href="../../../../pl/archive/oi/7/pod" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110731/oi7.pdf#page=65" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Automorfizmy</td>
+<td>Etap II - dzień pierwszy</td>
+<td>Grzegorz Jakacki</td>
+<td><a href="../../../../pl/archive/oi/7/aut" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110731/oi7.pdf#page=70" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Tr&oacute;jramienny dźwig</td>
+<td>Etap II - dzień pierwszy</td>
+<td>Wojciech Rytter</td>
+<td><a href="../../../../pl/archive/oi/7/tro" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110731/oi7.pdf#page=75" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Kod</td>
+<td>Etap II - dzień drugi</td>
+<td>Wojciech Guzicki</td>
+<td><a href="../../../../pl/archive/oi/7/kod" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110731/oi7.pdf#page=78" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Labirynt studni</td>
+<td>Etap II - dzień drugi</td>
+<td>Marcin Kubica</td>
+<td><a href="../../../../pl/archive/oi/7/lab" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110731/oi7.pdf#page=85" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Lollobrygida</td>
+<td>Etap III - dzień pr&oacute;bny</td>
+<td>Piotr Chrząstowski</td>
+<td><a href="../../../../pl/archive/oi/7/lol" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110731/oi7.pdf#page=98" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Jajka</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Macin Mucha</td>
+<td><a href="../../../../pl/archive/oi/7/jaj" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110731/oi7.pdf#page=105" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Po-łamana</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Grzegorz Jakacki</td>
+<td><a href="../../../../pl/archive/oi/7/pol" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110731/oi7.pdf#page=112" target="_blank">Opracowanie (Marcin Mucha)</a><br /></td>
+</tr>
+<tr>
+<td>Agenci</td>
+<td>Etap III - dzień drugi</td>
+<td>Tomasz Waleń</td>
+<td><a href="../../../../pl/archive/oi/7/age" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110731/oi7.pdf#page=115" target="_blank">Opracowanie</a><br /> <a href="https://ksiegarnia.pwn.pl/,742983828,p.html" target="_blank">Przygody Bajtazara</a><br /></td>
+</tr>
+<tr>
+<td>Powt&oacute;rzenia</td>
+<td>Etap III - dzień drugi</td>
+<td>Adam Malinowski</td>
+<td><a href="../../../../pl/archive/oi/7/pow" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110731/oi7.pdf#page=121" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Promocja</td>
+<td>Etap III - dzień drugi</td>
+<td>Tomasz Waleń</td>
+<td><a href="../../../../pl/archive/oi/7/pro" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110731/oi7.pdf#page=124" target="_blank">Opracowanie</a><br /></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="contest contest-oi contest-oi-6">
+<h2>VI Olimpiada Informatyczna</h2>
+<table class="small" border="1">
+<thead> 
+<tr>
+<th class="th-name">Tytuł</th> <th class="th-stage">Etap</th> <th class="th-author">Autor</th> <th class="th-submit">Wyślij</th> <th class="th-solutions">Materiały</th>
+</tr>
+</thead> 
+<tbody>
+<tr>
+<td>Gra w wielokąty</td>
+<td>Etap I</td>
+<td>Grzegorz Jakacki</td>
+<td><a href="../../../../pl/archive/oi/6/gra" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110731/oi6.pdf#page=35" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Monocyfrowe reprezentacje</td>
+<td>Etap I</td>
+<td>Krzysztof Loryś</td>
+<td><a href="../../../../pl/archive/oi/6/mon" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110731/oi6.pdf#page=37" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Muszkieterowie</td>
+<td>Etap I</td>
+<td>Wojciech Guzicki</td>
+<td><a href="../../../../pl/archive/oi/6/mus" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110731/oi6.pdf#page=44" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Puste prostopadłościany</td>
+<td>Etap I</td>
+<td>Bogdan S. Chlebus</td>
+<td><a href="../../../../pl/archive/oi/6/pus" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110731/oi6.pdf#page=51" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Rakiety</td>
+<td>Etap II - dzień pr&oacute;bny</td>
+<td>Wojciech Rytter</td>
+<td><a href="../../../../pl/archive/oi/6/rak" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110731/oi6.pdf#page=78" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Grotołazi</td>
+<td>Etap II - dzień pierwszy</td>
+<td>Marcin Kubica</td>
+<td><a href="../../../../pl/archive/oi/6/gro" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110731/oi6.pdf#page=63" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Lunatyk</td>
+<td>Etap II - dzień pierwszy</td>
+<td>Wojciech Rytter</td>
+<td><a href="../../../../pl/archive/oi/6/lun" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110731/oi6.pdf#page=71" target="_blank">Opracowanie</a><br /> <a href="https://ksiegarnia.pwn.pl/,742983828,p.html" target="_blank">Przygody Bajtazara</a><br /></td>
+</tr>
+<tr>
+<td>Bitmapa</td>
+<td>Etap II - dzień drugi</td>
+<td>Marcin Sawicki</td>
+<td><a href="../../../../pl/archive/oi/6/bit" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110731/oi6.pdf#page=56" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Lodowisko</td>
+<td>Etap II - dzień drugi</td>
+<td>Marcin Kubica</td>
+<td><a href="../../../../pl/archive/oi/6/lod" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110731/oi6.pdf#page=83" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Tr&oacute;jkolorowe drzewa binarne</td>
+<td>Etap III - dzień pr&oacute;bny</td>
+<td>Marcin Kubica</td>
+<td><a href="../../../../pl/archive/oi/6/tro" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110731/oi6.pdf#page=120" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Magazynier</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Krzysztof Loryś</td>
+<td><a href="../../../../pl/archive/oi/6/mag" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110731/oi6.pdf#page=100" target="_blank">Opracowanie</a><br /> <a href="https://ksiegarnia.pwn.pl/,742983828,p.html" target="_blank">Przygody Bajtazara</a><br /></td>
+</tr>
+<tr>
+<td>Mapa</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Marcin Sawicki</td>
+<td><a href="../../../../pl/archive/oi/6/map" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110731/oi6.pdf#page=106" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Ołtarze</td>
+<td>Etap III - dzień drugi</td>
+<td>Grzegorz Jakacki</td>
+<td><a href="../../../../pl/archive/oi/6/olt" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110731/oi6.pdf#page=111" target="_blank">Opracowanie</a><br /> <a href="https://ksiegarnia.pwn.pl/,748491780,p.html" target="_blank">W poszukiwaniu wyzwań<br />(Grzegorz Jakacki)</a><br /></td>
+</tr>
+<tr>
+<td>Pierwotek abstrakcyjny</td>
+<td>Etap III - dzień drugi</td>
+<td>Wojciech Rytter</td>
+<td><a href="../../../../pl/archive/oi/6/pie" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110731/oi6.pdf#page=115" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Woda</td>
+<td>Etap III - dzień drugi</td>
+<td>Grzegorz Jakacki</td>
+<td><a href="../../../../pl/archive/oi/6/wod" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110731/oi6.pdf#page=125" target="_blank">Opracowanie</a><br /></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="contest contest-oi contest-oi-5">
+<h2>V Olimpiada Informatyczna</h2>
+<table class="small" border="1">
+<thead> 
+<tr>
+<th class="th-name">Tytuł</th> <th class="th-stage">Etap</th> <th class="th-author">Autor</th> <th class="th-submit">Wyślij</th> <th class="th-solutions">Materiały</th>
+</tr>
+</thead> 
+<tbody>
+<tr>
+<td>AB-słowa</td>
+<td>Etap I</td>
+<td>Krzysztof Diks</td>
+<td><a href="../../../../pl/archive/oi/5/abs" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110731/oi5.pdf#page=59" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Pracownia malarska</td>
+<td>Etap I</td>
+<td>Wojciech Rytter</td>
+<td><a href="../../../../pl/archive/oi/5/mal" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110731/oi5.pdf#page=40" target="_blank">Opracowanie</a><br /> <a href="https://ksiegarnia.pwn.pl/,748491780,p.html" target="_blank">W poszukiwaniu wyzwań<br />(Wojciech Rytter)</a><br /></td>
+</tr>
+<tr>
+<td>Suma ciągu jedynkowego</td>
+<td>Etap I</td>
+<td>Grzegorz Jakacki</td>
+<td><a href="../../../../pl/archive/oi/5/sum" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110731/oi5.pdf#page=54" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Wielokąt</td>
+<td>Etap I</td>
+<td>Krzysztof Diks</td>
+<td><a href="../../../../pl/archive/oi/5/wie" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110731/oi5.pdf#page=47" target="_blank">Opracowanie</a><br /> <a href="https://ksiegarnia.pwn.pl/,742983828,p.html" target="_blank">Przygody Bajtazara</a><br /></td>
+</tr>
+<tr>
+<td>Sieć dr&oacute;g</td>
+<td>Etap II - dzień pr&oacute;bny</td>
+<td>Piotr Chrząstowski</td>
+<td><a href="../../../../pl/archive/oi/5/sie" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110731/oi5.pdf#page=66" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Pakowanie kontener&oacute;w</td>
+<td>Etap II - dzień pierwszy</td>
+<td>Wojciech Rytter</td>
+<td><a href="../../../../pl/archive/oi/5/pak" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110731/oi5.pdf#page=70" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>R&oacute;wnanie na słowach</td>
+<td>Etap II - dzień pierwszy</td>
+<td>Wojciech Rytter</td>
+<td><a href="../../../../pl/archive/oi/5/row" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110731/oi5.pdf#page=75" target="_blank">Opracowanie (Krzysztof Diks)</a><br /> <a href="https://ksiegarnia.pwn.pl/,742983828,p.html" target="_blank">Przygody Bajtazara</a><br /></td>
+</tr>
+<tr>
+<td>Okno</td>
+<td>Etap II - dzień drugi</td>
+<td>Wojciech Guzicki</td>
+<td><a href="../../../../pl/archive/oi/5/okn" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110731/oi5.pdf#page=79" target="_blank">Opracowanie</a><br /> <a href="https://ksiegarnia.pwn.pl/,748491780,p.html" target="_blank">W poszukiwaniu wyzwań<br />(Grzegorz Jakacki)</a><br /></td>
+</tr>
+<tr>
+<td>Płetwonurek</td>
+<td>Etap II - dzień drugi</td>
+<td>&nbsp;</td>
+<td><a href="../../../../pl/archive/oi/5/ple" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110731/oi5.pdf#page=88" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Układy asemblerowe</td>
+<td>Etap III - dzień pr&oacute;bny</td>
+<td>Marcin Kubica</td>
+<td><a href="../../../../pl/archive/oi/5/ukl" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110731/oi5.pdf#page=93" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Bankomaty</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Piotr Chrząstowski</td>
+<td><a href="../../../../pl/archive/oi/5/ban" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110731/oi5.pdf#page=99" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Gonitwa</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Adam Borowski</td>
+<td><a href="../../../../pl/archive/oi/5/gon" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110731/oi5.pdf#page=105" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Najlżejszy język</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Wojciech Rytter</td>
+<td><a href="../../../../pl/archive/oi/5/naj" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110731/oi5.pdf#page=109" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Gra Ulama</td>
+<td>Etap III - dzień drugi</td>
+<td>Andrzej Pelc</td>
+<td><a href="../../../../pl/archive/oi/5/gra" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110731/oi5.pdf#page=115" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Łamane płaskie</td>
+<td>Etap III - dzień drugi</td>
+<td>Krzysztof Sobusiak</td>
+<td><a href="../../../../pl/archive/oi/5/lam" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110731/oi5.pdf#page=119" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Prostokąty</td>
+<td>Etap III - dzień drugi</td>
+<td>Wojciech Guzicki</td>
+<td><a href="../../../../pl/archive/oi/5/pro" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110731/oi5.pdf#page=126" target="_blank">Opracowanie</a><br /></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="contest contest-oi contest-oi-4">
+<h2>IV Olimpiada Informatyczna</h2>
+<table class="small" border="1">
+<thead> 
+<tr>
+<th class="th-name">Tytuł</th> <th class="th-stage">Etap</th> <th class="th-author">Autor</th> <th class="th-submit">Wyślij</th> <th class="th-solutions">Materiały</th>
+</tr>
+</thead> 
+<tbody>
+<tr>
+<td>Liczba wybor&oacute;w symetrycznych</td>
+<td>Etap I</td>
+<td>Wojciech Rytter</td>
+<td><a href="../../../../pl/archive/oi/4/lic" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110731/oi4.pdf#page=35" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Skok w bok</td>
+<td>Etap I</td>
+<td>Bogdan S. Chlebus</td>
+<td><a href="../../../../pl/archive/oi/4/sko" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110731/oi4.pdf#page=39" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Tanie podr&oacute;że</td>
+<td>Etap I</td>
+<td>Stanisław Walig&oacute;rski</td>
+<td><a href="../../../../pl/archive/oi/4/tan" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110731/oi4.pdf#page=46" target="_blank">Opracowanie (Jacek Chrząszcz)</a><br /></td>
+</tr>
+<tr>
+<td>Bramki XOR</td>
+<td>Etap I</td>
+<td>Tomasz Śmigielski</td>
+<td><a href="../../../../pl/archive/oi/4/xor" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110731/oi4.pdf#page=52" target="_blank">Opracowanie (Marek Pawlicki)</a><br /></td>
+</tr>
+<tr>
+<td>Lotniska</td>
+<td>Etap II - dzień pr&oacute;bny</td>
+<td>Wojciech Guzicki</td>
+<td><a href="../../../../pl/archive/oi/4/lot" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110731/oi4.pdf#page=72" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Addon</td>
+<td>Etap II - dzień pierwszy</td>
+<td>Grzegorz Jakacki</td>
+<td><a href="../../../../pl/archive/oi/4/add" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110731/oi4.pdf#page=60" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Genotypy</td>
+<td>Etap II - dzień pierwszy</td>
+<td>Przemysława Kanarek</td>
+<td><a href="../../../../pl/archive/oi/4/gen" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110731/oi4.pdf#page=67" target="_blank">Opracowanie (Marcin Kubica)</a><br /></td>
+</tr>
+<tr>
+<td>Paliwo</td>
+<td>Etap II - dzień drugi</td>
+<td>Tomasz Śmigielski</td>
+<td><a href="../../../../pl/archive/oi/4/pal" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110731/oi4.pdf#page=77" target="_blank">Opracowanie (Albert Krzymowski)</a><br /></td>
+</tr>
+<tr>
+<td>Rekurencyjna mr&oacute;wka</td>
+<td>Etap II - dzień drugi</td>
+<td>Wojciech Rytter</td>
+<td><a href="../../../../pl/archive/oi/4/rek" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110731/oi4.pdf#page=82" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Wiarygodność świadk&oacute;w</td>
+<td>Etap III - dzień pr&oacute;bny</td>
+<td>Grzegorz Jakacki</td>
+<td><a href="../../../../pl/archive/oi/4/wia" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110731/oi4.pdf#page=108" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Kajaki</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Wojciech Rytter</td>
+<td><a href="../../../../pl/archive/oi/4/kaj" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110731/oi4.pdf#page=96" target="_blank">Opracowanie</a><br /> <a href="https://ksiegarnia.pwn.pl/,748491780,p.html" target="_blank">W poszukiwaniu wyzwań<br />(Wojciech Rytter)</a><br /></td>
+</tr>
+<tr>
+<td>Liczba zbior&oacute;w n-k-specjalnych</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Wojciech Rytter</td>
+<td><a href="../../../../pl/archive/oi/4/liz" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110731/oi4.pdf#page=99" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Tr&oacute;jkąty jednobarwne</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Wojciech Guzicki</td>
+<td><a href="../../../../pl/archive/oi/4/tro" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110731/oi4.pdf#page=106" target="_blank">Opracowanie</a><br /> <a href="https://ksiegarnia.pwn.pl/,742983828,p.html" target="_blank">Przygody Bajtazara</a><br /></td>
+</tr>
+<tr>
+<td>Alibaba</td>
+<td>Etap III - dzień drugi</td>
+<td>Piotr Chrząstowski</td>
+<td><a href="../../../../pl/archive/oi/4/ali" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110731/oi4.pdf#page=89" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Rezerwacja sal wykładowych</td>
+<td>Etap III - dzień drugi</td>
+<td>Wojciech Guzicki</td>
+<td><a href="../../../../pl/archive/oi/4/rez" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20110731/oi4.pdf#page=102" target="_blank">Opracowanie</a><br /> <a href="https://ksiegarnia.pwn.pl/,742983828,p.html" target="_blank">Przygody Bajtazara<br />(Wojciech Guzicki, Jakub Radoszewski)</a><br /></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="contest contest-oi contest-oi-3">
+<h2>III Olimpiada Informatyczna</h2>
+<table class="small" border="1">
+<thead> 
+<tr>
+<th class="th-name">Tytuł</th> <th class="th-stage">Etap</th> <th class="th-author">Autor</th> <th class="th-submit">Wyślij</th> <th class="th-solutions">Materiały</th>
+</tr>
+</thead> 
+<tbody>
+<tr>
+<td>Gońcy</td>
+<td>Etap I</td>
+<td>Krzysztof Diks</td>
+<td><a href="../../../../pl/archive/oi/3/gon" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20130309/1995_1.pdf#page=73" target="_blank">Opracowanie</a><br /> <a href="https://ksiegarnia.pwn.pl/,742983828,p.html" target="_blank">Przygody Bajtazara<br />(Jakub Łącki)</a><br /></td>
+</tr>
+<tr>
+<td>Mokra robota</td>
+<td>Etap I</td>
+<td>Piotr Chrząstowski</td>
+<td><a href="../../../../pl/archive/oi/3/mok" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20130309/1995_1.pdf#page=63" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Pręty</td>
+<td>Etap I</td>
+<td>Piotr Chrząstowski</td>
+<td><a href="../../../../pl/archive/oi/3/pre" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20130309/1995_1.pdf#page=55" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Zamek</td>
+<td>Etap I</td>
+<td>Krzysztof Diks</td>
+<td><a href="../../../../pl/archive/oi/3/zam" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20130309/1995_1.pdf#page=40" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Pięć monet</td>
+<td>Etap II - dzień pr&oacute;bny</td>
+<td>Piotr Chrząstowski</td>
+<td><a href="../../../../pl/archive/oi/3/mon" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20130309/1995_1.pdf#page=79" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Wieże</td>
+<td>Etap II - dzień pierwszy</td>
+<td>Krzysztof Diks</td>
+<td><a href="../../../../pl/archive/oi/3/wie" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20130309/1995_1.pdf#page=85" target="_blank">Opracowanie</a><br /> <a href="https://ksiegarnia.pwn.pl/,748491780,p.html" target="_blank">W poszukiwaniu wyzwań<br />(Krzysztof Diks)</a><br /></td>
+</tr>
+<tr>
+<td>Słowa Fibonacciego</td>
+<td>Etap II - dzień drugi</td>
+<td>Wojciech Rytter</td>
+<td><a href="../../../../pl/archive/oi/3/slo" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20130309/1995_1.pdf#page=102" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Hazard</td>
+<td>Etap II - dzień drugi</td>
+<td>Wojciech Plandowski</td>
+<td><a href="../../../../pl/archive/oi/3/haz" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20130309/1995_1.pdf#page=92" target="_blank">Opracowanie</a><br /> <a href="https://ksiegarnia.pwn.pl/,742983828,p.html" target="_blank">Przygody Bajtazara</a><br /></td>
+</tr>
+<tr>
+<td>Permutacje antyarytmetyczne</td>
+<td>Etap III - dzień pr&oacute;bny</td>
+<td>Wojciech Guzicki</td>
+<td><a href="../../../../pl/archive/oi/3/per" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20130309/1995_1.pdf#page=107" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Agenci</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Marcin Kubica</td>
+<td><a href="../../../../pl/archive/oi/3/age" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20130309/1995_1.pdf#page=113" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Kule</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Krzysztof Diks</td>
+<td><a href="../../../../pl/archive/oi/3/kul" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20130309/1995_1.pdf#page=129" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Nieatakujące się skoczki</td>
+<td>Etap III - dzień drugi</td>
+<td>Wojciech Rytter</td>
+<td><a href="../../../../pl/archive/oi/3/nie" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20130309/1995_1.pdf#page=137" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Wyr&oacute;wnywanie sł&oacute;w</td>
+<td>Etap III - dzień drugi</td>
+<td>Wojciech Rytter</td>
+<td><a href="../../../../pl/archive/oi/3/wyr" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20130309/1995_1.pdf#page=144" target="_blank">Opracowanie</a><br /></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="contest contest-oi contest-oi-2">
+<h2>II Olimpiada Informatyczna</h2>
+<table class="small" border="1">
+<thead> 
+<tr>
+<th class="th-name">Tytuł</th> <th class="th-stage">Etap</th> <th class="th-author">Autor</th> <th class="th-submit">Wyślij</th> <th class="th-solutions">Materiały</th>
+</tr>
+</thead> 
+<tbody>
+<tr>
+<td>Drzewa</td>
+<td>Etap I</td>
+<td>Wojciech Rytter</td>
+<td><a href="../../../../pl/archive/oi/2/drz" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20130203/1994.pdf#page=21" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Jedynki i zera</td>
+<td>Etap I</td>
+<td>Andrzej Walat</td>
+<td><a href="../../../../pl/archive/oi/2/jed" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20130203/1994.pdf#page=25" target="_blank">Opracowanie</a><br /> <a href="../../../../pl/archive/oi/2/jez" target="_blank">Trudniejsza wersja (Szkopuł)</a><br /> <a href="https://ksiegarnia.pwn.pl/,742983828,p.html" target="_blank">Przygody Bajtazara<br />(Andrzej Walat, Jakub Łącki)</a><br /></td>
+</tr>
+<tr>
+<td>Optymalizacja dysku</td>
+<td>Etap I</td>
+<td>Tomasz Śmigielski, Piotr Krysiuk</td>
+<td><a href="../../../../pl/archive/oi/2/opt" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20130203/1994.pdf#page=31" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Palindromy</td>
+<td>Etap I</td>
+<td>Wojciech Rytter</td>
+<td><a href="../../../../pl/archive/oi/2/pal" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20130203/1994.pdf#page=35" target="_blank">Opracowanie</a><br /> <a href="https://ksiegarnia.pwn.pl/,742983828,p.html" target="_blank">Przygody Bajtazara<br />(Wojciech Rytter, Jakub Radoszewski)</a><br /></td>
+</tr>
+<tr>
+<td>Klub Prawoskrętnych Kierowc&oacute;w</td>
+<td>Etap II - dzień pr&oacute;bny</td>
+<td>Piotr Chrząstowski</td>
+<td><a href="../../../../pl/archive/oi/2/kpk" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20130203/1994.pdf#page=38" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Mudstock Bis</td>
+<td>Etap II - dzień pierwszy</td>
+<td>Andrzej Walat</td>
+<td><a href="../../../../pl/archive/oi/2/mud" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20130203/1994.pdf#page=46" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Tr&oacute;jkąty</td>
+<td>Etap II - dzień pierwszy</td>
+<td>Piotr Chrząstowski</td>
+<td><a href="../../../../pl/archive/oi/2/tro" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20130203/1994.pdf#page=42" target="_blank">Opracowanie</a><br /> <a href="https://ksiegarnia.pwn.pl/,748491780,p.html" target="_blank">W poszukiwaniu wyzwań<br />(Krzysztof Stencel)</a><br /></td>
+</tr>
+<tr>
+<td>Pokrywanie szachownicy</td>
+<td>Etap II - dzień drugi</td>
+<td>Wojciech Rytter</td>
+<td><a href="../../../../pl/archive/oi/2/sza" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20130203/1994.pdf#page=48" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Wielokąt</td>
+<td>Etap II - dzień drugi</td>
+<td>Krzysztof Diks</td>
+<td><a href="../../../../pl/archive/oi/2/wie" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20130203/1994.pdf#page=52" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Kodowanie permutacji</td>
+<td>Etap III - dzień pr&oacute;bny</td>
+<td>Krzysztof Diks</td>
+<td><a href="../../../../pl/archive/oi/2/kod" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20130203/1994.pdf#page=56" target="_blank">Opracowanie</a><br /> <a href="https://ksiegarnia.pwn.pl/,748491780,p.html" target="_blank">W poszukiwaniu wyzwań<br />(Krzysztof Diks)</a><br /></td>
+</tr>
+<tr>
+<td>Obchodzenie drzewa skokami</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Krzysztof Diks</td>
+<td><a href="../../../../pl/archive/oi/2/obc" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20130203/1994.pdf#page=61" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Pochylnia</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Andrzej Walat</td>
+<td><a href="../../../../pl/archive/oi/2/poc" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20130203/1994.pdf#page=65" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Składanie sł&oacute;w</td>
+<td>Etap III - dzień drugi</td>
+<td>Wojciech Rytter</td>
+<td><a href="../../../../pl/archive/oi/2/skl" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20130203/1994.pdf#page=71" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Szeregowanie czynności</td>
+<td>Etap III - dzień drugi</td>
+<td>Marcin Jurdziński</td>
+<td><a href="../../../../pl/archive/oi/2/sze" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20130203/1994.pdf#page=74" target="_blank">Opracowanie</a><br /> <a href="https://ksiegarnia.pwn.pl/,742983828,p.html" target="_blank">Przygody Bajtazara<br />(Marcin Jurdziński, Tomasz Idziaszek)</a><br /></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="contest contest-oi contest-oi-1">
+<h2>I Olimpiada Informatyczna</h2>
+<table class="small" border="1">
+<thead> 
+<tr>
+<th class="th-name">Tytuł</th> <th class="th-stage">Etap</th> <th class="th-author">Autor</th> <th class="th-submit">Wyślij</th> <th class="th-solutions">Materiały</th>
+</tr>
+</thead> 
+<tbody>
+<tr>
+<td>Tr&oacute;jkąty</td>
+<td>Etap I</td>
+<td>Piotr Chrząstowski</td>
+<td><a href="../../../../pl/archive/oi/1/tro" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20130130/1993_2.pdf#page=19" target="_blank">Opracowanie</a><br /> <a href="https://ksiegarnia.pwn.pl/,748491780,p.html" target="_blank">W poszukiwaniu wyzwań<br />(Krzysztof Stencel)</a><br /></td>
+</tr>
+<tr>
+<td>Sponsor</td>
+<td>Etap I</td>
+<td>Piotr Chrząstowski</td>
+<td><a href="../../../../pl/archive/oi/1/spo" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20130130/1993_2.pdf#page=22" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Pionki</td>
+<td>Etap I</td>
+<td>Andrzej Walat</td>
+<td><a href="../../../../pl/archive/oi/1/pio" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20130130/1993_2.pdf#page=27" target="_blank">Opracowanie</a><br /> <a href="https://ksiegarnia.pwn.pl/,742983828,p.html" target="_blank">Przygody Bajtazara</a><br /></td>
+</tr>
+<tr>
+<td>Suma kwadrat&oacute;w cyfr</td>
+<td>Etap II - dzień pr&oacute;bny</td>
+<td>Wojciech Rytter</td>
+<td><a href="../../../../pl/archive/oi/1/kwa" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20130130/1993_2.pdf#page=33" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Przedsięwzięcie</td>
+<td>Etap II - dzień pierwszy</td>
+<td>Maciej M. Sysło</td>
+<td><a href="../../../../pl/archive/oi/1/prz" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20130130/1993_2.pdf#page=35" target="_blank">Opracowanie</a><br /> <a href="https://ksiegarnia.pwn.pl/,742983828,p.html" target="_blank">Przygody Bajtazara</a><br /></td>
+</tr>
+<tr>
+<td>Wyspy na tr&oacute;jkątnej sieci</td>
+<td>Etap II - dzień drugi</td>
+<td>Andrzej Walat</td>
+<td><a href="../../../../pl/archive/oi/1/wys" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20130130/1993_2.pdf#page=42" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Wahania akcji na giełdzie</td>
+<td>Etap III - dzień pr&oacute;bny</td>
+<td>Piotr Chrząstowski</td>
+<td><a href="../../../../pl/archive/oi/1/wah" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20130130/1993_2.pdf#page=48" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Anagramy</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Wojciech Complak</td>
+<td><a href="../../../../pl/archive/oi/1/ana" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20130130/1993_2.pdf#page=50" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Nasycanie makrofan&oacute;w</td>
+<td>Etap III - dzień pierwszy</td>
+<td>Andrzej Walat</td>
+<td><a href="../../../../pl/archive/oi/1/mak" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20130130/1993_2.pdf#page=54" target="_blank">Opracowanie</a><br /></td>
+</tr>
+<tr>
+<td>Przepustowość sieci</td>
+<td>Etap III - dzień drugi</td>
+<td>Maciej M. Sysło</td>
+<td><a href="../../../../pl/archive/oi/1/prs" target="_blank">Szkopuł</a></td>
+<td><a href="http://oi.edu.pl/static/attachment/20130130/1993_2.pdf#page=58" target="_blank">Opracowanie</a><br /></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Podziękowania:</strong></p>
+<ul>
+<li>Większą część powyższej rozpiski (I-XXVIII OI) przygotował Tomasz Idziaszek w ramach portalu <a href="http://www.algonotes.com/pl/archive/oi/" target="_blank">Algonotes.com</a>, a kolejne zadania uzupełniła Natalia Miszkiewicz.</li>
+<li>Bazę zadań z edycji I-XXV na Szkopule skompletował Bartosz Kostka. Pozostałe zadania umieszczali m.in. Mateusz Masiarz, Marcel Szelwiga i Jakub Rożek.</li>
+</ul>
+
+</div>
+
+      
+
+
+
+
+
+      </div>
+    </div>
+
+    <div id="footer" role="contentinfo">
+      <span class="line1">Olimpiada Informatyczna, OEIiZK</span><br>
+      <ul>
+        <li>ul. Nowogrodzka 73</li>
+        <li>02-006 Warszawa</li>
+        <li>tel. 22 50 140 14 lub 22 50 140 15</li>
+        <li class="last_item"><a href="mailto:olimpiada@oi.edu.pl">olimpiada@oi.edu.pl</a></li>
+      </ul>
+      <span class="line1"><small>Olimpiada finansowana jest ze środków Ministerstwa Edukacji Narodowej
+      w ramach zadania publicznego „Organizacja i przeprowadzenie olimpiad przedmiotowych
+      i interdyscyplinarnych w latach szkolnych 2022/2023, 2023/2024, 
+2024/2025”.</small></span>
+
+   </div>
+  
+  
+     <div id="anna">
+      &copy; Anna Michalska<br>
+      Uniwersytet Warszawski
+      </div>
+ 
+  
+  </div>
+
+  </div>
+  </div>
+  </div>
+  
+  </body>
+</html>

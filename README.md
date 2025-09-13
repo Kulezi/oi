@@ -40,7 +40,7 @@ bądź przy pomocy polecenia `grep 'nazwa zadania' -R .` wywołanego z główneg
 ## Jak samemu skorzystać z checklisty:
 Sforkuj [szablon](https://github.com/testowyuczen/oi) tego repozytorium [klikając tutaj](https://github.com/testowyuczen/oi/fork), i w zakładce Actions swojego repozytorium kliknij `I understand my workflows, go ahead and enable them` - bez tego checklista nie będzie się aktualizować automatycznie.
 
-Po wbiciu jakiegoś zadania, np 'Rycerz:wq' z pierwszego dnia II etapu XXXI OI:
+Po wbiciu jakiegoś zadania, np ['Rycerz' z pierwszego dnia II etapu XXXI OI](https://oi.edu.pl/archive/pl/oi/31/ryc):
 - Zapisz rozwiązanie. np. w pliku `rozwiazania/xxxi/etap2/dzien1/ryc/ryc.cpp`.
 - Dodaj je do repozytorium wykonując `git add `rozwiazania/xxxi/etap2/dzien1/ryc/ryc.cpp`, (przy pomocy `git status` możesz zobaczyć co już dodałeś w tym commicie).
 - Scommituj je np. w ten sposób: `git commit -m "Dodano rozwiązanie zadania 'Rycerz' z XXXI OI"` (jeśli zapomnieliśmy czegoś dodać wystarczy powtórzyć poprzedni krok i użyć `git commit --am`.

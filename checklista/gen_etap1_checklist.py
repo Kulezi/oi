@@ -43,7 +43,7 @@ def zadania_edycja(edycja):
     return 6
 
 # Znajdź wszystkie edycje
-wszystkie_edycje = range(1, max(v["edycja"] for v in data.values()) + 1)
+wszystkie_edycje = range(1, 33)
 
 # Przygotowujemy tabelę markdown
 header = ["Edycja"] + [f"zad. {i}" for i in range(1, 7)]

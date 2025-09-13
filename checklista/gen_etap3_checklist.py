@@ -73,7 +73,7 @@ ktory_dzien = {
 }
 
 # Znajdź wszystkie edycje
-wszystkie_edycje = range(1, max(v["edycja"] for v in data.values()) + 1)
+wszystkie_edycje = range(1, 32)
 
 # Przygotowujemy tabelę markdown
 header = ["Edycja", "Dzień próbny, zad. 1", "Dzień próbny, zad. 2", "Dzień 1 - zad. 1", "Dzień 1 - zad. 2", "Dzień 1 - zad. 3", "Dzień 2 - zad. 1", "Dzień 2 - zad. 2", "Dzień 2 - zad. 3"] 

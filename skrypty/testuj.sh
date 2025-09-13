@@ -1,4 +1,5 @@
 #!/bin/bash
+# Autor skryptu: Paweł Putra (https://github.com/kulezi)
 
 # Tu sobie ustawiamy flagi jakie chcemy, najlepiej z ustaleń technicznych konkursu.
 # Ewentualnie debugowe.

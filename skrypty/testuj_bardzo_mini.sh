@@ -1,4 +1,6 @@
 #!/bin/bash
+# Autor skryptu: Paweł Putra (https://github.com/kulezi)
+
 # Szczegóły działania skryptu możesz poczytać w testuj.sh, tu jest tylko mały wycinek.
 brute=$1
 model=$2

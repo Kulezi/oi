@@ -15,8 +15,30 @@ if marker not in content:
     print("❌ Nie znaleziono sekcji automatycznej w README.md", file=sys.stderr)
     sys.exit(1)
 
-# uruchomienie gen_json.py (w katalogu checklist)
+# --- usuń wszystko przed pierwszym nagłówkiem '#'
+lines = content.splitlines()
+for idx, line in enumerate(lines):
+    if line.strip().startswith("#"):
+        first_header_idx = idx
+        break
+else:
+    first_header_idx = 0
+
+lines = lines[first_header_idx:]
+content = "\n".join(lines)
+
+# --- uruchomienie gen_json.py (w katalogu checklist)
 subprocess.run(["python3", "gen_json.py"], cwd=checklist_dir, check=True)
+
+# --- generowanie SVG po gen_json.py
+subprocess.run(["python3", "gen_svg.py"], cwd=checklist_dir, check=True)
+
+# --- dodaj obrazek oi_progress.svg nad pierwszym nagłówkiem
+svg_path = "checklista/oi_progress.svg"
+if lines:
+    content = f"![Progres OI]({svg_path})\n\n" + content
+else:
+    content = f"![Progres OI]({svg_path})\n"
 
 tables = []
 
@@ -48,7 +70,11 @@ warning = (
 )
 
 # podmiana zawartości po markerze
-base, _ = content.split(marker, 1)
+if marker in content:
+    base, _ = content.split(marker, 1)
+else:
+    base = content
+
 new_content = base + marker + "\n\n" + warning + "\n\n".join(tables)
 
 # zapisz

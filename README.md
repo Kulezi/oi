@@ -1,3 +1,5 @@
+![Progres OI](checklista/oi_progress.svg)
+
 # Materiały przygotowujące do Olimpiady Informatycznej.
 
 ## Repozytorium ma na celu:

@@ -26,7 +26,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add README.md checklista/tasks.json
+          git add README.md checklista/tasks.json checklista/oi_progress.svg
           # Amend the last commit and add the bot as a co-author
           git commit --amend --no-edit -m "$(git log -1 --pretty=%B)
       

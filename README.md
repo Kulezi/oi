@@ -62,7 +62,7 @@ Po wbiciu jakiegoś zadania, np ['Rycerz' z pierwszego dnia II etapu XXXI OI](ht
 
 Etap I | Etap II | Etap III | Łącznie
 :---: | :---: | :---: | :---:
-38/150 (25%) | 44/157 (28%) | 39/200 (20%) | 121/507 (24%)
+39/150 (26%) | 45/157 (29%) | 39/200 (20%) | 123/507 (24%)
 
 ## Rozwiązane zadania wg edycji
 
@@ -73,11 +73,11 @@ II | 4/14 (29%) | XII | 4/17 (24%) | XXII | 4/17 (24%) | XXXII | 7/18 (39%)
 III | 2/13 (15%) | XIII | 5/16 (31%) | XXIII | 3/17 (18%) |  | 
 IV | 3/16 (19%) | XIV | 3/16 (19%) | XXIV | 6/16 (38%) |  | 
 V | 2/16 (12%) | XV | 3/16 (19%) | XXV | 16/18 (89%) |  | 
-VI | 2/15 (13%) | XVI | 1/16 (6%) | XXVI | 8/17 (47%) |  | 
+VI | 2/15 (13%) | XVI | 1/16 (6%) | XXVI | 9/17 (53%) |  | 
 VII | 3/15 (20%) | XVII | 5/17 (29%) | XXVII | 1/10 (10%) |  | 
 VIII | 2/15 (13%) | XVIII | 5/17 (29%) | XXVIII | 3/17 (18%) |  | 
 IX | 6/15 (40%) | XIX | 4/17 (24%) | XXIX | 1/17 (6%) |  | 
-X | 1/16 (6%) | XX | 3/17 (18%) | XXX | 0/17 (0%) |  |
+X | 1/16 (6%) | XX | 3/17 (18%) | XXX | 1/17 (6%) |  |
 
 
 ## Rozwiązane zadania z I etapu
@@ -113,7 +113,7 @@ XXVI | pod ✅ | nie ✅ | rob ✅ | klu ✅ | par ✅ | —
 XXVII |   |   |   |   |   | —
 XXVIII | gan ✅ |   |   |   |   | —
 XXIX |   |   |   |   |   | —
-XXX |   |   |   |   |   | —
+XXX | kol ✅ |   |   |   |   | —
 XXXI | cza ✅ |   |   |   |   | —
 XXXII | wal ✅ | kas 🤔 | spr ✅ | usu ✅ | zam ✅ | bit ✅
 
@@ -147,7 +147,7 @@ XXII |   | pus ✅ |   |   |
 XXIII |   | zaj ✅ | dro ✅ |   |  
 XXIV |   | sum ✅ |   | kon ✅ | zam ✅
 XXV |   | kon ✅ | dro ✅ | tom ✅ | tel ✅
-XXVI |   | kol ✅ | gwi ✅ | osi 🤔 | roz 🤔
+XXVI |   | kol ✅ | gwi ✅ | osi ✅ | roz 🤔
 XXVII |   | czw ✅ |   |   |  
 XXVIII |   | ple ✅ |   | pla ✅ |  
 XXIX |   |   |   | kon ✅ |  
@@ -190,5 +190,4 @@ XXVII | — | — | — | — | — | — | — | —
 XXVIII |   | — |   |   |   |   |   |  
 XXIX |   |   |   |   |   |   |   |  
 XXX |   | — |   |   |   |   |   |  
-XXXI |   | — |   |   |   |   |   |  
-XXXII |   | — |   |   |   |   |   |
+XXXI |   | — |   |   |   |   |   |

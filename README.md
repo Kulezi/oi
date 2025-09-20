@@ -64,22 +64,22 @@ Po wbiciu jakiegoś zadania, np ['Rycerz' z pierwszego dnia II etapu XXXI OI](ht
 
 Etap I | Etap II | Etap III | Łącznie
 :---: | :---: | :---: | :---:
-39/150 (26%) | 45/157 (29%) | 39/200 (20%) | 123/507 (24%)
+42/150 (28%) | 48/157 (31%) | 40/200 (20%) | 130/507 (26%)
 
 ## Rozwiązane zadania wg edycji
 
 Edycja | Wynik | Edycja | Wynik | Edycja | Wynik | Edycja | Wynik
 :--- | ---: | :--- | ---: | :--- | ---: | :--- | ---:
-I | 3/10 (30%) | XI | 2/16 (12%) | XXI | 6/17 (35%) | XXXI | 3/17 (18%)
+I | 3/10 (30%) | XI | 2/16 (12%) | XXI | 6/17 (35%) | XXXI | 4/17 (24%)
 II | 4/14 (29%) | XII | 4/17 (24%) | XXII | 4/17 (24%) | XXXII | 7/18 (39%)
 III | 2/13 (15%) | XIII | 5/16 (31%) | XXIII | 3/17 (18%) |  | 
 IV | 3/16 (19%) | XIV | 3/16 (19%) | XXIV | 6/16 (38%) |  | 
-V | 2/16 (12%) | XV | 3/16 (19%) | XXV | 16/18 (89%) |  | 
-VI | 2/15 (13%) | XVI | 1/16 (6%) | XXVI | 9/17 (53%) |  | 
-VII | 3/15 (20%) | XVII | 5/17 (29%) | XXVII | 1/10 (10%) |  | 
+V | 3/16 (19%) | XV | 3/16 (19%) | XXV | 17/18 (94%) |  | 
+VI | 3/15 (20%) | XVI | 1/16 (6%) | XXVI | 10/17 (59%) |  | 
+VII | 3/15 (20%) | XVII | 6/17 (35%) | XXVII | 1/10 (10%) |  | 
 VIII | 2/15 (13%) | XVIII | 5/17 (29%) | XXVIII | 3/17 (18%) |  | 
 IX | 6/15 (40%) | XIX | 4/17 (24%) | XXIX | 1/17 (6%) |  | 
-X | 1/16 (6%) | XX | 3/17 (18%) | XXX | 1/17 (6%) |  |
+X | 1/16 (6%) | XX | 4/17 (24%) | XXX | 1/17 (6%) |  |
 
 
 ## Rozwiązane zadania z I etapu
@@ -90,8 +90,8 @@ I | pio ✅ | tro ✅ |   | — | — | —
 II | jed ✅ | pal ✅ |   |   | — | —
 III | gon ✅ |   |   |   | — | —
 IV |   |   |   |   | — | —
-V | wie ✅ |   |   |   | — | —
-VI |   |   |   |   | — | —
+V | wie ✅ | sum ✅ |   |   | — | —
+VI | gra ✅ |   |   |   | — | —
 VII | bro ✅ |   |   |   | — | —
 VIII | ant ✅ |   |   |   | — | —
 IX | kom ✅ | kol ✅ |   |   | — | —
@@ -102,7 +102,7 @@ XIII | kra ✅ | okr ✅ |   |   |   | —
 XIV |   |   |   |   |   | —
 XV | pla ✅ |   |   |   |   | —
 XVI |   |   |   |   |   | —
-XVII | kor ✅ |   |   |   |   | —
+XVII | kor ✅ | tes ✅ |   |   |   | —
 XVIII | liz ✅ |   |   |   |   | —
 XIX | odl ✅ |   |   |   |   | —
 XX |   |   |   |   |   | —
@@ -142,19 +142,19 @@ XV |   |   |   |   |
 XVI |   |   |   | arc ✅ |  
 XVII |   | klo ✅ | cho ✅ |   |  
 XVIII |   | roz ✅ |   |   |  
-XIX |   | roz ✅ | okr ✅ | sza ✅ |  
+XIX |   | sza ✅ |   | roz ✅ | okr ✅
 XX |   | luk ✅ |   | mor ✅ |  
 XXI |   | prz ✅ |   | pta ✅ |  
 XXII |   | pus ✅ |   |   |  
 XXIII |   | zaj ✅ | dro ✅ |   |  
 XXIV |   | sum ✅ |   | kon ✅ | zam ✅
-XXV |   | kon ✅ | dro ✅ | tom ✅ | tel ✅
+XXV | prz ✅ | kon ✅ | dro ✅ | tom ✅ | tel ✅
 XXVI |   | kol ✅ | gwi ✅ | osi ✅ | roz 🤔
 XXVII |   | czw ✅ |   |   |  
 XXVIII |   | ple ✅ |   | pla ✅ |  
 XXIX |   |   |   | kon ✅ |  
 XXX |   |   |   |   |  
-XXXI |   | lic ✅ | ryc ✅ |   |  
+XXXI |   | lic ✅ | ryc ✅ | poj ✅ |  
 XXXII | sss ✅ | drz ✅ |   |   |
 
 
@@ -181,7 +181,7 @@ XVI |   | — |   |   |   |   |   | —
 XVII |   | — | zab ✅ |   |   | pil ✅ |   |  
 XVIII |   | — | imp ✅ |   |   | pat ✅ | met ✅ |  
 XIX |   | — |   |   |   |   |   |  
-XX |   | — |   |   |   | gdz ✅ |   |  
+XX |   | — | lan ✅ |   |   | gdz ✅ |   |  
 XXI | far ✅ | — | tur ✅ |   |   | pan ✅ |   |  
 XXII |   | — | wil ✅ |   |   | kol ✅ |   |  
 XXIII |   | — | zyw ✅ |   |   |   |   |  

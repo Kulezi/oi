@@ -524,6 +524,13 @@
         "nazwa": "tur",
         "punkty": 100
     },
+    "xxii_etap2_dzien2_trz": {
+        "edycja": 22,
+        "etap": 2,
+        "dzien": 2,
+        "nazwa": "trz",
+        "punkty": 100
+    },
     "xxii_etap2_dzien1_pus": {
         "edycja": 22,
         "etap": 2,

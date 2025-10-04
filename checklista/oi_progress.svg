@@ -162,8 +162,8 @@
 <text x="606.0" y="78" text-anchor="middle" dominant-baseline="middle" font-size="5" fill="white" font-family="monospace">XXI</text>
 <rect x="619.0" y="0" width="20" height="20" fill="rgba(0,255,0,0.20)" stroke="white" stroke-width="1">
 <title>1 Etap 22 OI – 20%</title></rect>
-<rect x="619.0" y="23" width="20" height="20" fill="rgba(0,255,0,0.20)" stroke="white" stroke-width="1">
-<title>2 Etap 22 OI – 20%</title></rect>
+<rect x="619.0" y="23" width="20" height="20" fill="rgba(0,255,0,0.40)" stroke="white" stroke-width="1">
+<title>2 Etap 22 OI – 40%</title></rect>
 <rect x="619.0" y="46" width="20" height="20" fill="rgba(0,255,0,0.28)" stroke="white" stroke-width="1">
 <title>3 Etap 22 OI – 28%</title></rect>
 <text x="629.0" y="78" text-anchor="middle" dominant-baseline="middle" font-size="5" fill="white" font-family="monospace">XXII</text>

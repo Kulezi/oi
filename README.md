@@ -70,7 +70,7 @@ Po wbiciu jakiegoś zadania, np ['Rycerz' z pierwszego dnia II etapu XXXI OI](ht
 
 Etap I | Etap II | Etap III | Łącznie
 :---: | :---: | :---: | :---:
-43/150 (29%) | 49/157 (31%) | 41/200 (20%) | 133/507 (26%)
+43/150 (29%) | 49/157 (31%) | 42/200 (21%) | 134/507 (26%)
 
 ## Rozwiązane zadania wg edycji
 
@@ -80,7 +80,7 @@ I | 3/10 (30%) | XI | 2/16 (12%) | XXI | 6/17 (35%) | XXXI | 4/17 (24%)
 II | 4/14 (29%) | XII | 4/17 (24%) | XXII | 4/17 (24%) | XXXII | 7/18 (39%)
 III | 2/13 (15%) | XIII | 5/16 (31%) | XXIII | 3/17 (18%) |  | 
 IV | 3/16 (19%) | XIV | 3/16 (19%) | XXIV | 6/16 (38%) |  | 
-V | 3/16 (19%) | XV | 3/16 (19%) | XXV | 17/18 (94%) |  | 
+V | 3/16 (19%) | XV | 3/16 (19%) | XXV | 18/18 (100%) |  | 
 VI | 3/15 (20%) | XVI | 1/16 (6%) | XXVI | 11/17 (65%) |  | 
 VII | 3/15 (20%) | XVII | 6/17 (35%) | XXVII | 1/10 (10%) |  | 
 VIII | 2/15 (13%) | XVIII | 5/17 (29%) | XXVIII | 3/17 (18%) |  | 
@@ -96,13 +96,13 @@ I | pio ✅ | tro ✅ |   | — | — | —
 II | jed ✅ | pal ✅ |   |   | — | —
 III | gon ✅ |   |   |   | — | —
 IV |   |   |   |   | — | —
-V | wie ✅ | sum ✅ |   |   | — | —
+V | sum ✅ | wie ✅ |   |   | — | —
 VI | gra ✅ |   |   |   | — | —
 VII | bro ✅ |   |   |   | — | —
 VIII | ant ✅ |   |   |   | — | —
 IX | kom ✅ | kol ✅ |   |   | — | —
 X | cze ✅ |   |   |   |   | —
-XI | gra ✅ | zaw ✅ |   |   |   | —
+XI | zaw ✅ | gra ✅ |   |   |   | —
 XII |   |   |   |   |   | —
 XIII | kra ✅ | okr ✅ |   |   |   | —
 XIV |   |   |   |   |   | —
@@ -116,14 +116,14 @@ XXI | kur ✅ |   |   |   |   | —
 XXII | kin ✅ |   |   |   |   | —
 XXIII |   |   |   |   |   | —
 XXIV | fla ✅ |   |   |   |   | —
-XXV | roz ✅ | pow ✅ | pio ✅ | pla ✅ | pra ✅ | —
-XXVI | pod ✅ | nie ✅ | rob ✅ | klu ✅ | par ✅ | —
+XXV | pow ✅ | roz ✅ | pra ✅ | pla ✅ | pio ✅ | —
+XXVI | rob ✅ | klu ✅ | par ✅ | nie ✅ | pod ✅ | —
 XXVII |   |   |   |   |   | —
 XXVIII | gan ✅ |   |   |   |   | —
 XXIX |   |   |   |   |   | —
 XXX | kol ✅ |   |   |   |   | —
 XXXI | cza ✅ |   |   |   |   | —
-XXXII | wal ✅ | kas 🤔 | spr ✅ | usu ✅ | zam ✅ | bit ✅
+XXXII | bit ✅ | wal ✅ | spr ✅ | zam ✅ | usu ✅ | kas 🤔
 
 
 ## Rozwiązane zadania z II etapu
@@ -146,16 +146,16 @@ XIII |   | naj ✅ |   |   |
 XIV |   | ska ✅ |   | tet ✅ |  
 XV |   |   |   |   |  
 XVI |   |   |   | arc ✅ |  
-XVII |   | klo ✅ | cho ✅ |   |  
+XVII |   | cho ✅ | klo ✅ |   |  
 XVIII |   | roz ✅ |   |   |  
 XIX |   | sza ✅ |   | roz ✅ | okr ✅
 XX |   | luk ✅ |   | mor ✅ |  
 XXI |   | prz ✅ |   | pta ✅ |  
 XXII |   | pus ✅ |   |   |  
-XXIII |   | zaj ✅ | dro ✅ |   |  
+XXIII |   | dro ✅ | zaj ✅ |   |  
 XXIV |   | sum ✅ |   | kon ✅ | zam ✅
-XXV | prz ✅ | kon ✅ | dro ✅ | tom ✅ | tel ✅
-XXVI | roz ✅ | kol ✅ | gwi ✅ | osi ✅ | cyk ✅
+XXV | prz ✅ | dro ✅ | kon ✅ | tom ✅ | tel ✅
+XXVI | roz ✅ | gwi ✅ | kol ✅ | cyk ✅ | osi ✅
 XXVII |   | czw ✅ |   |   |  
 XXVIII |   | ple ✅ |   | pla ✅ |  
 XXIX |   |   |   | kon ✅ |  
@@ -174,25 +174,25 @@ III |   | — |   |   | — |   |   | —
 IV |   | — | kaj ✅ | tro ✅ |   | rez ✅ |   | —
 V |   | — |   |   |   |   |   |  
 VI |   | — | mag ✅ |   | — |   |   |  
-VII |   | — |   |   | — | age ✅ | pow ✅ |  
+VII |   | — |   |   | — | pow ✅ | age ✅ |  
 VIII |   | — |   |   | — | kop ✅ |   |  
 IX | min ✅ | — |   |   | — | szy ✅ |   |  
 X |   | — |   |   | — |   |   |  
 XI |   | — |   |   |   |   |   | —
 XII | dzi ✅ | — |   |   |   | aut ✅ |   |  
-XIII |   | — |   |   | — | zos ✅ | pal ✅ |  
+XIII |   | — |   |   | — | pal ✅ | zos ✅ |  
 XIV |   | — |   |   | — | klo ✅ |   |  
 XV |   | — | kup ✅ |   |   | sta ✅ |   | —
 XVI |   | — |   |   |   |   |   | —
 XVII |   | — | zab ✅ |   |   | pil ✅ |   |  
 XVIII |   | — | imp ✅ |   |   | pat ✅ | met ✅ |  
 XIX |   | — |   |   |   |   |   |  
-XX |   | — | baj ✅ | lan ✅ |   | gdz ✅ |   |  
+XX |   | — | lan ✅ | baj ✅ |   | gdz ✅ |   |  
 XXI | far ✅ | — | tur ✅ |   |   | pan ✅ |   |  
 XXII |   | — | wil ✅ |   |   | kol ✅ |   |  
 XXIII |   | — | zyw ✅ |   |   |   |   |  
 XXIV | piz ✅ | — | zap ✅ |   |   |   |   | —
-XXV | trz 🤔 | dwa ✅ | ogr ✅ | kom ✅ | tur ✅ | wie ✅ | tak ✅ | ddl ✅
+XXV | trz ✅ | dwa ✅ | tur ✅ | kom ✅ | ogr ✅ | ddl ✅ | tak ✅ | wie ✅
 XXVI |   | — |   |   |   | dlu ✅ |   |  
 XXVII | — | — | — | — | — | — | — | —
 XXVIII |   | — |   |   |   |   |   |  

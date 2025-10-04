@@ -9,10 +9,10 @@
 <title>2 Etap – 31%</title></rect>
 <text x="78.0" y="33.0" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="white" font-family="monospace">II</text>
 <text x="110" y="33.0" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="white" font-family="monospace">31%</text>
-<rect x="90" y="46" width="40" height="20" fill="rgba(0,255,0,0.20)" stroke="white" stroke-width="1">
-<title>3 Etap – 20%</title></rect>
+<rect x="90" y="46" width="40" height="20" fill="rgba(0,255,0,0.21)" stroke="white" stroke-width="1">
+<title>3 Etap – 21%</title></rect>
 <text x="78.0" y="56.0" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="white" font-family="monospace">III</text>
-<text x="110" y="56.0" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="white" font-family="monospace">20%</text>
+<text x="110" y="56.0" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="white" font-family="monospace">21%</text>
 <rect x="136.0" y="0" width="20" height="20" fill="rgba(0,255,0,0.66)" stroke="white" stroke-width="1">
 <title>1 Etap 1 OI – 66%</title></rect>
 <rect x="136.0" y="23" width="20" height="20" fill="rgba(0,255,0,0.33)" stroke="white" stroke-width="1">
@@ -185,8 +185,8 @@
 <title>1 Etap 25 OI – 100%</title></rect>
 <rect x="688.0" y="23" width="20" height="20" fill="gold" stroke="white" stroke-width="1">
 <title>2 Etap 25 OI – 100%</title></rect>
-<rect x="688.0" y="46" width="20" height="20" fill="rgba(0,255,0,0.87)" stroke="white" stroke-width="1">
-<title>3 Etap 25 OI – 87%</title></rect>
+<rect x="688.0" y="46" width="20" height="20" fill="gold" stroke="white" stroke-width="1">
+<title>3 Etap 25 OI – 100%</title></rect>
 <text x="698.0" y="78" text-anchor="middle" dominant-baseline="middle" font-size="5" fill="white" font-family="monospace">XXV</text>
 <rect x="711.0" y="0" width="20" height="20" fill="gold" stroke="white" stroke-width="1">
 <title>1 Etap 26 OI – 100%</title></rect>

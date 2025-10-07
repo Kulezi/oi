@@ -70,14 +70,14 @@ Po wbiciu jakiegoś zadania, np ['Rycerz' z pierwszego dnia II etapu XXXI OI](ht
 
 Etap I | Etap II | Etap III | Łącznie
 :---: | :---: | :---: | :---:
-43/150 (29%) | 50/157 (32%) | 42/200 (21%) | 135/507 (27%)
+43/150 (29%) | 51/157 (32%) | 42/200 (21%) | 136/507 (27%)
 
 ## Rozwiązane zadania wg edycji
 
 Edycja | Wynik | Edycja | Wynik | Edycja | Wynik | Edycja | Wynik
 :--- | ---: | :--- | ---: | :--- | ---: | :--- | ---:
 I | 3/10 (30%) | XI | 2/16 (12%) | XXI | 6/17 (35%) | XXXI | 4/17 (24%)
-II | 4/14 (29%) | XII | 4/17 (24%) | XXII | 5/17 (29%) | XXXII | 7/18 (39%)
+II | 4/14 (29%) | XII | 4/17 (24%) | XXII | 6/17 (35%) | XXXII | 7/18 (39%)
 III | 2/13 (15%) | XIII | 5/16 (31%) | XXIII | 3/17 (18%) |  | 
 IV | 3/16 (19%) | XIV | 3/16 (19%) | XXIV | 6/16 (38%) |  | 
 V | 3/16 (19%) | XV | 3/16 (19%) | XXV | 18/18 (100%) |  | 
@@ -151,7 +151,7 @@ XVIII |   | roz ✅ |   |   |
 XIX |   | sza ✅ |   | roz ✅ | okr ✅
 XX |   | luk ✅ |   | mor ✅ |  
 XXI |   | prz ✅ |   | pta ✅ |  
-XXII |   | pus ✅ |   | trz ✅ |  
+XXII |   | pus ✅ |   | trz ✅ | kur ✅
 XXIII |   | dro ✅ | zaj ✅ |   |  
 XXIV |   | sum ✅ |   | kon ✅ | zam ✅
 XXV | prz ✅ | dro ✅ | kon ✅ | tom ✅ | tel ✅

@@ -531,6 +531,13 @@
         "nazwa": "trz",
         "punkty": 100
     },
+    "xxii_etap2_dzien2_kur": {
+        "edycja": 22,
+        "etap": 2,
+        "dzien": 2,
+        "nazwa": "kur",
+        "punkty": 100
+    },
     "xxii_etap2_dzien1_pus": {
         "edycja": 22,
         "etap": 2,

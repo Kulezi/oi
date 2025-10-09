@@ -7,7 +7,7 @@ root = Path(__file__).resolve().parent.parent
 readme = root / "README.md"
 checklist_dir = root / "checklista"
 
-# wczytaj README.md
+# --- wczytaj README.md
 content = readme.read_text(encoding="utf-8")
 
 marker = "<!-- AUTO-CHECKLIST -->"
@@ -42,7 +42,7 @@ else:
 
 tables = []
 
-# uruchomienie gen_liczniki.py
+# --- uruchomienie gen_liczniki.py
 out = subprocess.check_output(
     ["python3", "gen_liczniki.py"],
     cwd=checklist_dir,
@@ -52,16 +52,24 @@ tables.append("\n\n" + out.strip() + "\n")
 
 roman = {1: "I", 2: "II", 3: "III"}
 
-# uruchomienie 3 generatorów (również w katalogu checklist)
+# --- uruchomienie generatorów etapowych (I, II, III)
 for etap in [1, 2, 3]:
     out = subprocess.check_output(
         ["python3", f"gen_etap{etap}_checklist.py"],
         cwd=checklist_dir,
         text=True
     )
-    tables.append(f"## Rozwiązane zadania z {roman[etap]} etapu\n\n" + out.strip() + "\n")
+    etap_title = f"Rozwiązane zadania z {roman[etap]} etapu"
+    # Zawinięcie checklisty w spoiler
+    wrapped = (
+        f"<details>\n"
+        f"<summary>{etap_title}</summary>\n\n"
+        f"{out.strip()}\n"
+        f"</details>\n"
+    )
+    tables.append(wrapped)
 
-# komunikat ostrzegawczy
+# --- komunikat ostrzegawczy
 warning = (
     "> ⚠️ **UWAGA:** Sekcja poniżej jest generowana automatycznie.\n"
     "> Nie modyfikuj README poniżej tego napisu.\n"
@@ -69,7 +77,7 @@ warning = (
     "> 🤔 oznacza zadanie z mniej niż 100 punktów.\n"
 )
 
-# podmiana zawartości po markerze
+# --- podmiana zawartości po markerze
 if marker in content:
     base, _ = content.split(marker, 1)
 else:
@@ -77,7 +85,7 @@ else:
 
 new_content = base + marker + "\n\n" + warning + "\n\n".join(tables)
 
-# zapisz
+# --- zapisz README.md
 readme.write_text(new_content, encoding="utf-8")
 print("✅ README.md zostało zaktualizowane")
 

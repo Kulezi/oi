@@ -1,61 +1,78 @@
 ![Progres OI](checklista/oi_progress.svg)
 
-# Materiały przygotowujące do Olimpiady Informatycznej.
+# Maksowanie OI
 
-## Repozytorium ma na celu:
-- Przekazanie wiedzy przydatnej w Olimpiadzie Informatycznej dla wszystkich chętnych do nauki.
-- Promowanie systematycznego podejścia do treningu i zdrowych nawyków.
-- Zapewnienie prostych, przystępnych narzędzi do mierzenia swojego progresu
-- Naukę powszechnie stosowanych narzędzi programistycznych poprzez praktykę.
+## Po co mi to repo?
+- Żeby łatwiej przygotować się do Olimpiady Informatycznej.
+- Żeby uczyć się systematycznie i mierzyć postępy.
+- Żeby poznać w praktyce narzędzia programistyczne i linuksowe.
 
-## Repozytorium zawiera:
-- Rozwiązania zadań z Olimpiady Informatycznej, które napisałem, często alternatywne do omówień ze strony OI.
-- Skrypty linuksowe przydatne na olimpiadzie z prostym wytłumaczeniem każdej instrukcji.
-- Krótkie wykłady na temat korzystania z narzędzi linuksowych przydatnych w pisaniu i testowaniu zadań.
-- Automatycznie aktualizujący się licznik rozwiązanych zadań oraz tabelę pokazującą, 
-które zadania z każdej z edycji OI zostały już rozwiązane z podziałem na etapy olimpiady. 
-Przydaje się to do mierzenia progresu, oraz do doboru zadań na treningu. 
-- Odnośniki do innych przydatnych źródeł.
+## Co tu jest?
+- Automatycznie aktualizująca się checklista pokazująca, które zadania z OI zostały już zrobione.
+- Implementacje wszystkich zadań z OI jakie napisałem.
+- Przydatne skrypty linuksowe z prostym wyjaśnieniem każdej komendy.
+- Krótkie materiały o trickach i narzędziach użytecznych przy pisaniu i testowaniu kodu.
 
 
-## Struktura repozytorium:
+<details>
+<summary>Gdzie są jakie pliki?</summary>
 
-Zawartości katalogów `skrypty`, oraz `materialy` łatwo się domyślić, zachęcam do zapoznania się z nią.
-W katalogu `rozwiazania` znajdziesz wszystkie rozwiązania zadań z OI, które zaimplementowałem.
-Katalog `rozwiazania/<edycja_oi>/<etap_oi>/[dzień_etapu]/<skrót zadania>` zawiera pliki dotyczące danego zadania z OI.
-- `<skrót zadania>.cpp` - moje rozwiązanie zadania, które otrzymuje 100 pkt na testach na sio2/szkopule, 
-        dodatkowo z dopiskiem `_alt` bądź `_oi` pojawiają się czasem rozwiązania alternatywne oraz wprost z omówienia zadania,
-        w przypadkach gdy rozwiązałem zadanie na 100 punktów na kilka różnych sposobów.
-- `<skrót zadania><liczba punktów>.cpp` - Rozwiązania, które dostają mniej niż 100 punktów, takie jak bruty, bądź rozwiązania podgrup.
-I dosyć często również pliki: 
-- `<skrót zadania>g.cpp` - moja generatorka do zadania, której używałem testując rozwiązanie.
-- `<skrót zadania>chk.cpp` - moja czekerka w przypadku zadań, w których istnieje więcej niż jedno poprawne rozwiązanie inne niż generowane przez bruta.
-- Katalog `virtual_contest/`, zawierający moje skrypty, generatorki, czekerki i różne podejścia do zadania w przypadku, gdy symulowałem ograniczenia czasu i widoczności werdyktów występujące na olimpiadzie, tzn. w przypadku etapów I i II olimpiady, nie mogłem poznać liczby punktów, które dostanie moje zadanie na sprawdzarce szkopuł. Testowałem rozwiązanie lokalnie, i wysyłałem dopiero po przetestowaniu. Rozwiązania zadań z III etapu mogłem wysłać do 10 rozwiązań na szkopuła poznając ich wynik.
-
-Katalogi `checklista` oraz `.github` zawierają skrypty automatycznie generujące checklisty, nie należy ich modyfikować. 
-Jeśli coś nie działa, daj mi znać przez [Issue](https://github.com/Kulezi/oi/issues) na GitHubie.
-
-Przykładowo katalog `rozwiazania/xxv/etap3/dzien1/kom/` będzie zawierał moje rozwiązania do zadania 'Liczby kompletne' z III etapu XXV OI.
-Rozwiązania konkretnego zadanie można łatwo znaleźć sprawdzając, z której edycji i etapu olimpiady jest na [Liście zadań OI](https://oi.edu.pl/l/oi_zadania/),
-bądź przy pomocy polecenia `grep 'nazwa zadania' -R .` wywołanego z głównego katalogu repozytorium, np. `grep `Trójkąty` -R .`.
-
-## Jak samemu skorzystać z checklisty:
-Sforkuj [szablon](https://github.com/testowyuczen/oi) tego repozytorium [klikając tutaj](https://github.com/testowyuczen/oi/fork), i w zakładce Actions swojego repozytorium kliknij `I understand my workflows, go ahead and enable them` - bez tego checklista nie będzie się aktualizować automatycznie.
-
-### Automatyczny import rozwiązań z archiwum Szkopuła
-Skryptem [oi-fetcher](https://github.com/Matian37/oi-fetcher) można zgrać do repo wszystkie rozwiązania zadań z [Archiwum OI](https://szkopul.edu.pl/task_archive/oi/) Szkopuła (zadania z konkursów niestety trzeba wgrać manualnie). Kudos [@Matian37](https://www.github.com/Matian37).
-
-### Dodawanie nowych rozwiązań 
-Po wbiciu jakiegoś zadania, np ['Rycerz' z pierwszego dnia II etapu XXXI OI](https://oi.edu.pl/archive/pl/oi/31/ryc):
-- Zapisz rozwiązanie. np. w pliku `rozwiazania/xxxi/etap2/dzien1/ryc/ryc.cpp`.
-- Dodaj je do repozytorium wykonując `git add `rozwiazania/xxxi/etap2/dzien1/ryc/ryc.cpp`, (przy pomocy `git status` możesz zobaczyć co już dodałeś w tym commicie).
-- Scommituj je np. w ten sposób: `git commit -m "Dodano rozwiązanie zadania 'Rycerz' z XXXI OI"` (jeśli zapomnieliśmy czegoś dodać wystarczy powtórzyć poprzedni krok i użyć `git commit --am`.
-- Zaktualizuj repozytorium na GitHub o lokalne zmiany przy pomocy `git push`, ewentualnie `git push -f`.
-- Checklista w `README.md` na GitHub zaktualizuje się automatycznie w ciągu kilku minut.
-- `git pull` wciągnie aktualną wersję checklisty z GitHuba (bez tego będziesz potrzebował robić `git push -f` przy każdym pushu.
+📘 Przykład:  
+`rozwiazania/xxv/etap3/dzien1/kom/` – rozwiązania do zadania **„Liczby kompletne”** z III etapu XXV OI.
 
 
+Katalog `rozwiazania/` zawiera wszystkie zadania z OI, które zaimplementowałem.  
+Struktura wygląda tak:  
+`rozwiazania/<edycja_oi>/<etap_oi>/[dzień_etapu]/<skrót_zadania>/`
 
+- `<skrót>.cpp` – moje rozwiązanie (100 pkt na Szkopule lub SIO2).  
+  Dodatki `_alt` lub `_oi` to alternatywne rozwiązania.
+- `<skrót><liczba>.cpp` – rozwiązania z mniejszą liczbą punktów (np. bruty lub podgrupy).
+- `<skrót>g.cpp` – generatorka testów.
+- `<skrót>chk.cpp` – checkerka (jeśli zadanie ma kilka poprawnych odpowiedzi).
+
+Katalog `virtual_contest/` zawiera moje podejścia z symulacji zawodów (ograniczenia czasu i widoczności wyników jak na prawdziwej OI).
+
+Katalogi `checklista` oraz `.github` odpowiadają za automatyczne generowanie checklisty — **nie modyfikuj ich ręcznie.**
+
+Jeśli coś nie działa, daj mi znać przez [Issue](https://github.com/Kulezi/oi/issues).
+Chcesz znaleźć konkretne zadanie?  
+Zajrzyj na [Listę zadań OI](https://oi.edu.pl/l/oi_zadania/)  
+albo użyj:  
+```bash
+grep 'nazwa_zadania' -R .
+```
+
+</details>
+
+<details>
+<summary>Jak mam tego używać?</summary>
+
+1. Sforkuj [szablon repozytorium](https://github.com/testowyuczen/oi/fork).  
+2. W zakładce **Actions** kliknij  
+   `I understand my workflows, go ahead and enable them`  
+   — bez tego checklista nie będzie się aktualizować automatycznie.
+
+### Automatyczny import zadań ze Szkopuła
+Skrypt [oi-fetcher](https://github.com/Matian37/oi-fetcher) pozwala zgrać wszystkie rozwiązania z [Archiwum OI](https://szkopul.edu.pl/task_archive/oi/).  
+Zadania z konkursów trzeba dodać ręcznie.  
+Kudos dla [@Matian37](https://github.com/Matian37) za narzędzie.
+
+### Dodawanie nowych rozwiązań
+Załóżmy, że zrobiłeś zadanie ['Rycerz' z II etapu XXXI OI](https://oi.edu.pl/archive/pl/oi/31/ryc):
+
+```bash
+git add rozwiazania/xxxi/etap2/dzien1/ryc/ryc.cpp
+git commit -m "Dodano rozwiązanie zadania 'Rycerz' z XXXI OI"
+git push
+```
+
+Po kilku minutach checklista na GitHubie zaktualizuje się automatycznie.  
+Jeśli chcesz pobrać nową wersję checklisty lokalnie:
+```bash
+git pull
+```
+</details>
 <!-- AUTO-CHECKLIST -->
 
 > ⚠️ **UWAGA:** Sekcja poniżej jest generowana automatycznie.
@@ -70,7 +87,7 @@ Po wbiciu jakiegoś zadania, np ['Rycerz' z pierwszego dnia II etapu XXXI OI](ht
 
 Etap I | Etap II | Etap III | Łącznie
 :---: | :---: | :---: | :---:
-43/150 (29%) | 51/157 (32%) | 42/200 (21%) | 136/507 (27%)
+43/150 (29%) | 52/157 (33%) | 42/200 (21%) | 137/507 (27%)
 
 ## Rozwiązane zadania wg edycji
 
@@ -84,11 +101,12 @@ V | 3/16 (19%) | XV | 3/16 (19%) | XXV | 18/18 (100%) |  |
 VI | 3/15 (20%) | XVI | 1/16 (6%) | XXVI | 11/17 (65%) |  | 
 VII | 3/15 (20%) | XVII | 6/17 (35%) | XXVII | 1/10 (10%) |  | 
 VIII | 2/15 (13%) | XVIII | 5/17 (29%) | XXVIII | 3/17 (18%) |  | 
-IX | 6/15 (40%) | XIX | 4/17 (24%) | XXIX | 1/17 (6%) |  | 
+IX | 6/15 (40%) | XIX | 4/17 (24%) | XXIX | 2/17 (12%) |  | 
 X | 2/16 (12%) | XX | 5/17 (29%) | XXX | 1/17 (6%) |  |
 
 
-## Rozwiązane zadania z I etapu
+<details>
+<summary>Rozwiązane zadania z I etapu</summary>
 
 Edycja | zad. 1 | zad. 2 | zad. 3 | zad. 4 | zad. 5 | zad. 6
 :--- | ---: | ---: | ---: | ---: | ---: | ---:
@@ -124,9 +142,11 @@ XXIX |   |   |   |   |   | —
 XXX | kol ✅ |   |   |   |   | —
 XXXI | cza ✅ |   |   |   |   | —
 XXXII | bit ✅ | wal ✅ | spr ✅ | zam ✅ | usu ✅ | kas 🤔
+</details>
 
 
-## Rozwiązane zadania z II etapu
+<details>
+<summary>Rozwiązane zadania z II etapu</summary>
 
 Edycja | zad. próbne | Dzień 1 - zad. 1 | Dzień 1 - zad. 2 | Dzień 2 - zad. 1 | Dzień 2 - zad. 2
 :--- | ---: | ---: | ---: | ---: | ---:
@@ -158,13 +178,15 @@ XXV | prz ✅ | dro ✅ | kon ✅ | tom ✅ | tel ✅
 XXVI | roz ✅ | gwi ✅ | kol ✅ | cyk ✅ | osi ✅
 XXVII |   | czw ✅ |   |   |  
 XXVIII |   | ple ✅ |   | pla ✅ |  
-XXIX |   |   |   | kon ✅ |  
+XXIX |   |   |   | kon ✅ | bom ✅
 XXX |   |   |   |   |  
 XXXI |   | lic ✅ | ryc ✅ | poj ✅ |  
 XXXII | sss ✅ | drz ✅ |   |   |
+</details>
 
 
-## Rozwiązane zadania z III etapu
+<details>
+<summary>Rozwiązane zadania z III etapu</summary>
 
 Edycja | Dzień próbny, zad. 1 | Dzień próbny, zad. 2 | Dzień 1 - zad. 1 | Dzień 1 - zad. 2 | Dzień 1 - zad. 3 | Dzień 2 - zad. 1 | Dzień 2 - zad. 2 | Dzień 2 - zad. 3
 :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---:
@@ -199,3 +221,4 @@ XXVIII |   | — |   |   |   |   |   |
 XXIX |   |   |   |   |   |   |   |  
 XXX |   | — |   |   |   |   |   |  
 XXXI |   | — |   |   |   |   |   |
+</details>

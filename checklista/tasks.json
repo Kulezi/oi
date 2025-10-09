@@ -867,6 +867,13 @@
         "nazwa": "kon",
         "punkty": 100
     },
+    "xxix_etap2_dzien2_bom": {
+        "edycja": 29,
+        "etap": 2,
+        "dzien": 2,
+        "nazwa": "bom",
+        "punkty": 100
+    },
     "xxx_etap1_kol": {
         "edycja": 30,
         "etap": 1,

@@ -111,18 +111,18 @@ X | 2/16 (12%) | XX | 5/17 (29%) | XXX | 1/17 (6%) |  |
 Edycja | zad. 1 | zad. 2 | zad. 3 | zad. 4 | zad. 5 | zad. 6
 :--- | ---: | ---: | ---: | ---: | ---: | ---:
 I | pio ✅ | tro ✅ |   | — | — | —
-II | jed ✅ | pal ✅ |   |   | — | —
+II | pal ✅ | jed ✅ |   |   | — | —
 III | gon ✅ |   |   |   | — | —
 IV |   |   |   |   | — | —
 V | sum ✅ | wie ✅ |   |   | — | —
 VI | gra ✅ |   |   |   | — | —
 VII | bro ✅ |   |   |   | — | —
 VIII | ant ✅ |   |   |   | — | —
-IX | kom ✅ | kol ✅ |   |   | — | —
+IX | kol ✅ | kom ✅ |   |   | — | —
 X | cze ✅ |   |   |   |   | —
-XI | zaw ✅ | gra ✅ |   |   |   | —
+XI | gra ✅ | zaw ✅ |   |   |   | —
 XII |   |   |   |   |   | —
-XIII | kra ✅ | okr ✅ |   |   |   | —
+XIII | okr ✅ | kra ✅ |   |   |   | —
 XIV |   |   |   |   |   | —
 XV | pla ✅ |   |   |   |   | —
 XVI |   |   |   |   |   | —
@@ -134,14 +134,14 @@ XXI | kur ✅ |   |   |   |   | —
 XXII | kin ✅ |   |   |   |   | —
 XXIII |   |   |   |   |   | —
 XXIV | fla ✅ |   |   |   |   | —
-XXV | pow ✅ | roz ✅ | pra ✅ | pla ✅ | pio ✅ | —
-XXVI | rob ✅ | klu ✅ | par ✅ | nie ✅ | pod ✅ | —
+XXV | pio ✅ | roz ✅ | pla ✅ | pra ✅ | pow ✅ | —
+XXVI | nie ✅ | pod ✅ | klu ✅ | rob ✅ | par ✅ | —
 XXVII |   |   |   |   |   | —
 XXVIII | gan ✅ |   |   |   |   | —
 XXIX |   |   |   |   |   | —
 XXX | kol ✅ |   |   |   |   | —
 XXXI | cza ✅ |   |   |   |   | —
-XXXII | bit ✅ | wal ✅ | spr ✅ | zam ✅ | usu ✅ | kas 🤔
+XXXII | kas 🤔 | usu ✅ | zam ✅ | wal ✅ | bit ✅ | spr ✅
 </details>
 
 
@@ -168,17 +168,17 @@ XV |   |   |   |   |
 XVI |   |   |   | arc ✅ |  
 XVII |   | cho ✅ | klo ✅ |   |  
 XVIII |   | roz ✅ |   |   |  
-XIX |   | sza ✅ |   | roz ✅ | okr ✅
+XIX |   | sza ✅ |   | okr ✅ | roz ✅
 XX |   | luk ✅ |   | mor ✅ |  
 XXI |   | prz ✅ |   | pta ✅ |  
-XXII |   | pus ✅ |   | trz ✅ | kur ✅
-XXIII |   | dro ✅ | zaj ✅ |   |  
+XXII |   | pus ✅ |   | kur ✅ | trz ✅
+XXIII |   | zaj ✅ | dro ✅ |   |  
 XXIV |   | sum ✅ |   | kon ✅ | zam ✅
-XXV | prz ✅ | dro ✅ | kon ✅ | tom ✅ | tel ✅
-XXVI | roz ✅ | gwi ✅ | kol ✅ | cyk ✅ | osi ✅
+XXV | prz ✅ | kon ✅ | dro ✅ | tom ✅ | tel ✅
+XXVI | roz ✅ | kol ✅ | gwi ✅ | osi ✅ | cyk ✅
 XXVII |   | czw ✅ |   |   |  
 XXVIII |   | ple ✅ |   | pla ✅ |  
-XXIX |   |   |   | kon ✅ | bom ✅
+XXIX |   |   |   | bom ✅ | kon ✅
 XXX |   |   |   |   |  
 XXXI |   | lic ✅ | ryc ✅ | poj ✅ |  
 XXXII | sss ✅ | drz ✅ |   |   |
@@ -196,7 +196,7 @@ III |   | — |   |   | — |   |   | —
 IV |   | — | kaj ✅ | tro ✅ |   | rez ✅ |   | —
 V |   | — |   |   |   |   |   |  
 VI |   | — | mag ✅ |   | — |   |   |  
-VII |   | — |   |   | — | pow ✅ | age ✅ |  
+VII |   | — |   |   | — | age ✅ | pow ✅ |  
 VIII |   | — |   |   | — | kop ✅ |   |  
 IX | min ✅ | — |   |   | — | szy ✅ |   |  
 X |   | — |   |   | — |   |   |  
@@ -209,12 +209,12 @@ XVI |   | — |   |   |   |   |   | —
 XVII |   | — | zab ✅ |   |   | pil ✅ |   |  
 XVIII |   | — | imp ✅ |   |   | pat ✅ | met ✅ |  
 XIX |   | — |   |   |   |   |   |  
-XX |   | — | lan ✅ | baj ✅ |   | gdz ✅ |   |  
+XX |   | — | baj ✅ | lan ✅ |   | gdz ✅ |   |  
 XXI | far ✅ | — | tur ✅ |   |   | pan ✅ |   |  
 XXII |   | — | wil ✅ |   |   | kol ✅ |   |  
 XXIII |   | — | zyw ✅ |   |   |   |   |  
 XXIV | piz ✅ | — | zap ✅ |   |   |   |   | —
-XXV | trz ✅ | dwa ✅ | tur ✅ | kom ✅ | ogr ✅ | ddl ✅ | tak ✅ | wie ✅
+XXV | dwa ✅ | trz ✅ | ogr ✅ | tur ✅ | kom ✅ | tak ✅ | ddl ✅ | wie ✅
 XXVI |   | — |   |   |   | dlu ✅ |   |  
 XXVII | — | — | — | — | — | — | — | —
 XXVIII |   | — |   |   |   |   |   |  

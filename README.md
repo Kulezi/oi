@@ -87,13 +87,13 @@ git pull
 
 Etap I | Etap II | Etap III | Łącznie
 :---: | :---: | :---: | :---:
-43/150 (29%) | 53/157 (34%) | 42/200 (21%) | 138/507 (27%)
+43/150 (29%) | 54/157 (34%) | 42/200 (21%) | 139/507 (27%)
 
 ## Rozwiązane zadania wg edycji
 
 Edycja | Wynik | Edycja | Wynik | Edycja | Wynik | Edycja | Wynik
 :--- | ---: | :--- | ---: | :--- | ---: | :--- | ---:
-I | 3/10 (30%) | XI | 2/16 (12%) | XXI | 6/17 (35%) | XXXI | 4/17 (24%)
+I | 3/10 (30%) | XI | 2/16 (12%) | XXI | 6/17 (35%) | XXXI | 5/17 (29%)
 II | 4/14 (29%) | XII | 4/17 (24%) | XXII | 6/17 (35%) | XXXII | 7/18 (39%)
 III | 2/13 (15%) | XIII | 5/16 (31%) | XXIII | 3/17 (18%) |  | 
 IV | 3/16 (19%) | XIV | 3/16 (19%) | XXIV | 7/16 (44%) |  | 
@@ -180,7 +180,7 @@ XXVII |   | czw ✅ |   |   |
 XXVIII |   | ple ✅ |   | pla ✅ |  
 XXIX |   |   |   | kon ✅ | bom ✅
 XXX |   |   |   |   |  
-XXXI |   | lic ✅ | ryc ✅ | poj ✅ |  
+XXXI |   | lic ✅ | ryc ✅ | cia ✅ | poj ✅
 XXXII | sss ✅ | drz ✅ |   |   |
 </details>
 

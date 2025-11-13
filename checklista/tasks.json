@@ -888,6 +888,13 @@
         "nazwa": "kol",
         "punkty": 100
     },
+    "xxxi_etap2_dzien2_cia": {
+        "edycja": 31,
+        "etap": 2,
+        "dzien": 2,
+        "nazwa": "cia",
+        "punkty": 100
+    },
     "xxxi_etap2_dzien2_poj": {
         "edycja": 31,
         "etap": 2,

@@ -902,6 +902,13 @@
         "nazwa": "poj",
         "punkty": 100
     },
+    "xxxi_etap2_tel": {
+        "edycja": 31,
+        "etap": 2,
+        "dzien": 0,
+        "nazwa": "tel",
+        "punkty": 100
+    },
     "xxxi_etap2_dzien1_lic": {
         "edycja": 31,
         "etap": 2,

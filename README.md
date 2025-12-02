@@ -87,7 +87,7 @@ git pull
 
 Etap I | Etap II | Etap III | Łącznie
 :---: | :---: | :---: | :---:
-43/150 (29%) | 55/157 (35%) | 42/200 (21%) | 140/507 (28%)
+44/150 (29%) | 55/157 (35%) | 42/200 (21%) | 141/507 (28%)
 
 ## Rozwiązane zadania wg edycji
 
@@ -96,7 +96,7 @@ Edycja | Wynik | Edycja | Wynik | Edycja | Wynik | Edycja | Wynik
 I | 3/10 (30%) | XI | 2/16 (12%) | XXI | 6/17 (35%) | XXXI | 6/17 (35%)
 II | 4/14 (29%) | XII | 4/17 (24%) | XXII | 6/17 (35%) | XXXII | 7/18 (39%)
 III | 2/13 (15%) | XIII | 5/16 (31%) | XXIII | 3/17 (18%) |  | 
-IV | 3/16 (19%) | XIV | 3/16 (19%) | XXIV | 7/16 (44%) |  | 
+IV | 3/16 (19%) | XIV | 3/16 (19%) | XXIV | 8/16 (50%) |  | 
 V | 3/16 (19%) | XV | 3/16 (19%) | XXV | 18/18 (100%) |  | 
 VI | 3/15 (20%) | XVI | 1/16 (6%) | XXVI | 11/17 (65%) |  | 
 VII | 3/15 (20%) | XVII | 6/17 (35%) | XXVII | 1/10 (10%) |  | 
@@ -133,7 +133,7 @@ XX |   |   |   |   |   | —
 XXI | kur ✅ |   |   |   |   | —
 XXII | kin ✅ |   |   |   |   | —
 XXIII |   |   |   |   |   | —
-XXIV | fla ✅ |   |   |   |   | —
+XXIV | fla ✅ | sab ✅ |   |   |   | —
 XXV | pow ✅ | roz ✅ | pra ✅ | pla ✅ | pio ✅ | —
 XXVI | rob ✅ | klu ✅ | par ✅ | nie ✅ | pod ✅ | —
 XXVII |   |   |   |   |   | —

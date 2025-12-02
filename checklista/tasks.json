@@ -622,6 +622,13 @@
         "nazwa": "fla",
         "punkty": 100
     },
+    "xxiv_etap1_sab": {
+        "edycja": 24,
+        "etap": 1,
+        "dzien": 0,
+        "nazwa": "sab",
+        "punkty": 100
+    },
     "xxiv_etap3_probne_piz": {
         "edycja": 24,
         "etap": 3,

@@ -384,6 +384,13 @@
         "nazwa": "zab",
         "punkty": 100
     },
+    "xviii_etap2_dzien2_tem": {
+        "edycja": 18,
+        "etap": 2,
+        "dzien": 2,
+        "nazwa": "tem",
+        "punkty": 100
+    },
     "xviii_etap2_dzien1_roz": {
         "edycja": 18,
         "etap": 2,

@@ -87,21 +87,21 @@ git pull
 
 Etap I | Etap II | Etap III | Łącznie
 :---: | :---: | :---: | :---:
-44/150 (29%) | 55/157 (35%) | 42/200 (21%) | 141/507 (28%)
+44/150 (29%) | 61/157 (39%) | 42/200 (21%) | 147/507 (29%)
 
 ## Rozwiązane zadania wg edycji
 
 Edycja | Wynik | Edycja | Wynik | Edycja | Wynik | Edycja | Wynik
 :--- | ---: | :--- | ---: | :--- | ---: | :--- | ---:
-I | 3/10 (30%) | XI | 2/16 (12%) | XXI | 6/17 (35%) | XXXI | 6/17 (35%)
-II | 4/14 (29%) | XII | 4/17 (24%) | XXII | 6/17 (35%) | XXXII | 7/18 (39%)
+I | 4/10 (40%) | XI | 2/16 (12%) | XXI | 6/17 (35%) | XXXI | 6/17 (35%)
+II | 4/14 (29%) | XII | 4/17 (24%) | XXII | 8/17 (47%) | XXXII | 7/18 (39%)
 III | 2/13 (15%) | XIII | 5/16 (31%) | XXIII | 3/17 (18%) |  | 
-IV | 3/16 (19%) | XIV | 3/16 (19%) | XXIV | 8/16 (50%) |  | 
+IV | 3/16 (19%) | XIV | 3/16 (19%) | XXIV | 9/16 (56%) |  | 
 V | 3/16 (19%) | XV | 3/16 (19%) | XXV | 18/18 (100%) |  | 
 VI | 3/15 (20%) | XVI | 1/16 (6%) | XXVI | 11/17 (65%) |  | 
 VII | 3/15 (20%) | XVII | 6/17 (35%) | XXVII | 1/10 (10%) |  | 
-VIII | 2/15 (13%) | XVIII | 5/17 (29%) | XXVIII | 3/17 (18%) |  | 
-IX | 6/15 (40%) | XIX | 4/17 (24%) | XXIX | 2/17 (12%) |  | 
+VIII | 2/15 (13%) | XVIII | 6/17 (35%) | XXVIII | 3/17 (18%) |  | 
+IX | 6/15 (40%) | XIX | 5/17 (29%) | XXIX | 2/17 (12%) |  | 
 X | 2/16 (12%) | XX | 5/17 (29%) | XXX | 1/17 (6%) |  |
 
 
@@ -150,7 +150,7 @@ XXXII | bit ✅ | wal ✅ | spr ✅ | zam ✅ | usu ✅ | kas 🤔
 
 Edycja | zad. próbne | Dzień 1 - zad. 1 | Dzień 1 - zad. 2 | Dzień 2 - zad. 1 | Dzień 2 - zad. 2
 :--- | ---: | ---: | ---: | ---: | ---:
-I |   | prz ✅ | — |   | —
+I | sum ✅ | prz ✅ | — |   | —
 II |   | tro ✅ |   |   |  
 III |   |   | — | haz ✅ |  
 IV |   |   |   |   |  
@@ -167,13 +167,13 @@ XIV |   | ska ✅ |   | tet ✅ |
 XV |   |   |   |   |  
 XVI |   |   |   | arc ✅ |  
 XVII |   | cho ✅ | klo ✅ |   |  
-XVIII |   | roz ✅ |   |   |  
-XIX |   | sza ✅ |   | roz ✅ | okr ✅
+XVIII |   | roz ✅ |   | tem ✅ |  
+XIX |   | bon ✅ | sza ✅ | roz ✅ | okr ✅
 XX |   | luk ✅ |   | mor ✅ |  
 XXI |   | prz ✅ |   | pta ✅ |  
-XXII |   | pus ✅ |   | trz ✅ | kur ✅
+XXII | log ✅ | pod ✅ | pus ✅ | trz ✅ | kur ✅
 XXIII |   | dro ✅ | zaj ✅ |   |  
-XXIV |   | sum ✅ | str ✅ | kon ✅ | zam ✅
+XXIV | zaw ✅ | sum ✅ | str ✅ | kon ✅ | zam ✅
 XXV | prz ✅ | dro ✅ | kon ✅ | tom ✅ | tel ✅
 XXVI | roz ✅ | gwi ✅ | kol ✅ | cyk ✅ | osi ✅
 XXVII |   | czw ✅ |   |   |  

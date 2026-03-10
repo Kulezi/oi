@@ -6,11 +6,11 @@
         "nazwa": "prz",
         "punkty": 100
     },
-    "i_etap1_pio": {
+    "i_etap2_probne_sum": {
         "edycja": 1,
-        "etap": 1,
+        "etap": 2,
         "dzien": 0,
-        "nazwa": "pio",
+        "nazwa": "sum",
         "punkty": 100
     },
     "i_etap1_tro": {
@@ -20,6 +20,13 @@
         "nazwa": "tro",
         "punkty": 100
     },
+    "i_etap1_pio": {
+        "edycja": 1,
+        "etap": 1,
+        "dzien": 0,
+        "nazwa": "pio",
+        "punkty": 100
+    },
     "ii_etap2_dzien1_tro": {
         "edycja": 2,
         "etap": 2,
@@ -27,18 +34,18 @@
         "nazwa": "tro",
         "punkty": 100
     },
-    "ii_etap1_jed": {
-        "edycja": 2,
-        "etap": 1,
-        "dzien": 0,
-        "nazwa": "jed",
-        "punkty": 100
-    },
     "ii_etap1_pal": {
         "edycja": 2,
         "etap": 1,
         "dzien": 0,
         "nazwa": "pal",
+        "punkty": 100
+    },
+    "ii_etap1_jed": {
+        "edycja": 2,
+        "etap": 1,
+        "dzien": 0,
+        "nazwa": "jed",
         "punkty": 100
     },
     "ii_etap3_dzien2_sze": {
@@ -69,18 +76,18 @@
         "nazwa": "rez",
         "punkty": 100
     },
-    "iv_etap3_dzien1_kaj": {
-        "edycja": 4,
-        "etap": 3,
-        "dzien": 1,
-        "nazwa": "kaj",
-        "punkty": 100
-    },
     "iv_etap3_dzien1_tro": {
         "edycja": 4,
         "etap": 3,
         "dzien": 1,
         "nazwa": "tro",
+        "punkty": 100
+    },
+    "iv_etap3_dzien1_kaj": {
+        "edycja": 4,
+        "etap": 3,
+        "dzien": 1,
+        "nazwa": "kaj",
         "punkty": 100
     },
     "v_etap2_dzien1_row": {
@@ -90,18 +97,18 @@
         "nazwa": "row",
         "punkty": 100
     },
-    "v_etap1_sum": {
-        "edycja": 5,
-        "etap": 1,
-        "dzien": 0,
-        "nazwa": "sum",
-        "punkty": 100
-    },
     "v_etap1_wie": {
         "edycja": 5,
         "etap": 1,
         "dzien": 0,
         "nazwa": "wie",
+        "punkty": 100
+    },
+    "v_etap1_sum": {
+        "edycja": 5,
+        "etap": 1,
+        "dzien": 0,
+        "nazwa": "sum",
         "punkty": 100
     },
     "vi_etap2_dzien1_lun": {
@@ -132,18 +139,18 @@
         "nazwa": "bro",
         "punkty": 100
     },
-    "vii_etap3_dzien2_pow": {
-        "edycja": 7,
-        "etap": 3,
-        "dzien": 2,
-        "nazwa": "pow",
-        "punkty": 100
-    },
     "vii_etap3_dzien2_age": {
         "edycja": 7,
         "etap": 3,
         "dzien": 2,
         "nazwa": "age",
+        "punkty": 100
+    },
+    "vii_etap3_dzien2_pow": {
+        "edycja": 7,
+        "etap": 3,
+        "dzien": 2,
+        "nazwa": "pow",
         "punkty": 100
     },
     "viii_etap1_ant": {
@@ -160,18 +167,18 @@
         "nazwa": "kop",
         "punkty": 100
     },
-    "ix_etap2_probne_izo": {
-        "edycja": 9,
-        "etap": 2,
-        "dzien": 0,
-        "nazwa": "izo",
-        "punkty": 100
-    },
     "ix_etap2_dzien1_dzi": {
         "edycja": 9,
         "etap": 2,
         "dzien": 1,
         "nazwa": "dzi",
+        "punkty": 100
+    },
+    "ix_etap2_probne_izo": {
+        "edycja": 9,
+        "etap": 2,
+        "dzien": 0,
+        "nazwa": "izo",
         "punkty": 100
     },
     "ix_etap1_kom": {
@@ -279,18 +286,18 @@
         "nazwa": "okr",
         "punkty": 100
     },
-    "xiii_etap3_dzien2_pal": {
-        "edycja": 13,
-        "etap": 3,
-        "dzien": 2,
-        "nazwa": "pal",
-        "punkty": 100
-    },
     "xiii_etap3_dzien2_zos": {
         "edycja": 13,
         "etap": 3,
         "dzien": 2,
         "nazwa": "zos",
+        "punkty": 100
+    },
+    "xiii_etap3_dzien2_pal": {
+        "edycja": 13,
+        "etap": 3,
+        "dzien": 2,
+        "nazwa": "pal",
         "punkty": 100
     },
     "xiv_etap2_dzien2_tet": {
@@ -342,13 +349,6 @@
         "nazwa": "arc",
         "punkty": 100
     },
-    "xvii_etap2_dzien1_cho": {
-        "edycja": 17,
-        "etap": 2,
-        "dzien": 1,
-        "nazwa": "cho",
-        "punkty": 100
-    },
     "xvii_etap2_dzien1_klo": {
         "edycja": 17,
         "etap": 2,
@@ -356,11 +356,11 @@
         "nazwa": "klo",
         "punkty": 100
     },
-    "xvii_etap1_kor": {
+    "xvii_etap2_dzien1_cho": {
         "edycja": 17,
-        "etap": 1,
-        "dzien": 0,
-        "nazwa": "kor",
+        "etap": 2,
+        "dzien": 1,
+        "nazwa": "cho",
         "punkty": 100
     },
     "xvii_etap1_tes": {
@@ -368,6 +368,13 @@
         "etap": 1,
         "dzien": 0,
         "nazwa": "tes",
+        "punkty": 100
+    },
+    "xvii_etap1_kor": {
+        "edycja": 17,
+        "etap": 1,
+        "dzien": 0,
+        "nazwa": "kor",
         "punkty": 100
     },
     "xvii_etap3_dzien2_pil": {
@@ -384,6 +391,13 @@
         "nazwa": "zab",
         "punkty": 100
     },
+    "xviii_etap2_dzien2_tem": {
+        "edycja": 18,
+        "etap": 2,
+        "dzien": 2,
+        "nazwa": "tem",
+        "punkty": 100
+    },
     "xviii_etap2_dzien1_roz": {
         "edycja": 18,
         "etap": 2,
@@ -398,18 +412,18 @@
         "nazwa": "liz",
         "punkty": 100
     },
-    "xviii_etap3_dzien2_pat": {
-        "edycja": 18,
-        "etap": 3,
-        "dzien": 2,
-        "nazwa": "pat",
-        "punkty": 100
-    },
     "xviii_etap3_dzien2_met": {
         "edycja": 18,
         "etap": 3,
         "dzien": 2,
         "nazwa": "met",
+        "punkty": 100
+    },
+    "xviii_etap3_dzien2_pat": {
+        "edycja": 18,
+        "etap": 3,
+        "dzien": 2,
+        "nazwa": "pat",
         "punkty": 100
     },
     "xviii_etap3_dzien1_imp": {
@@ -440,6 +454,13 @@
         "nazwa": "sza",
         "punkty": 100
     },
+    "xix_etap2_dzien1_bon": {
+        "edycja": 19,
+        "etap": 2,
+        "dzien": 1,
+        "nazwa": "bon",
+        "punkty": 100
+    },
     "xix_etap1_odl": {
         "edycja": 19,
         "etap": 1,
@@ -468,18 +489,18 @@
         "nazwa": "gdz",
         "punkty": 100
     },
-    "xx_etap3_dzien1_lan": {
-        "edycja": 20,
-        "etap": 3,
-        "dzien": 1,
-        "nazwa": "lan",
-        "punkty": 100
-    },
     "xx_etap3_dzien1_baj": {
         "edycja": 20,
         "etap": 3,
         "dzien": 1,
         "nazwa": "baj",
+        "punkty": 100
+    },
+    "xx_etap3_dzien1_lan": {
+        "edycja": 20,
+        "etap": 3,
+        "dzien": 1,
+        "nazwa": "lan",
         "punkty": 100
     },
     "xxi_etap2_dzien2_pta": {
@@ -510,13 +531,6 @@
         "nazwa": "pan",
         "punkty": 100
     },
-    "xxi_etap3_probne_far": {
-        "edycja": 21,
-        "etap": 3,
-        "dzien": 0,
-        "nazwa": "far",
-        "punkty": 100
-    },
     "xxi_etap3_dzien1_tur": {
         "edycja": 21,
         "etap": 3,
@@ -524,11 +538,11 @@
         "nazwa": "tur",
         "punkty": 100
     },
-    "xxii_etap2_dzien2_trz": {
-        "edycja": 22,
-        "etap": 2,
-        "dzien": 2,
-        "nazwa": "trz",
+    "xxi_etap3_probne_far": {
+        "edycja": 21,
+        "etap": 3,
+        "dzien": 0,
+        "nazwa": "far",
         "punkty": 100
     },
     "xxii_etap2_dzien2_kur": {
@@ -538,11 +552,32 @@
         "nazwa": "kur",
         "punkty": 100
     },
+    "xxii_etap2_dzien2_trz": {
+        "edycja": 22,
+        "etap": 2,
+        "dzien": 2,
+        "nazwa": "trz",
+        "punkty": 100
+    },
+    "xxii_etap2_dzien1_pod": {
+        "edycja": 22,
+        "etap": 2,
+        "dzien": 1,
+        "nazwa": "pod",
+        "punkty": 100
+    },
     "xxii_etap2_dzien1_pus": {
         "edycja": 22,
         "etap": 2,
         "dzien": 1,
         "nazwa": "pus",
+        "punkty": 100
+    },
+    "xxii_etap2_probne_log": {
+        "edycja": 22,
+        "etap": 2,
+        "dzien": 0,
+        "nazwa": "log",
         "punkty": 100
     },
     "xxii_etap1_kin": {
@@ -587,13 +622,6 @@
         "nazwa": "zyw",
         "punkty": 100
     },
-    "xxiv_etap2_dzien2_kon": {
-        "edycja": 24,
-        "etap": 2,
-        "dzien": 2,
-        "nazwa": "kon",
-        "punkty": 100
-    },
     "xxiv_etap2_dzien2_zam": {
         "edycja": 24,
         "etap": 2,
@@ -601,11 +629,11 @@
         "nazwa": "zam",
         "punkty": 100
     },
-    "xxiv_etap2_dzien1_sum": {
+    "xxiv_etap2_dzien2_kon": {
         "edycja": 24,
         "etap": 2,
-        "dzien": 1,
-        "nazwa": "sum",
+        "dzien": 2,
+        "nazwa": "kon",
         "punkty": 100
     },
     "xxiv_etap2_dzien1_str": {
@@ -615,11 +643,18 @@
         "nazwa": "str",
         "punkty": 100
     },
-    "xxiv_etap1_fla": {
+    "xxiv_etap2_dzien1_sum": {
         "edycja": 24,
-        "etap": 1,
+        "etap": 2,
+        "dzien": 1,
+        "nazwa": "sum",
+        "punkty": 100
+    },
+    "xxiv_etap2_probne_zaw": {
+        "edycja": 24,
+        "etap": 2,
         "dzien": 0,
-        "nazwa": "fla",
+        "nazwa": "zaw",
         "punkty": 100
     },
     "xxiv_etap1_sab": {
@@ -629,11 +664,18 @@
         "nazwa": "sab",
         "punkty": 100
     },
-    "xxiv_etap3_probne_piz": {
+    "xxiv_etap1_fla": {
+        "edycja": 24,
+        "etap": 1,
+        "dzien": 0,
+        "nazwa": "fla",
+        "punkty": 100
+    },
+    "xxiv_etap3_dzien1_mid": {
         "edycja": 24,
         "etap": 3,
-        "dzien": 0,
-        "nazwa": "piz",
+        "dzien": 1,
+        "nazwa": "mid",
         "punkty": 100
     },
     "xxiv_etap3_dzien1_zap": {
@@ -643,11 +685,11 @@
         "nazwa": "zap",
         "punkty": 100
     },
-    "xxv_etap2_dzien2_tom": {
-        "edycja": 25,
-        "etap": 2,
-        "dzien": 2,
-        "nazwa": "tom",
+    "xxiv_etap3_probne_piz": {
+        "edycja": 24,
+        "etap": 3,
+        "dzien": 0,
+        "nazwa": "piz",
         "punkty": 100
     },
     "xxv_etap2_dzien2_tel": {
@@ -657,11 +699,11 @@
         "nazwa": "tel",
         "punkty": 100
     },
-    "xxv_etap2_probne_prz": {
+    "xxv_etap2_dzien2_tom": {
         "edycja": 25,
         "etap": 2,
-        "dzien": 0,
-        "nazwa": "prz",
+        "dzien": 2,
+        "nazwa": "tom",
         "punkty": 100
     },
     "xxv_etap2_dzien1_dro": {
@@ -678,25 +720,11 @@
         "nazwa": "kon",
         "punkty": 100
     },
-    "xxv_etap1_pow": {
+    "xxv_etap2_probne_prz": {
         "edycja": 25,
-        "etap": 1,
+        "etap": 2,
         "dzien": 0,
-        "nazwa": "pow",
-        "punkty": 100
-    },
-    "xxv_etap1_roz": {
-        "edycja": 25,
-        "etap": 1,
-        "dzien": 0,
-        "nazwa": "roz",
-        "punkty": 100
-    },
-    "xxv_etap1_pra": {
-        "edycja": 25,
-        "etap": 1,
-        "dzien": 0,
-        "nazwa": "pra",
+        "nazwa": "prz",
         "punkty": 100
     },
     "xxv_etap1_pla": {
@@ -713,11 +741,25 @@
         "nazwa": "pio",
         "punkty": 100
     },
-    "xxv_etap3_dzien2_ddl": {
+    "xxv_etap1_pra": {
         "edycja": 25,
-        "etap": 3,
-        "dzien": 2,
-        "nazwa": "ddl",
+        "etap": 1,
+        "dzien": 0,
+        "nazwa": "pra",
+        "punkty": 100
+    },
+    "xxv_etap1_roz": {
+        "edycja": 25,
+        "etap": 1,
+        "dzien": 0,
+        "nazwa": "roz",
+        "punkty": 100
+    },
+    "xxv_etap1_pow": {
+        "edycja": 25,
+        "etap": 1,
+        "dzien": 0,
+        "nazwa": "pow",
         "punkty": 100
     },
     "xxv_etap3_dzien2_tak": {
@@ -727,11 +769,39 @@
         "nazwa": "tak",
         "punkty": 100
     },
+    "xxv_etap3_dzien2_ddl": {
+        "edycja": 25,
+        "etap": 3,
+        "dzien": 2,
+        "nazwa": "ddl",
+        "punkty": 100
+    },
     "xxv_etap3_dzien2_wie": {
         "edycja": 25,
         "etap": 3,
         "dzien": 2,
         "nazwa": "wie",
+        "punkty": 100
+    },
+    "xxv_etap3_dzien1_ogr": {
+        "edycja": 25,
+        "etap": 3,
+        "dzien": 1,
+        "nazwa": "ogr",
+        "punkty": 100
+    },
+    "xxv_etap3_dzien1_kom": {
+        "edycja": 25,
+        "etap": 3,
+        "dzien": 1,
+        "nazwa": "kom",
+        "punkty": 100
+    },
+    "xxv_etap3_dzien1_tur": {
+        "edycja": 25,
+        "etap": 3,
+        "dzien": 1,
+        "nazwa": "tur",
         "punkty": 100
     },
     "xxv_etap3_probne_trz": {
@@ -748,34 +818,6 @@
         "nazwa": "dwa",
         "punkty": 100
     },
-    "xxv_etap3_dzien1_tur": {
-        "edycja": 25,
-        "etap": 3,
-        "dzien": 1,
-        "nazwa": "tur",
-        "punkty": 100
-    },
-    "xxv_etap3_dzien1_kom": {
-        "edycja": 25,
-        "etap": 3,
-        "dzien": 1,
-        "nazwa": "kom",
-        "punkty": 100
-    },
-    "xxv_etap3_dzien1_ogr": {
-        "edycja": 25,
-        "etap": 3,
-        "dzien": 1,
-        "nazwa": "ogr",
-        "punkty": 100
-    },
-    "xxvi_etap2_dzien2_cyk": {
-        "edycja": 26,
-        "etap": 2,
-        "dzien": 2,
-        "nazwa": "cyk",
-        "punkty": 100
-    },
     "xxvi_etap2_dzien2_osi": {
         "edycja": 26,
         "etap": 2,
@@ -783,11 +825,11 @@
         "nazwa": "osi",
         "punkty": 100
     },
-    "xxvi_etap2_probne_roz": {
+    "xxvi_etap2_dzien2_cyk": {
         "edycja": 26,
         "etap": 2,
-        "dzien": 0,
-        "nazwa": "roz",
+        "dzien": 2,
+        "nazwa": "cyk",
         "punkty": 100
     },
     "xxvi_etap2_dzien1_gwi": {
@@ -804,11 +846,11 @@
         "nazwa": "kol",
         "punkty": 100
     },
-    "xxvi_etap1_rob": {
+    "xxvi_etap2_probne_roz": {
         "edycja": 26,
-        "etap": 1,
+        "etap": 2,
         "dzien": 0,
-        "nazwa": "rob",
+        "nazwa": "roz",
         "punkty": 100
     },
     "xxvi_etap1_klu": {
@@ -818,11 +860,11 @@
         "nazwa": "klu",
         "punkty": 100
     },
-    "xxvi_etap1_par": {
+    "xxvi_etap1_pod": {
         "edycja": 26,
         "etap": 1,
         "dzien": 0,
-        "nazwa": "par",
+        "nazwa": "pod",
         "punkty": 100
     },
     "xxvi_etap1_nie": {
@@ -832,11 +874,18 @@
         "nazwa": "nie",
         "punkty": 100
     },
-    "xxvi_etap1_pod": {
+    "xxvi_etap1_par": {
         "edycja": 26,
         "etap": 1,
         "dzien": 0,
-        "nazwa": "pod",
+        "nazwa": "par",
+        "punkty": 100
+    },
+    "xxvi_etap1_rob": {
+        "edycja": 26,
+        "etap": 1,
+        "dzien": 0,
+        "nazwa": "rob",
         "punkty": 100
     },
     "xxvi_etap3_dzien2_dlu": {
@@ -895,6 +944,13 @@
         "nazwa": "kol",
         "punkty": 100
     },
+    "xxxi_etap2_tel": {
+        "edycja": 31,
+        "etap": 2,
+        "dzien": 0,
+        "nazwa": "tel",
+        "punkty": 100
+    },
     "xxxi_etap2_dzien2_cia": {
         "edycja": 31,
         "etap": 2,
@@ -909,11 +965,11 @@
         "nazwa": "poj",
         "punkty": 100
     },
-    "xxxi_etap2_tel": {
+    "xxxi_etap2_dzien1_ryc": {
         "edycja": 31,
         "etap": 2,
-        "dzien": 0,
-        "nazwa": "tel",
+        "dzien": 1,
+        "nazwa": "ryc",
         "punkty": 100
     },
     "xxxi_etap2_dzien1_lic": {
@@ -923,25 +979,11 @@
         "nazwa": "lic",
         "punkty": 100
     },
-    "xxxi_etap2_dzien1_ryc": {
-        "edycja": 31,
-        "etap": 2,
-        "dzien": 1,
-        "nazwa": "ryc",
-        "punkty": 100
-    },
     "xxxi_etap1_cza": {
         "edycja": 31,
         "etap": 1,
         "dzien": 0,
         "nazwa": "cza",
-        "punkty": 100
-    },
-    "xxxii_etap2_probne_sss": {
-        "edycja": 32,
-        "etap": 2,
-        "dzien": 0,
-        "nazwa": "sss",
         "punkty": 100
     },
     "xxxii_etap2_dzien1_drz": {
@@ -951,6 +993,13 @@
         "nazwa": "drz",
         "punkty": 100
     },
+    "xxxii_etap2_probne_sss": {
+        "edycja": 32,
+        "etap": 2,
+        "dzien": 0,
+        "nazwa": "sss",
+        "punkty": 100
+    },
     "xxxii_etap1_bit": {
         "edycja": 32,
         "etap": 1,
@@ -958,25 +1007,18 @@
         "nazwa": "bit",
         "punkty": 100
     },
-    "xxxii_etap1_wal": {
-        "edycja": 32,
-        "etap": 1,
-        "dzien": 0,
-        "nazwa": "wal",
-        "punkty": 100
-    },
-    "xxxii_etap1_spr": {
-        "edycja": 32,
-        "etap": 1,
-        "dzien": 0,
-        "nazwa": "spr",
-        "punkty": 100
-    },
     "xxxii_etap1_zam": {
         "edycja": 32,
         "etap": 1,
         "dzien": 0,
         "nazwa": "zam",
+        "punkty": 100
+    },
+    "xxxii_etap1_wal": {
+        "edycja": 32,
+        "etap": 1,
+        "dzien": 0,
+        "nazwa": "wal",
         "punkty": 100
     },
     "xxxii_etap1_usu": {
@@ -992,5 +1034,12 @@
         "dzien": 0,
         "nazwa": "kas",
         "punkty": 97
+    },
+    "xxxii_etap1_spr": {
+        "edycja": 32,
+        "etap": 1,
+        "dzien": 0,
+        "nazwa": "spr",
+        "punkty": 100
     }
 }
